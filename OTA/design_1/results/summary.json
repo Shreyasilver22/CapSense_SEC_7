@@ -1,0 +1,16 @@
+{
+  "simulator": "ngspice",
+  "supply_V": 5,
+  "temperature_C": 27,
+  "external_load_F": 5e-12,
+  "compensation_F": 5e-12,
+  "external_bias_V": 0.95,
+  "gain_dB": 35.56794,
+  "unity_gain_Hz": 1554635.0,
+  "phase_at_UGF_deg": -118.6105,
+  "estimated_phase_margin_deg": 61.3895,
+  "follower_high_V": 2.610739,
+  "follower_low_V": 2.511864,
+  "scope": "Seven-MOS single-ended voltage-biased baseline; not the planned current-reference or fully differential CMFB design.",
+  "limitations": "PDK HSPICE compatibility warnings remain; nominal only, no precision SC/noise/PVT/layout qualification."
+}

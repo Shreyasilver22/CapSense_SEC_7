@@ -1,0 +1,22 @@
+SCL08 seven transistor OTA first pass
+.include "../spice/models.inc"
+.include "../spice/ota7.inc"
+.temp 27
+VDD vdd 0 5
+VBN vbn 0 0.95
+CL out 0 5p
+VIN inp 0 dc 2.5 pulse(2.5 2.6 20u 100n 100n 40u 80u)
+XU inp out out vdd 0 vbn ota7
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+print v(out) i(vdd)
+tran 20n 120u
+wrdata ../results/transient.dat v(inp) v(out)
+meas tran output_high find v(out) at=59u
+meas tran output_low find v(out) at=99u
+quit
+.endc
+.end

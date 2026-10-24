@@ -1,0 +1,50 @@
+** sch_path: OTA/design_1/tb/ota_follower_tb.sch
+**.subckt ota_follower_tb
+XU inp out out vdd 0 vbn ota_scl08
+VDD vdd 0 5
+VBN vbn 0 0.95
+VIN inp 0 dc 2.5 pulse(2.5 2.6 20u 100n 100n 40u 80u)
+CL out 0 5p m=1
+**** begin user architecture code
+
+.include ../spice/models.inc
+.temp 27
+
+
+.control
+set noaskquit
+set filetype=binary
+op
+print v(out) i(VDD)
+tran 20n 120u
+let tracking_error = v(out)-v(inp)
+meas tran output_high find v(out) at=59u
+meas tran output_low find v(out) at=99u
+write ota_follower_tb.raw v(inp) v(out) tracking_error
+quit
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_scl08.sym # of pins=6
+** sym_path: OTA/design_1/designs/ota_scl08.sym
+** sch_path: OTA/design_1/designs/ota_scl08.sch
+.subckt ota_scl08 inp inn out vdd vss vbn
+*.ipin inp
+*.ipin inn
+*.opin out
+*.iopin vdd
+*.iopin vss
+*.ipin vbn
+M3 n1 n1 vdd vdd P w=2.5u l=0.8u m=1
+M4 n2 n1 vdd vdd P w=2.5u l=0.8u m=1
+M1 n1 inn tail vss N w=2.5u l=0.8u m=1
+M2 n2 inp tail vss N w=2.5u l=0.8u m=1
+M5 tail vbn vss vss N w=5u l=0.8u m=1
+M6 out n2 vdd vdd P w=7u l=0.8u m=1
+M7 out vbn vss vss N w=10u l=0.8u m=1
+Cc out n2 5p m=1
+.ends
+
+.end

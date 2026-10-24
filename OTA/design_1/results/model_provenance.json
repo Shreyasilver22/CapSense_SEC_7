@@ -1,0 +1,8 @@
+{
+  "process": "SCL CP8D 0.8 um",
+  "model_filename": "tntp49_5v",
+  "sha256": "15a4b2e857b1e7b44fe77eea8312f9941d0dbfc314d8131f79863d03b71be227",
+  "simulator": "ngspice-42",
+  "model_cards_bundled": false,
+  "note": "Hash identifies the locally used file; no redistribution licence was established for the foundry model cards."
+}

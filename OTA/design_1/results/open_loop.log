@@ -1,0 +1,222 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: Unusual leading characters like '$' or others out of '= [] ? () & % $"!:,\f'
+    in netlist or included files, will be replaced with '*'.
+    Check line no 8:  $******pmos digital **********************
+
+
+Circuit: scl08 seven transistor ota first pass
+
+Warning: Model issue on line 7 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 9 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(out) = 3.276283e+00
+v(xu.n1) = 3.362435e+00
+v(xu.n2) = 3.362435e+00
+v(xu.tail) = 1.178562e+00
+i(vdd) = -1.11915e-04
+ BSIM3v32: Berkeley Short Channel IGFET Model Version-3
+     device               m.xu.m6               m.xu.m4               m.xu.m3
+      model                     p                     p                     p
+          l                 8e-07                 8e-07                 8e-07
+          w                 7e-06               2.5e-06               2.5e-06
+          m                     1                     1                     1
+         ad                     0                     0                     0
+         as                     0                     0                     0
+         pd                     0                     0                     0
+         ps                     0                     0                     0
+        nrd                     0                     0                     0
+        nrs                     0                     0                     0
+        off                     0                     0                     0
+     nqsmod                     0                     0                     0
+        geo                     0                     0                     0
+     delvto                     0                     0                     0
+      mulu0                     1                     1                     1
+       gmbs            0.00133598           0.000255796           0.000255796
+         gm           0.000174137           3.51799e-05           3.51799e-05
+        gds           2.53347e-05           4.88843e-06           4.88843e-06
+      vdsat              0.607399              0.552647              0.552647
+        vth              0.914413              0.989799              0.989799
+         id           8.25961e-05           1.46594e-05           1.46594e-05
+        vbs           -0.00156697           -0.00077871           -0.00077871
+        vgs                 1.636               1.63679               1.63679
+        vds               1.72058               1.63601               1.63601
+        ibd          -1.72217e-12          -1.63679e-12          -1.63679e-12
+        ibs          -1.56812e-15          -7.78918e-16          -7.78918e-16
+        gbd                 1e-12                 1e-12                 1e-12
+        gbs           1.00072e-12           1.00026e-12           1.00026e-12
+         qb          -1.85774e-14          -6.84494e-15          -6.84494e-15
+        cqb                     0                     0                     0
+         qg           1.36874e-14            4.7511e-15            4.7511e-15
+        cqg                     0                     0                     0
+         qd           1.53086e-14           5.62231e-15           5.62231e-15
+        cqd                     0                     0                     0
+        cgg           8.58664e-15           3.06884e-15           3.06884e-15
+        cgd           3.18001e-16           1.21489e-16           1.21489e-16
+        cgs          -5.66743e-14          -1.94221e-14          -1.94221e-14
+        cdg          -4.67984e-18           -1.7097e-18           -1.7097e-18
+        cdd           2.81522e-18           9.72023e-19           9.72023e-19
+        cds           3.49015e-17           1.22534e-17           1.22534e-17
+        cbg          -1.23016e-15          -4.41507e-16          -4.41507e-16
+        cbd           1.89871e-17           7.28969e-18           7.28969e-18
+        cbs          -3.24638e-15          -1.12054e-15          -1.12054e-15
+      capbd           7.27947e-15            2.9072e-15            2.9072e-15
+      capbs           1.12172e-14            4.3195e-15            4.3195e-15
+
+ BSIM3v32: Berkeley Short Channel IGFET Model Version-3
+     device               m.xu.m7               m.xu.m5               m.xu.m2
+      model                     n                     n                     n
+          l                 8e-07                 8e-07                 8e-07
+          w                 1e-05                 5e-06               2.5e-06
+          m                     1                     1                     1
+         ad                     0                     0                     0
+         as                     0                     0                     0
+         pd                     0                     0                     0
+         ps                     0                     0                     0
+        nrd                     0                     0                     0
+        nrs                     0                     0                     0
+        off                     0                     0                     0
+     nqsmod                     0                     0                     0
+        geo                     0                     0                     0
+     delvto                     0                     0                     0
+      mulu0                     1                     1                     1
+       gmbs            0.00013028           5.44108e-05            1.2009e-05
+         gm           0.000402381           0.000159012           6.44506e-05
+        gds           3.83657e-06           2.26582e-06           1.17588e-06
+      vdsat              0.268346              0.248459              0.316381
+        vth              0.597549              0.629954              0.942244
+         id           8.25961e-05           2.93189e-05           1.46594e-05
+        vbs          -0.000436108          -0.000309607              -1.17887
+        vgs              0.949564               0.94969               1.32113
+        vds               3.27541               1.17794               2.18325
+        ibd          -3.27586e-12          -1.17826e-12          -3.36213e-12
+        ibs          -4.36245e-16          -3.09656e-16          -1.17887e-12
+        gbd                 1e-12                 1e-12                 1e-12
+        gbs           1.00031e-12           1.00016e-12                 1e-12
+         qb          -4.65197e-14          -1.19882e-14          -1.83681e-14
+        cqb                     0                     0                     0
+         qg           5.88195e-15           4.83977e-15            2.1909e-15
+        cqg                     0                     0                     0
+         qd           4.50981e-14           8.99324e-15           1.21587e-14
+        cqd                     0                     0                     0
+        cgg           6.93147e-15           2.98876e-15           9.83804e-16
+        cgd           3.25175e-17           1.37727e-17           1.01677e-17
+        cgs          -5.50119e-15          -2.40217e-15          -8.04195e-16
+        cdg          -3.92473e-19          -1.81287e-18          -1.56175e-19
+        cdd           7.56358e-20           8.21594e-19           4.57781e-20
+        cds           4.54201e-19           1.63963e-18           1.40012e-19
+        cbg          -1.29021e-15           -5.5594e-16          -1.56736e-16
+        cbd           1.38359e-17           5.68048e-18           2.54947e-18
+        cbs          -2.20279e-15          -9.57401e-16           -1.9606e-16
+      capbd            9.5889e-15           6.51323e-15           2.89066e-15
+      capbs           1.66339e-14           8.74064e-15           3.63344e-15
+
+ BSIM3v32: Berkeley Short Channel IGFET Model Version-3
+     device               m.xu.m1
+      model                     n
+          l                 8e-07
+          w               2.5e-06
+          m                     1
+         ad                     0
+         as                     0
+         pd                     0
+         ps                     0
+        nrd                     0
+        nrs                     0
+        off                     0
+     nqsmod                     0
+        geo                     0
+     delvto                     0
+      mulu0                     1
+       gmbs            1.2009e-05
+         gm           6.44506e-05
+        gds           1.17588e-06
+      vdsat              0.316381
+        vth              0.942244
+         id           1.46594e-05
+        vbs              -1.17887
+        vgs               1.32113
+        vds               2.18325
+        ibd          -3.36213e-12
+        ibs          -1.17887e-12
+        gbd                 1e-12
+        gbs                 1e-12
+         qb          -1.83681e-14
+        cqb                     0
+         qg            2.1909e-15
+        cqg                     0
+         qd           1.21587e-14
+        cqd                     0
+        cgg           9.83804e-16
+        cgd           1.01677e-17
+        cgs          -8.04195e-16
+        cdg          -1.56175e-19
+        cdd           4.57781e-20
+        cds           1.40012e-19
+        cbg          -1.56736e-16
+        cbd           2.54947e-18
+        cbs           -1.9606e-16
+      capbd           2.89066e-15
+      capbs           3.63344e-15
+
+@m.xu.m1[vds] = 2.183254e+00
+@m.xu.m1[vdsat] = 3.163805e-01
+@m.xu.m2[vds] = 2.183254e+00
+@m.xu.m2[vdsat] = 3.163805e-01
+@m.xu.m3[vds] = 1.636008e+00
+@m.xu.m3[vdsat] = 5.526472e-01
+@m.xu.m4[vds] = 1.636008e+00
+@m.xu.m4[vdsat] = 5.526472e-01
+@m.xu.m5[vds] = 1.177942e+00
+@m.xu.m5[vdsat] = 2.484586e-01
+@m.xu.m6[vds] = 1.720583e+00
+@m.xu.m6[vdsat] = 6.073994e-01
+@m.xu.m7[vds] = 3.275411e+00
+@m.xu.m7[vdsat] = 2.683465e-01
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 901
+gain_1hz            =  3.556794e+01
+ugf                 =  1.554635e+06
+phase_ugf           =  -1.186105e+02
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 2001
+ngspice-42 done

@@ -1,0 +1,7 @@
+/spice/models.inc
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+*.sch.bak
+*.sim

@@ -1,0 +1,2 @@
+* Copy/configure as models.inc; use the locally licensed SCL CP8D MOS deck.
+.include "/absolute/path/to/SCL/models49/mos/tntp49_5v"

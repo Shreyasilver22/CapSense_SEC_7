@@ -1,0 +1,53 @@
+** sch_path: OTA/design_1/tb/ota_ac_tb.sch
+**.subckt ota_ac_tb
+XU inp inn out vdd 0 vbn ota_scl08
+VDD vdd 0 5
+VBN vbn 0 0.95
+VIN inp 0 dc 2.5 ac 0.5
+CL out 0 5p m=1
+VINN inn 0 dc 2.5 ac 0.5 180
+**** begin user architecture code
+
+.include ../spice/models.inc
+.temp 27
+
+
+.control
+set noaskquit
+set filetype=binary
+op
+print v(out) i(VDD)
+ac dec 100 1 1G
+let gain_db = db(v(out))
+let phase_deg = 180/PI*cph(v(out))
+meas ac gain_1hz find gain_db at=1
+meas ac ugf when gain_db=0 fall=1
+meas ac phase_ugf find phase_deg when gain_db=0 fall=1
+write ota_ac_tb.raw v(out) gain_db phase_deg
+quit
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_scl08.sym # of pins=6
+** sym_path: OTA/design_1/designs/ota_scl08.sym
+** sch_path: OTA/design_1/designs/ota_scl08.sch
+.subckt ota_scl08 inp inn out vdd vss vbn
+*.ipin inp
+*.ipin inn
+*.opin out
+*.iopin vdd
+*.iopin vss
+*.ipin vbn
+M3 n1 n1 vdd vdd P w=2.5u l=0.8u m=1
+M4 n2 n1 vdd vdd P w=2.5u l=0.8u m=1
+M1 n1 inn tail vss N w=2.5u l=0.8u m=1
+M2 n2 inp tail vss N w=2.5u l=0.8u m=1
+M5 tail vbn vss vss N w=5u l=0.8u m=1
+M6 out n2 vdd vdd P w=7u l=0.8u m=1
+M7 out vbn vss vss N w=10u l=0.8u m=1
+Cc out n2 5p m=1
+.ends
+
+.end

@@ -1,0 +1,16 @@
+SCL reference at W2.5u L0.8u, zero body bias
+.include "../spice/models.inc"
+.temp 27
+VD dn 0 3
+VG gn 0 1
+MNR dn gn 0 0 N W=2.5u L=0.8u
+VSP sp 0 5
+VDP dp 0 2
+VGP gp 0 3
+MPR dp gp sp sp P W=2.5u L=0.8u
+.control
+op
+print @mnr[id] @mnr[gm] @mpr[id] @mpr[gm]
+quit
+.endc
+.end
