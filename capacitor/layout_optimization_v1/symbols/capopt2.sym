@@ -1,0 +1,19 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=primitive
+format="tcleval(@name @pinlist [capopt_model @style @value 2 ])"
+template="name=XC style=slotted value=4p"}
+V {}
+S {}
+E {}
+L 4 -35 -12 35 -12 {}
+L 4 -35 12 35 12 {}
+L 4 0 -60 0 -12 {}
+L 4 0 12 0 60 {}
+B 5 -2.5 -62.5 2.5 -57.5 {name=TOP dir=inout}
+B 5 -2.5 57.5 2.5 62.5 {name=BOT dir=inout}
+T {@name} 105 -35 0 0 0.3 0.3 {}
+T {@style} 105 -10 0 0 0.25 0.25 {}
+T {Target: @value} 105 15 0 0 0.25 0.25 {}
+T {tcleval([capopt_info @style @value ])} 105 40 0 0 0.2 0.2 {}
+T {SUB internally tied to 0} 105 62 0 0 0.17 0.17 {}

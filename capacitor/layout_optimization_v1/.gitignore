@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.raw
+*.log
+*.dat
+results/file_manifest.json

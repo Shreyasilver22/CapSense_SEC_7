@@ -1,0 +1,82 @@
+* Experimental custom layout extraction. Old-Magic compatibility remains unresolved.
+
+.subckt capopt_baseline_3p TOP BOT SUB
+Cmut TOP BOT 3.00538e-12
+Ctop TOP SUB 1.85155e-12
+Cbot BOT SUB 5.51627e-12
+.ends capopt_baseline_3p
+.subckt capopt_baseline_3p_gnd TOP BOT
+XC TOP BOT 0 capopt_baseline_3p
+.ends capopt_baseline_3p_gnd
+
+.subckt capopt_compact_3p TOP BOT SUB
+Cmut TOP BOT 3.00457e-12
+Ctop TOP SUB 1.6005e-12
+Cbot BOT SUB 5.08205e-12
+.ends capopt_compact_3p
+.subckt capopt_compact_3p_gnd TOP BOT
+XC TOP BOT 0 capopt_compact_3p
+.ends capopt_compact_3p_gnd
+
+.subckt capopt_slotted_3p TOP BOT SUB
+Cmut TOP BOT 3.00539e-12
+Ctop TOP SUB 4.68898e-13
+Cbot BOT SUB 3.62743e-12
+.ends capopt_slotted_3p
+.subckt capopt_slotted_3p_gnd TOP BOT
+XC TOP BOT 0 capopt_slotted_3p
+.ends capopt_slotted_3p_gnd
+
+.subckt capopt_baseline_4p TOP BOT SUB
+Cmut TOP BOT 3.99578e-12
+Ctop TOP SUB 2.44696e-12
+Cbot BOT SUB 7.32176e-12
+.ends capopt_baseline_4p
+.subckt capopt_baseline_4p_gnd TOP BOT
+XC TOP BOT 0 capopt_baseline_4p
+.ends capopt_baseline_4p_gnd
+
+.subckt capopt_compact_4p TOP BOT SUB
+Cmut TOP BOT 3.99098e-12
+Ctop TOP SUB 2.11585e-12
+Cbot BOT SUB 6.74161e-12
+.ends capopt_compact_4p
+.subckt capopt_compact_4p_gnd TOP BOT
+XC TOP BOT 0 capopt_compact_4p
+.ends capopt_compact_4p_gnd
+
+.subckt capopt_slotted_4p TOP BOT SUB
+Cmut TOP BOT 3.99574e-12
+Ctop TOP SUB 6.15322e-13
+Cbot BOT SUB 4.8097e-12
+.ends capopt_slotted_4p
+.subckt capopt_slotted_4p_gnd TOP BOT
+XC TOP BOT 0 capopt_slotted_4p
+.ends capopt_slotted_4p_gnd
+
+.subckt capopt_baseline_8p TOP BOT SUB
+Cmut TOP BOT 8.00295e-12
+Ctop TOP SUB 4.90149e-12
+Cbot BOT SUB 1.46206e-11
+.ends capopt_baseline_8p
+.subckt capopt_baseline_8p_gnd TOP BOT
+XC TOP BOT 0 capopt_baseline_8p
+.ends capopt_baseline_8p_gnd
+
+.subckt capopt_compact_8p TOP BOT SUB
+Cmut TOP BOT 8.00463e-12
+Ctop TOP SUB 4.24063e-12
+Cbot BOT SUB 1.34897e-11
+.ends capopt_compact_8p
+.subckt capopt_compact_8p_gnd TOP BOT
+XC TOP BOT 0 capopt_compact_8p
+.ends capopt_compact_8p_gnd
+
+.subckt capopt_slotted_8p TOP BOT SUB
+Cmut TOP BOT 8.00291e-12
+Ctop TOP SUB 1.21003e-12
+Cbot BOT SUB 9.59705e-12
+.ends capopt_slotted_8p
+.subckt capopt_slotted_8p_gnd TOP BOT
+XC TOP BOT 0 capopt_slotted_8p
+.ends capopt_slotted_8p_gnd

@@ -1,0 +1,6 @@
+* NGSPICE file created from capopt_baseline_8p.ext - technology: SCL_CP8D
+
+.subckt capopt_baseline_8p BOT TOP
+C0 BOT TOP 8002.950000fF
+C1 TOP 0 4901.490000fF
+.ends

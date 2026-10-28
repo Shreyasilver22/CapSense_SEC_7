@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "name": "capopt_baseline_3p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": 2.220446049250313e-14
+    },
+    {
+      "name": "capopt_compact_3p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": -0.026951666677743624
+    },
+    {
+      "name": "capopt_slotted_3p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": 0.00033273662567445683
+    },
+    {
+      "name": "capopt_baseline_4p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": 0.0
+    },
+    {
+      "name": "capopt_compact_4p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": -0.12012673370406235
+    },
+    {
+      "name": "capopt_slotted_4p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": -0.0010010561141915453
+    },
+    {
+      "name": "capopt_baseline_8p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": 0.0
+    },
+    {
+      "name": "capopt_compact_8p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": 0.020992259104457567
+    },
+    {
+      "name": "capopt_slotted_8p",
+      "model_currents": "PASS",
+      "drc_markers": 0,
+      "target_error_percent": -0.0004998156929447717
+    }
+  ],
+  "native_symbols": "two-pin and three-pin style/value variants netlisted and simulated",
+  "physical_qualification": "UNRESOLVED extraction-version discrepancy; no formal capacitor LVS or PVT validation"
+}

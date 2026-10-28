@@ -1,0 +1,24 @@
+** sch_path: capacitor/layout_optimization_v1/results/two_pin.sch
+**.subckt two_pin
+XC0 top0 0 capopt_baseline_4p_gnd
+R0 drive top0 1meg m=1
+XC1 top1 0 capopt_compact_4p_gnd
+R1 drive top1 1meg m=1
+XC2 top2 0 capopt_slotted_4p_gnd
+R2 drive top2 1meg m=1
+VIN drive 0 pulse(0 1 1u 1n 1n 80u 160u)
+**** begin user architecture code
+
+.include ../models/cap_layouts.lib.spice
+
+
+.control
+set filetype=binary
+tran 5n 100u
+write demo2.raw v(drive) v(top0) v(top1) v(top2)
+quit
+.endc
+
+**** end user architecture code
+**.ends
+.end

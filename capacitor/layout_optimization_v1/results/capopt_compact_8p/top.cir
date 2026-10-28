@@ -1,0 +1,16 @@
+Transfer current check capopt_compact_8p
+.include "../../models/cap_layouts.lib.spice"
+VT t 0 dc 0 ac 1
+VB b 0 0
+VS s 0 0
+XC t b s capopt_compact_8p
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 10 1meg 2meg
+let cm=abs(imag(i(VB)))/(2*PI*frequency)
+let cs=abs(imag(i(VS)))/(2*PI*frequency)
+wrdata top.dat real(cm) real(cs)
+quit
+.endc
+.end

@@ -1,0 +1,24 @@
+{
+  "targets": [
+    {
+      "token": "3p",
+      "target_F": 3.00538e-12,
+      "baseline_units": 264
+    },
+    {
+      "token": "4p",
+      "target_F": 3.99578e-12,
+      "baseline_units": 351
+    },
+    {
+      "token": "8p",
+      "target_F": 8.00295e-12,
+      "baseline_units": 703
+    }
+  ],
+  "strip_rows": {
+    "3p": 16,
+    "8p": 27,
+    "4p": 18
+  }
+}

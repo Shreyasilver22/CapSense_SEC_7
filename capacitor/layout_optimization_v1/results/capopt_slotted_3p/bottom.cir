@@ -1,0 +1,16 @@
+Transfer current check capopt_slotted_3p
+.include "../../models/cap_layouts.lib.spice"
+VT t 0 0
+VB b 0 dc 0 ac 1
+VS s 0 0
+XC t b s capopt_slotted_3p
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 10 1meg 2meg
+let cm=abs(imag(i(VT)))/(2*PI*frequency)
+let cs=abs(imag(i(VS)))/(2*PI*frequency)
+wrdata bottom.dat real(cm) real(cs)
+quit
+.endc
+.end

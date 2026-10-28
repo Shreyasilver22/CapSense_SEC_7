@@ -152,3 +152,9 @@ python3 scripts/prepare.py --value 5p --pdk-root "$SCL08_CAP_PDK_ROOT"
 Prepared 2.5p/7.5p/3p/4p/6p/8p/10p and 1/2/4/8-unit CDAC examples are listed in CATALOG.md. Full layouts correspond to explicit mutual-capacitance models plus substrate loading; requested capacitance is not a guaranteed manufacturing tolerance. The 6/8/10p files are standalone capacitor variants only.
 
 The original fixed-size v1 experiment is superseded by this value-driven source and its preserved extraction-format limitation. No duplicate legacy release or unrelated OTA results are included. Generated plots/catalog/DRC and raw extraction evidence are committed; bulky transient raw files and logs are reproducible and ignored.
+
+## Layout-optimized capacitor variants
+
+See [layout_optimization_v1](layout_optimization_v1/README.md) for the baseline/compact/slotted comparison, prepared near3/4/8pF layouts, explicit-substrate models, editable style/value symbols and reproducible checks.
+
+The highlighted slotted 4p candidate has about 3.99574pF mutual capacitance, 0.615322pF TOP-substrate and 4.80970pF BOT-substrate capacitance, with a 0.159475mm2 bounding footprint. These are provisional extraction estimates: the old-Magic compatibility discrepancy and absence of formal capacitor LVS remain documented. The parent library's existing model/symbol names are preserved. No OTA files are changed by this addition.
