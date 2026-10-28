@@ -1,0 +1,11 @@
+timestamp 0
+version 8.3
+tech SCL_CP8D
+style lambda=0.09(generic)
+scale 1000 1 1
+resistclasses 4000 10000 22000 50 30 8600
+port "TOP" 2 2394 75393 2394 75393 m2
+port "BOT" 1 -396 -594 -396 -594 m1
+node "TOP" 0 3.70469e+06 2394 75393 m2 0 0 0 0 0 0 0 0 -1519047296 7134800 0 0
+node "BOT" 0 1.0974e+07 -396 -594 m1 0 0 0 0 0 0 -1533607296 7062000 0 0 0 0
+cap "BOT" "TOP" 5.99937e+06

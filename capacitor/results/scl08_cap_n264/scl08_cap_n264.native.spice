@@ -1,0 +1,6 @@
+* NGSPICE file created from scl08_cap_n264.ext - technology: SCL_CP8D
+
+.subckt scl08_cap_n264 BOT TOP
+C0 BOT TOP 3005.380000fF
+C1 TOP 0 1851.550000fF
+.ends

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.local/
+*.raw
+*.dat
+*.log
+results/*_run.log
+results/*_netlist.log
+results/*_netlisting.log
+results/file_manifest.json
+.magicrc
+*.swp

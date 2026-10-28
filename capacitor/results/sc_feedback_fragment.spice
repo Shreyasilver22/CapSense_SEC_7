@@ -1,0 +1,8 @@
+** sch_path: capacitor/examples/sc_feedback_fragment.sch
+**.subckt sc_feedback_fragment SUM VOUT VSUB
+*.iopin SUM
+*.iopin VOUT
+*.iopin VSUB
+XCFB SUM VOUT VSUB scl08_cap_2.5p
+**.ends
+.end

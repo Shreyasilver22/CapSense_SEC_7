@@ -1,0 +1,112 @@
+[
+  {
+    "cell": "scl08_cap_n220",
+    "units": 220,
+    "columns": 13,
+    "rows": 17,
+    "width_um": 512.0,
+    "height_um": 484.0,
+    "overlap_um2": 88000.0,
+    "footprint_um2": 247808.0
+  },
+  {
+    "cell": "scl08_cap_n660",
+    "units": 660,
+    "columns": 22,
+    "rows": 30,
+    "width_um": 872.0,
+    "height_um": 848.0,
+    "overlap_um2": 264000.0,
+    "footprint_um2": 739456.0
+  },
+  {
+    "cell": "scl08_cap_n264",
+    "units": 264,
+    "columns": 14,
+    "rows": 19,
+    "width_um": 552.0,
+    "height_um": 540.0,
+    "overlap_um2": 105600.0,
+    "footprint_um2": 298080.0
+  },
+  {
+    "cell": "scl08_cap_n1",
+    "units": 1,
+    "columns": 1,
+    "rows": 1,
+    "width_um": 32.0,
+    "height_um": 20.0,
+    "overlap_um2": 400.0,
+    "footprint_um2": 640.0
+  },
+  {
+    "cell": "scl08_cap_n2",
+    "units": 2,
+    "columns": 2,
+    "rows": 1,
+    "width_um": 72.0,
+    "height_um": 36.0,
+    "overlap_um2": 800.0,
+    "footprint_um2": 2592.0
+  },
+  {
+    "cell": "scl08_cap_n4",
+    "units": 4,
+    "columns": 2,
+    "rows": 2,
+    "width_um": 72.0,
+    "height_um": 64.0,
+    "overlap_um2": 1600.0,
+    "footprint_um2": 4608.0
+  },
+  {
+    "cell": "scl08_cap_n8",
+    "units": 8,
+    "columns": 3,
+    "rows": 3,
+    "width_um": 112.0,
+    "height_um": 92.0,
+    "overlap_um2": 3200.0,
+    "footprint_um2": 10304.0
+  },
+  {
+    "cell": "scl08_cap_n351",
+    "units": 351,
+    "columns": 16,
+    "rows": 22,
+    "width_um": 632.0,
+    "height_um": 624.0,
+    "overlap_um2": 140400.0,
+    "footprint_um2": 394368.0
+  },
+  {
+    "cell": "scl08_cap_n527",
+    "units": 527,
+    "columns": 20,
+    "rows": 27,
+    "width_um": 792.0,
+    "height_um": 764.0,
+    "overlap_um2": 210800.0,
+    "footprint_um2": 605088.0
+  },
+  {
+    "cell": "scl08_cap_n703",
+    "units": 703,
+    "columns": 23,
+    "rows": 31,
+    "width_um": 912.0,
+    "height_um": 876.0,
+    "overlap_um2": 281200.0,
+    "footprint_um2": 798912.0
+  },
+  {
+    "cell": "scl08_cap_n878",
+    "units": 878,
+    "columns": 25,
+    "rows": 36,
+    "width_um": 992.0,
+    "height_um": 1016.0,
+    "overlap_um2": 351200.0,
+    "footprint_um2": 1007872.0
+  }
+]

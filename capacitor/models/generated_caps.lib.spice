@@ -1,0 +1,145 @@
+* EXPERIMENTAL custom metal capacitors. Native extraction compatibility unresolved.
+* All substrate parasitics retained from raw .ext; no physical voltage/PVT qualification.
+
+.subckt scl08_cap_n220 TOP BOT SUB
+Cmut TOP BOT 2.50448e-12
+Ctop TOP SUB 1.54474e-12
+Cbot BOT SUB 4.60322e-12
+.ends scl08_cap_n220
+
+.subckt scl08_cap_n660 TOP BOT SUB
+Cmut TOP BOT 7.51344e-12
+Ctop TOP SUB 4.5672e-12
+Cbot BOT SUB 1.37282e-11
+.ends scl08_cap_n660
+
+.subckt scl08_cap_n264 TOP BOT SUB
+Cmut TOP BOT 3.00538e-12
+Ctop TOP SUB 1.85155e-12
+Cbot BOT SUB 5.51627e-12
+.ends scl08_cap_n264
+
+.subckt scl08_cap_n1 TOP BOT SUB
+Cmut TOP BOT 1.1384e-14
+Ctop TOP SUB 3.856e-15
+Cbot BOT SUB 1.616e-14
+.ends scl08_cap_n1
+
+.subckt scl08_cap_n2 TOP BOT SUB
+Cmut TOP BOT 2.2768e-14
+Ctop TOP SUB 1.664e-14
+Cbot BOT SUB 4.5584e-14
+.ends scl08_cap_n2
+
+.subckt scl08_cap_n4 TOP BOT SUB
+Cmut TOP BOT 4.5536e-14
+Ctop TOP SUB 3.024e-14
+Cbot BOT SUB 8.6832e-14
+.ends scl08_cap_n4
+
+.subckt scl08_cap_n8 TOP BOT SUB
+Cmut TOP BOT 9.1072e-14
+Ctop TOP SUB 6.5056e-14
+Cbot BOT SUB 1.74928e-13
+.ends scl08_cap_n8
+
+.subckt scl08_cap_n351 TOP BOT SUB
+Cmut TOP BOT 3.99578e-12
+Ctop TOP SUB 2.44696e-12
+Cbot BOT SUB 7.32176e-12
+.ends scl08_cap_n351
+
+.subckt scl08_cap_n527 TOP BOT SUB
+Cmut TOP BOT 5.99937e-12
+Ctop TOP SUB 3.70469e-12
+Cbot BOT SUB 1.0974e-11
+.ends scl08_cap_n527
+
+.subckt scl08_cap_n703 TOP BOT SUB
+Cmut TOP BOT 8.00295e-12
+Ctop TOP SUB 4.90149e-12
+Cbot BOT SUB 1.46206e-11
+.ends scl08_cap_n703
+
+.subckt scl08_cap_n878 TOP BOT SUB
+Cmut TOP BOT 9.99515e-12
+Ctop TOP SUB 6.1448e-12
+Cbot BOT SUB 1.8241e-11
+.ends scl08_cap_n878
+
+.subckt scl08_cap_2.5p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n220
+.ends scl08_cap_2.5p
+.subckt scl08_cap_gnd_2.5p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n220
+.ends scl08_cap_gnd_2.5p
+
+.subckt scl08_cap_7.5p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n660
+.ends scl08_cap_7.5p
+.subckt scl08_cap_gnd_7.5p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n660
+.ends scl08_cap_gnd_7.5p
+
+.subckt scl08_cap_3p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n264
+.ends scl08_cap_3p
+.subckt scl08_cap_gnd_3p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n264
+.ends scl08_cap_gnd_3p
+
+.subckt scl08_cap_11.384f TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n1
+.ends scl08_cap_11.384f
+.subckt scl08_cap_gnd_11.384f TOP BOT
+XCORE TOP BOT 0 scl08_cap_n1
+.ends scl08_cap_gnd_11.384f
+
+.subckt scl08_cap_22.768f TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n2
+.ends scl08_cap_22.768f
+.subckt scl08_cap_gnd_22.768f TOP BOT
+XCORE TOP BOT 0 scl08_cap_n2
+.ends scl08_cap_gnd_22.768f
+
+.subckt scl08_cap_45.536f TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n4
+.ends scl08_cap_45.536f
+.subckt scl08_cap_gnd_45.536f TOP BOT
+XCORE TOP BOT 0 scl08_cap_n4
+.ends scl08_cap_gnd_45.536f
+
+.subckt scl08_cap_91.072f TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n8
+.ends scl08_cap_91.072f
+.subckt scl08_cap_gnd_91.072f TOP BOT
+XCORE TOP BOT 0 scl08_cap_n8
+.ends scl08_cap_gnd_91.072f
+
+.subckt scl08_cap_4p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n351
+.ends scl08_cap_4p
+.subckt scl08_cap_gnd_4p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n351
+.ends scl08_cap_gnd_4p
+
+.subckt scl08_cap_6p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n527
+.ends scl08_cap_6p
+.subckt scl08_cap_gnd_6p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n527
+.ends scl08_cap_gnd_6p
+
+.subckt scl08_cap_8p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n703
+.ends scl08_cap_8p
+.subckt scl08_cap_gnd_8p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n703
+.ends scl08_cap_gnd_8p
+
+.subckt scl08_cap_10p TOP BOT SUB
+XCORE TOP BOT SUB scl08_cap_n878
+.ends scl08_cap_10p
+.subckt scl08_cap_gnd_10p TOP BOT
+XCORE TOP BOT 0 scl08_cap_n878
+.ends scl08_cap_gnd_10p

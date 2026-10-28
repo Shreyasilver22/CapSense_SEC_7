@@ -1,0 +1,16 @@
+Check extracted alias for 7.5p
+.include "../../models/generated_caps.lib.spice"
+VTOP top 0 0
+VBOT bot 0 dc 0 ac 1
+VSUB sub 0 0
+XC top bot sub scl08_cap_7.5p
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 10 1meg 2meg
+let cm=abs(imag(i(VTOP)))/(2*PI*frequency)
+let ct=abs(imag(i(VSUB)))/(2*PI*frequency)
+wrdata bottom.dat real(cm) real(ct)
+quit
+.endc
+.end

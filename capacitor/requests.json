@@ -1,0 +1,55 @@
+{
+  "unit_C_fF": 11.384,
+  "capacitors": [
+    {
+      "value": "2.5p",
+      "units": 220,
+      "note": "Unassigned-role pair; 3:1 unit-count option with 7.5p"
+    },
+    {
+      "value": "7.5p",
+      "units": 660,
+      "note": "Unassigned-role pair; uses 3x220 units instead of nearest independent count 659"
+    },
+    {
+      "value": "3p",
+      "note": "OTA compensation exploration; not a validated replacement"
+    },
+    {
+      "value": "11.384f",
+      "units": 1,
+      "note": "CDAC unit illustration"
+    },
+    {
+      "value": "22.768f",
+      "units": 2,
+      "note": "CDAC 2-unit illustration"
+    },
+    {
+      "value": "45.536f",
+      "units": 4,
+      "note": "CDAC 4-unit illustration"
+    },
+    {
+      "value": "91.072f",
+      "units": 8,
+      "note": "CDAC 8-unit illustration"
+    },
+    {
+      "value": "4p",
+      "note": "Requested through prepare.py; nearest integer unit count"
+    },
+    {
+      "value": "6p",
+      "note": "Standalone compensation-capacitor variant; no OTA circuit included"
+    },
+    {
+      "value": "8p",
+      "note": "Standalone compensation-capacitor variant; no OTA circuit included"
+    },
+    {
+      "value": "10p",
+      "note": "Standalone compensation-capacitor variant; no OTA circuit included"
+    }
+  ]
+}

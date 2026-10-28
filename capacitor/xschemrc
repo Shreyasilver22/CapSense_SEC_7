@@ -1,0 +1,28 @@
+set cap_root [file dirname [file normalize [info script]]]
+set XSCHEM_LIBRARY_PATH "$cap_root/symbols:$cap_root/examples:/usr/share/xschem/xschem_library"
+set netlist_dir [file join $cap_root results]
+source [file join $cap_root scripts symbol_helpers.tcl]
+proc cap_load_plot {{filename capacitor_demo.raw}} {
+  global netlist_dir
+  xschem raw_clear
+  xschem raw_read [file join $netlist_dir  $filename] tran
+  xschem redraw
+}
+proc cap_configure_simulator {} {
+  global sim
+  set_sim_defaults
+  set sim(spice,default) 1
+  set sim(spice,1,cmd) {ngspice -b -o "$n.log" "$N"}
+  set sim(spice,1,fg) 0
+  set sim(spice,1,st) 1
+  # Process-local fix for the unquoted working directory in xschem 3.4.4.
+  if {[llength [info procs simulate]]} {
+    set cap_body [info body simulate]
+    set cap_old {cd $netlist_dir; $cmd}
+    set cap_new {cd \"$netlist_dir\"; $cmd}
+    if {[string first $cap_old $cap_body] >= 0} {
+      proc simulate {{callback {}}} [string map [list $cap_old $cap_new] $cap_body]
+    }
+  }
+}
+after idle cap_configure_simulator

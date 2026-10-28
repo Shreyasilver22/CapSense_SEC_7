@@ -1,0 +1,13 @@
+Two-pin convenience symbol model, substrate internally grounded
+.include "../models/generated_caps.lib.spice"
+VTOP top 0 dc 0 ac 1
+VBOT bot 0 0
+XCAP top bot scl08_cap_gnd_2.5p
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 10 1meg 2meg
+wrdata ../results/two_pin.dat real(i(VTOP)) imag(i(VTOP)) real(i(VBOT)) imag(i(VBOT))
+quit
+.endc
+.end

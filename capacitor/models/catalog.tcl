@@ -1,0 +1,15 @@
+array unset cap_actual_pf
+array set cap_actual_pf {
+ {2.5p} 2.50448
+ {7.5p} 7.51344
+ {3p} 3.00538
+ {11.384f} 0.011384
+ {22.768f} 0.022768
+ {45.536f} 0.045536
+ {91.072f} 0.091072
+ {4p} 3.99578
+ {6p} 5.99937
+ {8p} 8.00295
+ {10p} 9.99515
+}
+if {[info exists ::env(SCL08_CAP_PDK_ROOT)]} {set cap_pdk_root $::env(SCL08_CAP_PDK_ROOT)}

@@ -1,0 +1,19 @@
+Illustrative 4-weight capacitive DAC with substrate parasitics, not a SAR ADC
+.include "../models/generated_caps.lib.spice"
+RINIT dac 0 1e12
+VBIT0 b0 0 pulse(0 1 1u 1n 1n 30u 60u)
+XBIT0 dac b0 0 scl08_cap_11.384f
+VBIT1 b1 0 pulse(0 1 3u 1n 1n 30u 60u)
+XBIT1 dac b1 0 scl08_cap_22.768f
+VBIT2 b2 0 pulse(0 1 5u 1n 1n 30u 60u)
+XBIT2 dac b2 0 scl08_cap_45.536f
+VBIT3 b3 0 pulse(0 1 7u 1n 1n 30u 60u)
+XBIT3 dac b3 0 scl08_cap_91.072f
+.control
+set wr_singlescale
+set wr_vecnames
+tran 1n 10u
+wrdata ../results/cdac.dat v(dac) v(b0) v(b1) v(b2) v(b3)
+quit
+.endc
+.end

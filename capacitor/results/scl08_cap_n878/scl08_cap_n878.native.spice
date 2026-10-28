@@ -1,0 +1,6 @@
+* NGSPICE file created from scl08_cap_n878.ext - technology: SCL_CP8D
+
+.subckt scl08_cap_n878 BOT TOP
+C0 BOT TOP 9995.150000fF
+C1 TOP 0 6144.800000fF
+.ends

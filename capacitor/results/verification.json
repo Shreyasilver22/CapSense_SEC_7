@@ -1,0 +1,91 @@
+{
+  "status": "PASS for documented layout, model, symbol and value-to-layout workflow checks; not foundry qualification",
+  "checks": [
+    {
+      "value": "2.5p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n220",
+      "drc_markers": 0
+    },
+    {
+      "value": "7.5p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n660",
+      "drc_markers": 0
+    },
+    {
+      "value": "3p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n264",
+      "drc_markers": 0
+    },
+    {
+      "value": "11.384f",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n1",
+      "drc_markers": 0
+    },
+    {
+      "value": "22.768f",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n2",
+      "drc_markers": 0
+    },
+    {
+      "value": "45.536f",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n4",
+      "drc_markers": 0
+    },
+    {
+      "value": "91.072f",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n8",
+      "drc_markers": 0
+    },
+    {
+      "value": "4p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n351",
+      "drc_markers": 0
+    },
+    {
+      "value": "6p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n527",
+      "drc_markers": 0
+    },
+    {
+      "value": "8p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n703",
+      "drc_markers": 0
+    },
+    {
+      "value": "10p",
+      "plate_transfer_and_substrate_currents": "PASS",
+      "cell": "scl08_cap_n878",
+      "drc_markers": 0
+    }
+  ],
+  "nominal_7p5_to_2p5_ratio": 3.0,
+  "cdac_expected_V": [
+    0.03972751891454256,
+    0.1191825567436277,
+    0.27809263240179793,
+    0.5959127837181384
+  ],
+  "cdac_measured_V": [
+    0.039727380352356,
+    0.1191818639972,
+    0.27809055291929,
+    0.59590765533138
+  ],
+  "three_pin_symbol": "netlisted and simulated",
+  "two_pin_symbol": "netlisted and simulated; substrate parasitics retained",
+  "sc_feedback_pin_mapping": "SUM VOUT VSUB verified",
+  "new_value_workflow": "4p scanned from schematic, model/layout generated and simulated",
+  "magic_compatibility": "UNRESOLVED; inherited old-version/native-export discrepancy",
+  "capacitor_LVS": "NOT provided by stock device deck",
+  "displayed_target_and_extracted_values": "native SVG strings verified"
+}

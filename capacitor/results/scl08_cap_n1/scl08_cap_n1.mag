@@ -1,0 +1,20 @@
+magic
+tech SCL_CP8D
+magscale 1 9
+timestamp 1793174284
+<< checkpaint >>
+rect -600 0 2600 2000
+<< metal1 >>
+rect 0 1200 2000 2000
+rect -600 800 2000 1200
+rect 0 0 2000 800
+<< metal2 >>
+rect 0 1200 2000 2000
+rect 0 800 2600 1200
+rect 0 0 2000 800
+<< labels >>
+rlabel metal1 s -396 999 -396 999 4 BOT
+port 1 nsew
+rlabel metal2 s 2394 999 2394 999 4 TOP
+port 2 nsew
+<< end >>
