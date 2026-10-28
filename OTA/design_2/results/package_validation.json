@@ -1,0 +1,7 @@
+{
+  "portable_SPICE_benches": "PASS",
+  "AC_matches_saved_comparison": "PASS",
+  "native_xschem_testbench": "netlisted and simulated",
+  "compensation_pin_mapping": "TOP=n2 BOT=out SUB=vss verified",
+  "model_qualification": "provisional; see README"
+}

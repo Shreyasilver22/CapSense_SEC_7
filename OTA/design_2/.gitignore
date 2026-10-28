@@ -1,0 +1,8 @@
+spice/models.inc
+__pycache__/
+*.py[cod]
+.venv/
+*.raw
+*.log
+results/*_run.log
+results/file_manifest.json

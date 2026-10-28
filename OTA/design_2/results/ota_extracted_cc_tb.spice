@@ -1,0 +1,53 @@
+** sch_path: OTA/design_2/tb/ota_extracted_cc_tb.sch
+**.subckt ota_extracted_cc_tb
+XU inp out out vdd 0 iref ota_extracted_cc
+VDD vdd 0 5
+IREF vdd iref 2.5u
+VIN inp 0 dc 2.5 pulse(2.5 2.6 20u 100n 100n 40u 80u)
+CL out 0 5p m=1
+**** begin user architecture code
+
+.include ../spice/models.inc
+.include ../designs/capacitors.lib.spice
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12
+
+
+.control
+set noaskquit
+set filetype=binary
+op
+print v(out) i(VDD)
+tran 5n 120u
+let tracking_error = v(out)-v(inp)
+meas tran output_high find v(out) at=59u
+meas tran output_low find v(out) at=99u
+write ota_extracted_cc_tb.raw v(inp) v(out) tracking_error
+quit
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_extracted_cc.sym # of pins=6
+** sym_path: OTA/design_2/designs/ota_extracted_cc.sym
+** sch_path: OTA/design_2/designs/ota_extracted_cc.sch
+.subckt ota_extracted_cc inp inn out vdd vss iref
+*.ipin inp
+*.ipin inn
+*.opin out
+*.iopin vdd
+*.iopin vss
+*.iopin iref
+M3 n1 n1 vdd vdd P w=10u l=3.2u m=1
+M4 n2 n1 vdd vdd P w=10u l=3.2u m=1
+M1 n1 inn tail vss N w=7.5u l=2.4u m=1
+M2 n2 inp tail vss N w=7.5u l=2.4u m=1
+M5 tail iref vss vss N w=20u l=3.2u m=1
+M6 out n2 vdd vdd P w=112u l=3.2u m=1
+M7 out iref vss vss N w=160u l=3.2u m=1
+M8 iref iref vss vss N w=20u l=3.2u m=1
+XCC n2 out vss scl08_cap_8p
+.ends
+
+.end

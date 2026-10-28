@@ -1,0 +1,40 @@
+set project_root [file dirname [file normalize [info script]]]
+set XSCHEM_LIBRARY_PATH "$project_root/designs:$project_root/tb:/usr/share/xschem/xschem_library"
+set netlist_dir [file join $project_root results]
+
+# Project-local simulator configuration: batch ngspice, results remain in this project.
+proc ota_configure_simulator {} {
+  global sim
+set_sim_defaults
+set sim(spice,default) 1
+set sim(spice,1,cmd) {ngspice -b -o "$n.log" "$N"}
+set sim(spice,1,fg) 0
+set sim(spice,1,st) 1
+# xschem 3.4.4 ships an unquoted cd in its simulation helper.
+# Patch that helper in this process only; do not edit system/global configuration.
+if {[llength [info procs simulate]]} {
+  set ota_sim_body [info body simulate]
+  set ota_old_cd {cd $netlist_dir; $cmd}
+  set ota_new_cd {cd \"$netlist_dir\"; $cmd}
+  if {[string first $ota_old_cd $ota_sim_body] >= 0} {
+    proc simulate {{callback {}}} [string map [list $ota_old_cd $ota_new_cd] $ota_sim_body]
+  }
+  unset ota_sim_body ota_old_cd ota_new_cd
+}
+
+}
+after idle ota_configure_simulator
+
+proc ota_load_plot {filename analysis} {
+  global netlist_dir
+  xschem raw_clear
+  xschem raw_read [file join $netlist_dir $filename] $analysis
+  xschem redraw
+}
+
+source [file join $project_root designs catalog.tcl]
+proc cap_value_text {value} {
+ global cap_actual_pf
+ if {[info exists cap_actual_pf($value)]} {return "Extracted: $cap_actual_pf($value) pF"}
+ return {NOT PREPARED}
+}

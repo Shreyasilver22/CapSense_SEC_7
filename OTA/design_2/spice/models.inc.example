@@ -1,0 +1,2 @@
+* Copy as models.inc or run scripts/configure_models.py
+.include "/your/path/to/tntp49_5v"
