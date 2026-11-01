@@ -1,0 +1,7 @@
+{
+  "DRC_markers": 0,
+  "LVS_match": true,
+  "deck": "Unmodified local SCL CP8D KLayout DRC/LVS decks",
+  "wrong_gate": "MISMATCH as expected",
+  "wrong_size": "MISMATCH as expected"
+}

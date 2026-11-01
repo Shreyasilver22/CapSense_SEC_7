@@ -1,0 +1,10 @@
+{
+  "packages": 25,
+  "archived_files_verified": 28952,
+  "zip_integrity": "PASS",
+  "sha256_check": "PASS",
+  "native_mos_card_scan": "PASS",
+  "credential_pattern_scan": "PASS",
+  "new_simulations_run": false,
+  "omitted_files": 25718
+}

@@ -1,0 +1,16 @@
+{
+  "xschem_transistor_schematic_LVS": "MATCH against GDS",
+  "xschem_symbol_SC_simulation": "PASS: sampled outputs match generated deck within 5 uV; adaptive timestep grids can differ",
+  "max_sample_difference_uV": 2.4779665999119516,
+  "unchanged_signal_core_devices": [
+    "MN1",
+    "MN2",
+    "MNC1",
+    "MNC2",
+    "MPC1",
+    "MPC2",
+    "MP1",
+    "MP2",
+    "MTAIL"
+  ]
+}

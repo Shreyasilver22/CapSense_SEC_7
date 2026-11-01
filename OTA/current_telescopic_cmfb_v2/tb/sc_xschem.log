@@ -1,0 +1,85 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: Unusual leading characters like '$' or others out of '= [] ? () & % $"!:,\f'
+    in netlist or included files, will be replaced with '*'.
+    Check line no 6:  $******pmos digital **********************
+
+
+Circuit: ** sch_path: /mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101/designs/sc_ota_cmfb_v2.sch
+
+Warning: Model issue on line 5 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 7 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+other                                  3.43884
+out                                    1.50007
+bias                                  0.824871
+sum                                    1.50007
+vbn                                        2.4
+vcm                                        2.5
+vbp                                        2.8
+ref                                        1.5
+vp                                         0.3
+tx                                     2.30301
+rx                                       2.303
+p1                                           0
+p2                                           0
+rst                                          5
+p1b                                          5
+p2b                                          5
+rstb                                         0
+brstb#branch                                 0
+bp2b#branch                                  0
+bp1b#branch                                  0
+vrst#branch                                  0
+vp2#branch                                   0
+vp1#branch                                   0
+vbp#branch                                   0
+vbn#branch                                   0
+vcm#branch                                   0
+vp#branch                          4.40006e-12
+vref#branch                                  0
+vdd#branch                        -4.63664e-05
+
+
+No. of Data Rows : 23099
+ngspice-42 done

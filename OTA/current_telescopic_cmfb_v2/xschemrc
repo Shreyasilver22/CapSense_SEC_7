@@ -1,0 +1,5 @@
+set CMFB_PROJECT_DIR [file normalize [file dirname [info script]]]
+set XSCHEM_LIBRARY_PATH "/usr/share/xschem/xschem_library:$CMFB_PROJECT_DIR/symbols"
+set netlist_dir [file join $CMFB_PROJECT_DIR tb]
+set USER_CONF_DIR [file join $CMFB_PROJECT_DIR .xschem]
+file mkdir $USER_CONF_DIR

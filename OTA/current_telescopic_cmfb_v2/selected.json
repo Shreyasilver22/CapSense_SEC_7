@@ -1,0 +1,8 @@
+{
+  "R_kohm": 200,
+  "bias_m": 2,
+  "follower_m": 4,
+  "cap_m": 12,
+  "controller_scale": 0.5,
+  "sense_type": "nmos"
+}

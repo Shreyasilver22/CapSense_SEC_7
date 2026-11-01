@@ -1,0 +1,37 @@
+.subckt ota_telescopic ip im op om vdd bn vcm
+* Buffered resistive common-mode sensing; reference has matched level shift.
+MSP vdd op sp 0 N W=20u L=1.6u M=4 AD=90p AS=90p PD=49u PS=49u
+MSM vdd om sm 0 N W=20u L=1.6u M=4 AD=90p AS=90p PD=49u PS=49u
+MSR vdd vcm sr 0 N W=20u L=1.6u M=4 AD=90p AS=90p PD=49u PS=49u
+MSIP sp bn 0 0 N W=20u L=3.2u M=2 AD=90p AS=90p PD=49u PS=49u
+MSIM sm bn 0 0 N W=20u L=3.2u M=2 AD=90p AS=90p PD=49u PS=49u
+MSIR sr bn 0 0 N W=20u L=3.2u M=2 AD=90p AS=90p PD=49u PS=49u
+XSP sp sense RPP W=2.4u L=17142.857142857u
+XSM sm sense RPP W=2.4u L=17142.857142857u
+MCBI cb cb vdd vdd P W=20u L=3.2u AD=90p AS=90p PD=49u PS=49u
+MCBN cb bn 0 0 N W=11.428571u L=3.2u AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u
+MCC vdd pc vdd vdd P W=20u L=10u M=4 AD=90p AS=90p PD=49u PS=49u
+* Symmetric MOS Miller compensation of the common-mode loop.
+MCM1 op pc op op P W=20u L=10u AD=90p AS=90p PD=49u PS=49u M=12
+MCM2 om pc om om P W=20u L=10u AD=90p AS=90p PD=49u PS=49u M=12
+MTAIL tail bn 0 0 N W=80.0u L=3.2u AD=360p AS=360p PD=169u PS=169u
+VN nb 0 2.4
+VP pb vdd -2.2
+MN1 nx1 ip tail 0 N W=15u L=2.4u AD=67.5p AS=67.5p PD=39u PS=39u
+MN2 nx2 im tail 0 N W=15u L=2.4u AD=67.5p AS=67.5p PD=39u PS=39u
+MNC1 om nb nx1 0 N W=30u L=2.4u AD=135p AS=135p PD=69u PS=69u
+MNC2 op nb nx2 0 N W=30u L=2.4u AD=135p AS=135p PD=69u PS=69u
+MPC1 om pb px1 vdd P W=60u L=2.4u AD=270p AS=270p PD=129u PS=129u
+MPC2 op pb px2 vdd P W=60u L=2.4u AD=270p AS=270p PD=129u PS=129u
+MP1 px1 pc vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+MP2 px2 pc vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+MCS ca sense ct vdd P W=5u L=2.4u M=1 AD=22.5p AS=22.5p PD=19u PS=19u
+MCR rcm sr ct vdd P W=5u L=2.4u M=1 AD=22.5p AS=22.5p PD=19u PS=19u
+MCT ct cb vdd vdd P W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFN1 ca ca 0 0 N W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFN2 pc ca 0 0 N W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFN3 rcm rcm 0 0 N W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFN4 pbias rcm 0 0 N W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFP1 pbias pbias vdd vdd P W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+MCFP2 pc pbias vdd vdd P W=10u L=3.2u M=1 AD=45p AS=45p PD=29u PS=29u
+.ends ota_telescopic

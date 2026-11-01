@@ -1,0 +1,33 @@
+.subckt ota_telescopic ip im op om vdd bn vcm
+* Buffered resistive common-mode sensing; reference has matched level shift.
+MSP 0 op sp vdd P W=40u L=1.6u AD=180p AS=180p PD=89u PS=89u
+MSM 0 om sm vdd P W=40u L=1.6u AD=180p AS=180p PD=89u PS=89u
+MSR 0 vcm sr vdd P W=40u L=1.6u AD=180p AS=180p PD=89u PS=89u
+MSIP sp cb vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+MSIM sm cb vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+MSIR sr cb vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+XSP sp sense RPP W=2.4u L=85714.285714u
+XSM sm sense RPP W=2.4u L=85714.285714u
+MCS ca sense ct 0 N W=10u L=2.4u AD=45p AS=45p PD=29u PS=29u
+MCR pc sr ct 0 N W=10u L=2.4u AD=45p AS=45p PD=29u PS=29u
+MCBI cb cb vdd vdd P W=20u L=3.2u AD=90p AS=90p PD=49u PS=49u
+MCBN cb bn 0 0 N W=11.428571u L=3.2u AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u
+MCT ct bn 0 0 N W=11.428571u L=3.2u AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u
+MCP1 ca ca vdd vdd P W=20u L=3.2u AD=90p AS=90p PD=49u PS=49u
+MCP2 pc ca vdd vdd P W=20u L=3.2u AD=90p AS=90p PD=49u PS=49u
+MCC vdd pc vdd vdd P W=20u L=10u M=4 AD=90p AS=90p PD=49u PS=49u
+* Symmetric MOS Miller compensation of the common-mode loop.
+MCM1 op pc op op P W=20u L=10u M=8 AD=90p AS=90p PD=49u PS=49u
+MCM2 om pc om om P W=20u L=10u M=8 AD=90p AS=90p PD=49u PS=49u
+MTAIL tail bn 0 0 N W=80.0u L=3.2u AD=360p AS=360p PD=169u PS=169u
+VN nb 0 2.4
+VP pb vdd -2.2
+MN1 nx1 ip tail 0 N W=15u L=2.4u AD=67.5p AS=67.5p PD=39u PS=39u
+MN2 nx2 im tail 0 N W=15u L=2.4u AD=67.5p AS=67.5p PD=39u PS=39u
+MNC1 om nb nx1 0 N W=30u L=2.4u AD=135p AS=135p PD=69u PS=69u
+MNC2 op nb nx2 0 N W=30u L=2.4u AD=135p AS=135p PD=69u PS=69u
+MPC1 om pb px1 vdd P W=60u L=2.4u AD=270p AS=270p PD=129u PS=129u
+MPC2 op pb px2 vdd P W=60u L=2.4u AD=270p AS=270p PD=129u PS=129u
+MP1 px1 pc vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+MP2 px2 pc vdd vdd P W=40u L=3.2u AD=180p AS=180p PD=89u PS=89u
+.ends ota_telescopic

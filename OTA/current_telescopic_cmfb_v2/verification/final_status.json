@@ -1,0 +1,42 @@
+{
+  "DRC_markers": 0,
+  "LVS": true,
+  "extracted_topology_LVS": "MATCH against GDS after restoring both native resistor halves",
+  "xschem": {
+    "xschem_transistor_schematic_LVS": "MATCH against GDS",
+    "xschem_symbol_SC_simulation": "PASS: sampled outputs match generated deck within 5 uV; adaptive timestep grids can differ",
+    "max_sample_difference_uV": 2.4779665999119516,
+    "unchanged_signal_core_devices": [
+      "MN1",
+      "MN2",
+      "MNC1",
+      "MNC2",
+      "MPC1",
+      "MPC2",
+      "MP1",
+      "MP2",
+      "MTAIL"
+    ]
+  },
+  "signal_core_unchanged": true,
+  "AC_cases": 1442,
+  "AC_execution_failures": 0,
+  "CMFB_nominal_PM_deg": 70.7128490612927,
+  "CMFB_worst_PM_deg": 63.74523875438691,
+  "signal_worst_PM_deg": 88.83293686778246,
+  "all_tested_CMFB_cases_above_60": true,
+  "nominal_differential_gain_dB": 88.4387062079372,
+  "nominal_differential_UGF_MHz": 1.3430861472905407,
+  "layout_area_mm2": 1.2966137152000001,
+  "resistor_body_ground_C_pF": 10.641048000000001,
+  "SC_cases": 16,
+  "SC_execution_failures": 0,
+  "nominal_SC_TG_output_V": 3.3563807482140002,
+  "nominal_SC_TG_error_mV": 56.380748214000405,
+  "nominal_SC_CM_error_mV": 24.802387051999997,
+  "nominal_SC_power_uW": 232.89443121543817,
+  "sensor_delta_50fF_response_mV": 35.99478784000043,
+  "full_RC_qualified": false,
+  "noise_qualified": false,
+  "limits": "Engineering capacitance extraction; resistor-body alias unqualified; full RC substrate errors remain. SC uses Gear; ideal diagnostic control is smoothed; original abrupt ideal switch fails convergence."
+}
