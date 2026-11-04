@@ -1,0 +1,16 @@
+[
+  {
+    "CL_pF": 5,
+    "step_per_output_V": 0.1,
+    "dt10_settling_us": 0.8203945999999996,
+    "dt2_settling_us": 0.8167945000000003,
+    "difference_us": 0.003600099999999329
+  },
+  {
+    "CL_pF": 10,
+    "step_per_output_V": 1,
+    "dt10_settling_us": 4.5507874,
+    "dt2_settling_us": 4.5428899,
+    "difference_us": 0.007897500000000335
+  }
+]

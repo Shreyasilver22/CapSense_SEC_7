@@ -1,0 +1,23 @@
+{
+  "arch": "fd_ota",
+  "switch": "tg",
+  "cp": 7,
+  "cn": 5,
+  "cfb": 40,
+  "vdd": 5,
+  "vref": 2.5,
+  "mos": "tntp49_5v",
+  "temp": 27,
+  "res": "typ",
+  "load": 5,
+  "auxload": 5,
+  "dt": 20,
+  "stop_us": 500,
+  "wn": 10,
+  "wp": 20,
+  "vbn": 3,
+  "junction": "estimated",
+  "advance_ns": 1000,
+  "probe": false,
+  "clock_edge_ns": 1000
+}

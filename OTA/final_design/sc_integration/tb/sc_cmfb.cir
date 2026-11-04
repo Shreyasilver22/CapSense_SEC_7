@@ -1,0 +1,55 @@
+Shreyas SC network: fd_ota, tg; explicit reconstruction of missing symbols
+.include "../../models/scl08_models.inc"
+.include "../../models/ota_cm2p5_C.spice"
+.param CP=7p CN=5p CF=40p
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12 numdgt=12 method=gear maxord=2
+VDD vdd 0 5
+VREF vref 0 2.5
+VPHI1 phi1 0 PULSE(5 0 41u 1000n 1000n 58u 100u)
+VPHI2 phi2 0 PULSE(0 5 46u 1000n 1000n 43u 100u)
+B1 phi1b 0 V=5-v(phi1)
+B2 phi2b 0 V=5-v(phi2)
+CSp txp rxp {CP}
+CSn txn rxn {CN}
+CFp sump outp {CF}
+CFn sumn outn {CF}
+CLP outp 0 5p
+CLN outn 0 5p
+VPHIT phit 0 PULSE(0 5 45u 1000n 1000n 44u 100u)
+BT phitb 0 V=5-v(phit)
+MN_drive_p vdd phi1 txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_p vdd phi1b txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_p 0 phi2 txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_p 0 phi2b txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_p 0 phi1 rxp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_p 0 phi1b rxp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_p rxp phit sump 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_p rxp phitb sump vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_p sump phi1 outp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_p sump phi1b outp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_drive_n vdd phi1 txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_n vdd phi1b txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_n 0 phi2 txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_n 0 phi2b txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_n 0 phi1 rxn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_n 0 phi1b rxn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_n rxn phit sumn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_n rxn phitb sumn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_n sumn phi1 outn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_n sumn phi1b outn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+VBN vbn 0 3
+VBP vbp vdd -2.2
+IREF vdd bias 3.5u
+XOTA sumn sump outp outn vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+.control
+set wr_singlescale
+set wr_vecnames
+op
+print v(outp) v(outn) v(sump) v(sumn) i(vdd)
+tran 20n 500u
+wrdata transient.dat v(outp) v(outn) v(sump) v(sumn) v(phi1) v(phi2) v(txp) v(rxp) v(txn) v(rxn) i(vdd)
+write sc_cmfb.raw v(outp) v(outn) v(sump) v(sumn) v(phi1) v(phi2) v(phit) v(txp) v(rxp)
+quit
+.endc
+.end

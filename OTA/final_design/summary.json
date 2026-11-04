@@ -1,0 +1,174 @@
+{
+  "change": "External VBN 2.4 -> 3.0 V; input CM 2.5 V; nominal output CM 2.5 V; same core, CMFB, RPP, MOS caps and GDS.",
+  "nominal": [
+    {
+      "label": "Previous input 1.5 V",
+      "input_cm_V": 1.5,
+      "VBN_V": 2.4,
+      "gain_dB": 88.4387062079372,
+      "UGF_MHz": 1.3430861472905407,
+      "diff_PM_deg": 89.30381899229843,
+      "CMFB_PM_deg": 70.7128490612927,
+      "power_uW": 231.96
+    },
+    {
+      "label": "Input 2.5 V, old bias",
+      "input_cm_V": 2.5,
+      "VBN_V": 2.4,
+      "gain_dB": 51.2101089020791,
+      "UGF_MHz": 0.31538549926366866,
+      "diff_PM_deg": 89.95206905675386,
+      "CMFB_PM_deg": 70.73438605907242,
+      "power_uW": 232.97000000000003
+    },
+    {
+      "label": "Input 2.5 V, VBN=3 V",
+      "input_cm_V": 2.5,
+      "VBN_V": 3,
+      "gain_dB": 87.53228487717993,
+      "UGF_MHz": 1.3655440315607994,
+      "diff_PM_deg": 89.30846655453311,
+      "CMFB_PM_deg": 70.73585297471415,
+      "power_uW": 233.0395
+    }
+  ],
+  "final_grid": {
+    "diff": {
+      "cases": 541,
+      "missing_unity_crossings": 0,
+      "min_gain_dB": 84.81409625394843,
+      "min_PM_deg": 88.84532958810728,
+      "worst_PM_case": {
+        "candidate": "final_grid",
+        "pars": {
+          "R_kohm": 200,
+          "bias_m": 2,
+          "follower_m": 4,
+          "cap_m": 12,
+          "controller_scale": 0.5,
+          "sense_type": "nmos"
+        },
+        "kind": "diff",
+        "vd": 0,
+        "mos": "wnwp49_5v",
+        "VDD": 5.5,
+        "temp": 0,
+        "CL_pF": 1,
+        "vbn": 3,
+        "res": "best",
+        "input_cm_V": 2.5,
+        "output_cm_target_V": 2.5,
+        "status": "OK",
+        "gain_dB": 87.19671253665558,
+        "PM_deg": 88.84532958810728,
+        "crossings": [
+          {
+            "f_MHz": 2.2445137918729086,
+            "PM_deg": 88.84532958810728
+          }
+        ],
+        "power_uW": 256.71799999999996,
+        "CM_error_mV": -0.9519999999998419,
+        "op_V": 2.499048,
+        "om_V": 2.499048
+      },
+      "max_CM_error_mV": 3.147000000000233
+    },
+    "cm": {
+      "cases": 541,
+      "missing_unity_crossings": 0,
+      "min_gain_dB": 54.53289563877749,
+      "min_PM_deg": 65.73199104093496,
+      "worst_PM_case": {
+        "candidate": "final_grid",
+        "pars": {
+          "R_kohm": 200,
+          "bias_m": 2,
+          "follower_m": 4,
+          "cap_m": 12,
+          "controller_scale": 0.5,
+          "sense_type": "nmos"
+        },
+        "kind": "cm",
+        "vd": 0,
+        "mos": "wnbp49_5v",
+        "VDD": 5.5,
+        "temp": 0,
+        "CL_pF": 10,
+        "vbn": 3,
+        "res": "worst",
+        "input_cm_V": 2.5,
+        "output_cm_target_V": 2.5,
+        "status": "OK",
+        "gain_dB": 57.74316057105122,
+        "PM_deg": 65.73199104093496,
+        "crossings": [
+          {
+            "f_MHz": 0.07457904314429782,
+            "PM_deg": 65.73199104093496
+          }
+        ],
+        "power_uW": 255.5476,
+        "CM_error_mV": -0.9060000000000734,
+        "op_V": 2.499094,
+        "om_V": 2.499094
+      },
+      "max_CM_error_mV": 3.147000000000233
+    }
+  },
+  "original_model_unchanged": true,
+  "wide_swing_worst": {
+    "candidate": "fixed_cm_screen",
+    "pars": {
+      "R_kohm": 200,
+      "bias_m": 2,
+      "follower_m": 4,
+      "cap_m": 12,
+      "controller_scale": 0.5,
+      "sense_type": "nmos"
+    },
+    "kind": "diff",
+    "vd": 1,
+    "mos": "bnbp49_5v",
+    "VDD": 4.5,
+    "temp": 85,
+    "CL_pF": 10,
+    "vbn": 3,
+    "res": "typ",
+    "input_cm_V": 2.5,
+    "output_cm_target_V": 2.5,
+    "status": "OK",
+    "gain_dB": 58.93142832688706,
+    "PM_deg": 89.61733479699232,
+    "crossings": [
+      {
+        "f_MHz": 0.8575613767347704,
+        "PM_deg": 89.61733479699232
+      }
+    ],
+    "power_uW": 208.9638,
+    "CM_error_mV": -7.56599999999974,
+    "op_V": 2.992367,
+    "om_V": 1.992501
+  },
+  "transient_cases": 12,
+  "new_DRC_LVS": false,
+  "new_SC_test": false,
+  "qualified_full_RC_noise": false,
+  "fine_timestep": [
+    {
+      "CL_pF": 5,
+      "step_per_output_V": 0.1,
+      "dt10_settling_us": 0.8203945999999996,
+      "dt2_settling_us": 0.8167945000000003,
+      "difference_us": 0.003600099999999329
+    },
+    {
+      "CL_pF": 10,
+      "step_per_output_V": 1,
+      "dt10_settling_us": 4.5507874,
+      "dt2_settling_us": 4.5428899,
+      "difference_us": 0.007897500000000335
+    }
+  ]
+}

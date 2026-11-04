@@ -1,0 +1,33 @@
+CMFB revision bias_screen
+.include "../models/scl08_models.inc"
+.include "../models/ota_cm2p5_C.spice"
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12
+VDD vdd 0 5
+IREF vdd bn 3.5u
+VCM vcm 0 2.5
+VBN vbn 0 3
+VBP vbp vdd -2.2
+XOTA inp inn op om vdd 0 bn vcm vbn vbp ota_telescopic_cm2p5
+CLP op 0 5p
+CLM om 0 5p
+VCMD cmd 0 dc 0 ac 1
+VICM icm 0 2.5
+EIP inp icm cmd fb 0.5
+EIM inn icm fb cmd 0.5
+EOD od 0 op om 1
+LDC od fb 1e12
+CAC fb 0 1e12
+.control
+set wr_singlescale
+set wr_vecnames
+op
+print v(op) v(om) i(vdd)
+ac dec 80 0.01 1G
+let gr=real(v(od))
+let gi=imag(v(od))
+wrdata ac.dat gr gi
+write ota_cm2p5_ac.raw
+quit
+.endc
+.end

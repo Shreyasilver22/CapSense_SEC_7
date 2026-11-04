@@ -1,0 +1,21 @@
+{
+  "repository": "Shreyasilver22/CapSense_SEC_7",
+  "read_commit": "327c0a9e65c764afdd1cefdeaa67a59f16d9894d",
+  "SCA_upload_commit": "126613487e6308387d735e9e008777cfd3e72f7d",
+  "schematic_git_blob": "3156ea53434fec5d38e0815acd3503d24bfc8846",
+  "OTA_sha256": "96b7e87d77e359bee36407743b318124225d0881ee6b49010cb0dfb4733412c3",
+  "missing_dependencies": [
+    "TG_scl_checked.sym",
+    "amp_behavioral.sym"
+  ],
+  "assumed_TG": {
+    "NMOS_W_um": 10,
+    "PMOS_W_um": 20,
+    "L_um": 0.8,
+    "NMOS_body": "VSS",
+    "PMOS_body": "VDD"
+  },
+  "switch_layout_extracted": false,
+  "capacitors": "Ideal linear CS / CF; MOS capacitors only inside OTA compensation",
+  "switch_junction_geometry": "Estimated:4.5 um source/drain extension, AD/AS=W*4.5um, PD/PS=2*(W+4.5um); no extracted switch layout"
+}

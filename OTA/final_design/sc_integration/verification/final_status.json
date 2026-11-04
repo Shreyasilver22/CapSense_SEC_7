@@ -1,0 +1,44 @@
+{
+  "native_OTA": "Unchanged previously C-extracted CMFB macro",
+  "new_SC": "Reconstructed visible network, one shared FD OTA",
+  "reference_components_preserved": {
+    "CP_pF": 7,
+    "CN_pF": 5,
+    "CF_each_pF": 40,
+    "VDD_V": 5,
+    "VCM_target_V": 2.5,
+    "clock_Hz": 10000
+  },
+  "changes": {
+    "transfer_advance_us": 1,
+    "switch_gate_rise_fall_us": 1,
+    "two_behavioral_amplifiers_replaced_by_one_FD_OTA": true
+  },
+  "nominal_and_corner_tests": "PASS: completed numerical simulations; accuracy bounds are separately reported",
+  "final_corner_completed": 49,
+  "final_corner_failed": 0,
+  "new_system_DRC_LVS": false,
+  "new_system_PEX": false,
+  "physical_SC_caps": false,
+  "hardware_clock_drivers": false,
+  "qualified_noise_mismatch": false,
+  "waveform_records_retained": 38,
+  "other_waveforms": "Dense repetitive corner traces omitted; every bench/log/measurement and summary retained.",
+  "worst_case_timestep_difference_uV": 3.074284999904364,
+  "nominal_sampled_diff_mV": 326.29351999999966,
+  "main_corner_worst_error_mV": 2.045392001521318,
+  "worst_corner_fine_error_mV": -2.048466286521222,
+  "nominal_transient_CM_ranges": {
+    "output_CM_range_V": [
+      1.2457721849999999,
+      2.595387875
+    ],
+    "input_CM_range_V": [
+      0.47641710800000003,
+      2.50176513
+    ]
+  },
+  "worst_measured_dynamic_settling_us": 16.561199999999992,
+  "sample_time_us": 80,
+  "precision_accuracy_across_corners": "Does not meet provisional0.1%; ASIC accuracy/noise target remains undefined"
+}

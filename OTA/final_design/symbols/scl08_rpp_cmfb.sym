@@ -1,0 +1,15 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+spice_primitive=true
+format="@name @pinlist RPP W=@w L=@l"
+template="name=XR w=2.4u l=17142.857143u"}
+V {}
+S {}
+E {}
+B 4 -20 -8 20 8 {}
+L 4 -30 0 -20 0 {}
+L 4 20 0 30 0 {}
+B 5 -32.5 -2.5 -27.5 2.5 {name=A dir=inout}
+B 5 27.5 -2.5 32.5 2.5 {name=B dir=inout}
+T {@name: RPP 200k} -35 -25 0 0 0.2 0.2 {}

@@ -1,0 +1,9 @@
+2026-10-31 22:11:46 +0000: Starting running SCL C1D Klayout LVS runset on /mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101/layout/ota_telescopic_layout.gds
+2026-10-31 22:11:46 +0000: deep mode is enabled.
+2026-10-31 22:11:46 +0000: Netlist file: /mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101/schematic/reference.cdl
+2026-10-31 22:11:46 +0000: Extracted netlist file: /mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101/verification/extracted.cir
+2026-10-31 22:11:46 +0000: Final report: /mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101/verification/lvs.lvsdb
+2026-10-31 22:11:47 +0000: LVS Total Run time 0.378258 seconds
+2026-10-31 22:11:47 +0000: ==========================================
+2026-10-31 22:11:47 +0000: INFO : Congratulations! Netlists match.
+2026-10-31 22:11:47 +0000: ==========================================

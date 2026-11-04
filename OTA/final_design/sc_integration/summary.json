@@ -1,0 +1,511 @@
+{
+  "connection": "One shared fully differential OTA: INP=SUM_N, INN=SUM_P, OUTP=OUT_P, OUTM=OUT_N; VCM pin=2.5 V.",
+  "nominal": {
+    "name": "fd_ota_tg_20763e77c9f5",
+    "parameters": {
+      "arch": "fd_ota",
+      "switch": "tg",
+      "cp": 7,
+      "cn": 5,
+      "cfb": 40,
+      "vdd": 5,
+      "vref": 2.5,
+      "mos": "tntp49_5v",
+      "temp": 27,
+      "res": "typ",
+      "load": 5,
+      "auxload": 5,
+      "dt": 20,
+      "stop_us": 500,
+      "wn": 10,
+      "wp": 20,
+      "vbn": 3,
+      "junction": "estimated",
+      "advance_ns": 1000,
+      "probe": false,
+      "clock_edge_ns": 1000
+    },
+    "status": "OK",
+    "ideal": {
+      "outp_V": 2.6630434782608696,
+      "outn_V": 2.3369565217391304,
+      "input_CM_V": 1.5217391304347827,
+      "diff_V": 0.32608695652173925
+    },
+    "samples": [
+      {
+        "time_us": 80.0,
+        "outp_V": 2.66148567,
+        "outn_V": 2.33519215,
+        "diff_V": 0.32629351999999967,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": 0.2065634782604242,
+        "output_CM_V": 2.49833891,
+        "input_CM_V": 1.5200711181434001,
+        "input_diff_mV": 0.012243713199966422,
+        "late_change_mV": 0.00011000000021965661,
+        "tail_settling_us": 6.4874263999999995,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      },
+      {
+        "time_us": 180.0,
+        "outp_V": 2.66148567,
+        "outn_V": 2.33519215,
+        "diff_V": 0.32629351999999967,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": 0.2065634782604242,
+        "output_CM_V": 2.49833891,
+        "input_CM_V": 1.520071245,
+        "input_diff_mV": 0.012250000000157968,
+        "late_change_mV": 0.00011000000021965661,
+        "tail_settling_us": 6.500663000000002,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      },
+      {
+        "time_us": 280.0,
+        "outp_V": 2.66148567,
+        "outn_V": 2.33519215,
+        "diff_V": 0.32629351999999967,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": 0.2065634782604242,
+        "output_CM_V": 2.49833891,
+        "input_CM_V": 1.520071245,
+        "input_diff_mV": 0.012250000000157968,
+        "late_change_mV": 0.00011000000021965661,
+        "tail_settling_us": 6.492900000000014,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      },
+      {
+        "time_us": 380.0,
+        "outp_V": 2.66148567,
+        "outn_V": 2.33519215,
+        "diff_V": 0.32629351999999967,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": 0.2065634782604242,
+        "output_CM_V": 2.49833891,
+        "input_CM_V": 1.520071245,
+        "input_diff_mV": 0.012250000000157968,
+        "late_change_mV": 0.00011000000021965661,
+        "tail_settling_us": 6.492907999999982,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      },
+      {
+        "time_us": 480.0,
+        "outp_V": 2.66148567,
+        "outn_V": 2.33519215,
+        "diff_V": 0.32629351999999967,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": 0.2065634782604242,
+        "output_CM_V": 2.49833891,
+        "input_CM_V": 1.520071245,
+        "input_diff_mV": 0.012250000000157968,
+        "late_change_mV": 0.00011000000021965661,
+        "tail_settling_us": 6.492895999999975,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      }
+    ],
+    "last": {
+      "time_us": 480.0,
+      "outp_V": 2.66148567,
+      "outn_V": 2.33519215,
+      "diff_V": 0.32629351999999967,
+      "ideal_diff_V": 0.32608695652173925,
+      "diff_error_mV": 0.2065634782604242,
+      "output_CM_V": 2.49833891,
+      "input_CM_V": 1.520071245,
+      "input_diff_mV": 0.012250000000157968,
+      "late_change_mV": 0.00011000000021965661,
+      "tail_settling_us": 6.492895999999975,
+      "reset_outp_V": 2.49912406,
+      "reset_outn_V": 2.49912406
+    },
+    "max_sampled_diff_error_mV": 0.2065634782604242,
+    "max_late_change_mV": 0.00011000000021965661,
+    "avg_total_VDD_power_uW": 239.63894494274726,
+    "outp_range_V": [
+      1.17598389,
+      2.75987655
+    ],
+    "outn_range_V": [
+      1.26518675,
+      2.50164027
+    ],
+    "min_rxp_V": -1.31369084e-05,
+    "min_rxn_V": -6.14739151e-06
+  },
+  "original_timing": {
+    "name": "fd_ota_tg_f91cd6f027a0",
+    "parameters": {
+      "arch": "fd_ota",
+      "switch": "tg",
+      "cp": 7,
+      "cn": 5,
+      "cfb": 40,
+      "vdd": 5,
+      "vref": 2.5,
+      "mos": "tntp49_5v",
+      "temp": 27,
+      "res": "typ",
+      "load": 5,
+      "auxload": 5,
+      "dt": 20,
+      "stop_us": 100,
+      "wn": 10,
+      "wp": 20,
+      "vbn": 3,
+      "junction": "estimated",
+      "advance_ns": 0
+    },
+    "status": "OK",
+    "ideal": {
+      "outp_V": 2.6630434782608696,
+      "outn_V": 2.3369565217391304,
+      "input_CM_V": 1.5217391304347827,
+      "diff_V": 0.32608695652173925
+    },
+    "samples": [
+      {
+        "time_us": 80.0,
+        "outp_V": 2.58112273,
+        "outn_V": 2.41673696971995,
+        "diff_V": 0.16438576028005025,
+        "ideal_diff_V": 0.32608695652173925,
+        "diff_error_mV": -161.701196241689,
+        "output_CM_V": 2.498929849859975,
+        "input_CM_V": 1.612177545140025,
+        "input_diff_mV": 0.006189719950144834,
+        "late_change_mV": 0.00010000000028043132,
+        "tail_settling_us": 5.899439899999997,
+        "reset_outp_V": 2.49912406,
+        "reset_outn_V": 2.49912406
+      }
+    ],
+    "last": {
+      "time_us": 80.0,
+      "outp_V": 2.58112273,
+      "outn_V": 2.41673696971995,
+      "diff_V": 0.16438576028005025,
+      "ideal_diff_V": 0.32608695652173925,
+      "diff_error_mV": -161.701196241689,
+      "output_CM_V": 2.498929849859975,
+      "input_CM_V": 1.612177545140025,
+      "input_diff_mV": 0.006189719950144834,
+      "late_change_mV": 0.00010000000028043132,
+      "tail_settling_us": 5.899439899999997,
+      "reset_outp_V": 2.49912406,
+      "reset_outn_V": 2.49912406
+    },
+    "max_sampled_diff_error_mV": 161.701196241689,
+    "max_late_change_mV": 0.00010000000028043132,
+    "avg_total_VDD_power_uW": 236.33774434260525,
+    "outp_range_V": [
+      -0.140429834,
+      2.63554967
+    ],
+    "outn_range_V": [
+      -0.0574124862,
+      2.511546
+    ],
+    "min_rxp_V": -0.816856293,
+    "min_rxn_V": -0.766909683
+  },
+  "literal_two_OTA": {
+    "name": "two_ota_tg_e8a6bfd1ad43",
+    "parameters": {
+      "arch": "two_ota",
+      "switch": "tg",
+      "cp": 7,
+      "cn": 5,
+      "cfb": 40,
+      "vdd": 5,
+      "vref": 2.5,
+      "mos": "tntp49_5v",
+      "temp": 27,
+      "res": "typ",
+      "load": 5,
+      "auxload": 5,
+      "dt": 20,
+      "stop_us": 100,
+      "wn": 10,
+      "wp": 20,
+      "vbn": 3,
+      "junction": "estimated",
+      "advance_ns": 0
+    },
+    "status": "OK",
+    "ideal": {
+      "outp_V": 3.8125,
+      "outn_V": 3.4375,
+      "input_CM_V": 2.5,
+      "diff_V": 0.375
+    },
+    "samples": [
+      {
+        "time_us": 80.0,
+        "outp_V": 3.64429446,
+        "outn_V": 3.44148504,
+        "diff_V": 0.2028094199999999,
+        "ideal_diff_V": 0.375,
+        "diff_error_mV": -172.1905800000001,
+        "output_CM_V": 3.5428897499999996,
+        "input_CM_V": 2.478540095,
+        "input_diff_mV": 40.52466999999993,
+        "late_change_mV": 0.00019000000017754815,
+        "tail_settling_us": 10.667479599999998,
+        "reset_outp_V": 2.49999992,
+        "reset_outn_V": 2.49999992
+      }
+    ],
+    "last": {
+      "time_us": 80.0,
+      "outp_V": 3.64429446,
+      "outn_V": 3.44148504,
+      "diff_V": 0.2028094199999999,
+      "ideal_diff_V": 0.375,
+      "diff_error_mV": -172.1905800000001,
+      "output_CM_V": 3.5428897499999996,
+      "input_CM_V": 2.478540095,
+      "input_diff_mV": 40.52466999999993,
+      "late_change_mV": 0.00019000000017754815,
+      "tail_settling_us": 10.667479599999998,
+      "reset_outp_V": 2.49999992,
+      "reset_outn_V": 2.49999992
+    },
+    "max_sampled_diff_error_mV": 172.1905800000001,
+    "max_late_change_mV": 0.00019000000017754815,
+    "avg_total_VDD_power_uW": 470.52758462814944,
+    "outp_range_V": [
+      -0.05064488,
+      3.67824046
+    ],
+    "outn_range_V": [
+      0.171099441,
+      3.44725342
+    ],
+    "min_rxp_V": -0.805533445,
+    "min_rxn_V": -0.683456709
+  },
+  "final_corner_runs": 49,
+  "final_corner_completed": 49,
+  "final_corner_failed": 0,
+  "failed_corners": [],
+  "worst_sample_error_mV": 2.045392001521318,
+  "worst_sample_output_CM_error_mV": 1.9329500000000444,
+  "worst_late_change_mV": 0.16115180409981278,
+  "max_selected_0p1pct_settling_us": 16.561199999999992,
+  "fine_step_sample_difference_uV": 0.18999999973345894,
+  "equal_sensor_offset_mV": 0.2839500000000328,
+  "delta_CP_50fF": {
+    "ideal_delta_mV": 7.970620881845747,
+    "simulated_delta_mV": 7.969190000000292
+  },
+  "fast_edge_corner_completed": 36,
+  "fast_edge_corner_total": 49,
+  "new_SC_layout": false,
+  "precision_caps": "Ideal linear 40 pF feedback; physical implementation remains unqualified",
+  "clock_drivers": "Ideal voltage ramps; implementation / power / skew not qualified",
+  "switching_glitches": {
+    "output_CM_range_V": [
+      1.2457721849999999,
+      2.595387875
+    ],
+    "input_CM_range_V": [
+      0.47641710800000003,
+      2.50176513
+    ]
+  },
+  "worst_case_finer_timestep": {
+    "coarse": {
+      "name": "fd_ota_tg_ea253c27966e",
+      "parameters": {
+        "arch": "fd_ota",
+        "switch": "tg",
+        "cp": 7,
+        "cn": 5,
+        "cfb": 40,
+        "vdd": 5.5,
+        "vref": 2.5,
+        "mos": "bnwp49_5v",
+        "temp": 85,
+        "res": "typ",
+        "load": 5,
+        "auxload": 5,
+        "dt": 20,
+        "stop_us": 200,
+        "wn": 10,
+        "wp": 20,
+        "vbn": 3,
+        "junction": "estimated",
+        "advance_ns": 1000,
+        "probe": false,
+        "clock_edge_ns": 1000
+      },
+      "status": "OK",
+      "ideal": {
+        "outp_V": 2.6739130434782608,
+        "outn_V": 2.3260869565217392,
+        "input_CM_V": 1.4565217391304348,
+        "diff_V": 0.3478260869565215
+      },
+      "samples": [
+        {
+          "time_us": 80.0,
+          "outp_V": 2.67123050747585,
+          "outn_V": 2.32544979252415,
+          "diff_V": 0.3457807149516996,
+          "ideal_diff_V": 0.3478260869565215,
+          "diff_error_mV": -2.0453720048219104,
+          "output_CM_V": 2.4983401499999998,
+          "input_CM_V": 1.44821412650985,
+          "input_diff_mV": 0.0016999999998823512,
+          "late_change_mV": 0.15689795234996584,
+          "tail_settling_us": 12.295904699999998,
+          "reset_outp_V": 2.49913433,
+          "reset_outn_V": 2.49913433
+        },
+        {
+          "time_us": 180.0,
+          "outp_V": 2.6712304974775,
+          "outn_V": 2.3254498025225,
+          "diff_V": 0.3457806949550002,
+          "ideal_diff_V": 0.3478260869565215,
+          "diff_error_mV": -2.045392001521318,
+          "output_CM_V": 2.4983401499999998,
+          "input_CM_V": 1.44821412760125,
+          "input_diff_mV": 0.0017020474998297175,
+          "late_change_mV": 0.15689795249990146,
+          "tail_settling_us": 12.295904999999992,
+          "reset_outp_V": 2.49913434,
+          "reset_outn_V": 2.49913434
+        }
+      ],
+      "last": {
+        "time_us": 180.0,
+        "outp_V": 2.6712304974775,
+        "outn_V": 2.3254498025225,
+        "diff_V": 0.3457806949550002,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.045392001521318,
+        "output_CM_V": 2.4983401499999998,
+        "input_CM_V": 1.44821412760125,
+        "input_diff_mV": 0.0017020474998297175,
+        "late_change_mV": 0.15689795249990146,
+        "tail_settling_us": 12.295904999999992,
+        "reset_outp_V": 2.49913434,
+        "reset_outn_V": 2.49913434
+      },
+      "max_sampled_diff_error_mV": 2.045392001521318,
+      "max_late_change_mV": 0.15689795249990146,
+      "avg_total_VDD_power_uW": 262.5270852008047,
+      "outp_range_V": [
+        0.699337656,
+        2.78125016
+      ],
+      "outn_range_V": [
+        0.857001671,
+        2.50181862
+      ],
+      "min_rxp_V": -0.233812325,
+      "min_rxn_V": -0.0150626391
+    },
+    "fine": {
+      "name": "fd_ota_tg_7faec228e36d",
+      "parameters": {
+        "arch": "fd_ota",
+        "switch": "tg",
+        "cp": 7,
+        "cn": 5,
+        "cfb": 40,
+        "vdd": 5.5,
+        "vref": 2.5,
+        "mos": "bnwp49_5v",
+        "temp": 85,
+        "res": "typ",
+        "load": 5,
+        "auxload": 5,
+        "dt": 5,
+        "stop_us": 200,
+        "wn": 10,
+        "wp": 20,
+        "vbn": 3,
+        "junction": "estimated",
+        "advance_ns": 1000,
+        "probe": false,
+        "clock_edge_ns": 1000
+      },
+      "status": "OK",
+      "ideal": {
+        "outp_V": 2.6739130434782608,
+        "outn_V": 2.3260869565217392,
+        "input_CM_V": 1.4565217391304348,
+        "diff_V": 0.3478260869565215
+      },
+      "samples": [
+        {
+          "time_us": 80.0,
+          "outp_V": 2.6712289842564,
+          "outn_V": 2.3254513386154,
+          "diff_V": 0.3457776456410002,
+          "ideal_diff_V": 0.3478260869565215,
+          "diff_error_mV": -2.0484413155212877,
+          "output_CM_V": 2.4983401614359,
+          "input_CM_V": 1.4482165683583998,
+          "input_diff_mV": 0.0017000000001043958,
+          "late_change_mV": 0.15689287179998512,
+          "tail_settling_us": 12.283564099999998,
+          "reset_outp_V": 2.49913433,
+          "reset_outn_V": 2.49913433
+        },
+        {
+          "time_us": 180.0,
+          "outp_V": 2.6712289704020002,
+          "outn_V": 2.325451349732,
+          "diff_V": 0.3457776206700003,
+          "ideal_diff_V": 0.3478260869565215,
+          "diff_error_mV": -2.048466286521222,
+          "output_CM_V": 2.4983401600670003,
+          "input_CM_V": 1.448216595142,
+          "input_diff_mV": 0.0016999999998823512,
+          "late_change_mV": 0.1568899999999651,
+          "tail_settling_us": 12.285067000000012,
+          "reset_outp_V": 2.49913434,
+          "reset_outn_V": 2.49913434
+        }
+      ],
+      "last": {
+        "time_us": 180.0,
+        "outp_V": 2.6712289704020002,
+        "outn_V": 2.325451349732,
+        "diff_V": 0.3457776206700003,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.048466286521222,
+        "output_CM_V": 2.4983401600670003,
+        "input_CM_V": 1.448216595142,
+        "input_diff_mV": 0.0016999999998823512,
+        "late_change_mV": 0.1568899999999651,
+        "tail_settling_us": 12.285067000000012,
+        "reset_outp_V": 2.49913434,
+        "reset_outn_V": 2.49913434
+      },
+      "max_sampled_diff_error_mV": 2.048466286521222,
+      "max_late_change_mV": 0.15689287179998512,
+      "avg_total_VDD_power_uW": 262.52789613718454,
+      "outp_range_V": [
+        0.699263597,
+        2.78127055
+      ],
+      "outn_range_V": [
+        0.856898945,
+        2.50181546
+      ],
+      "min_rxp_V": -0.233897428,
+      "min_rxn_V": -0.0150319049
+    },
+    "sampled_difference_uV": 3.074284999904364
+  }
+}

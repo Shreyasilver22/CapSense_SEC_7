@@ -1,0 +1,189 @@
+{
+  "coarse": {
+    "name": "fd_ota_tg_ea253c27966e",
+    "parameters": {
+      "arch": "fd_ota",
+      "switch": "tg",
+      "cp": 7,
+      "cn": 5,
+      "cfb": 40,
+      "vdd": 5.5,
+      "vref": 2.5,
+      "mos": "bnwp49_5v",
+      "temp": 85,
+      "res": "typ",
+      "load": 5,
+      "auxload": 5,
+      "dt": 20,
+      "stop_us": 200,
+      "wn": 10,
+      "wp": 20,
+      "vbn": 3,
+      "junction": "estimated",
+      "advance_ns": 1000,
+      "probe": false,
+      "clock_edge_ns": 1000
+    },
+    "status": "OK",
+    "ideal": {
+      "outp_V": 2.6739130434782608,
+      "outn_V": 2.3260869565217392,
+      "input_CM_V": 1.4565217391304348,
+      "diff_V": 0.3478260869565215
+    },
+    "samples": [
+      {
+        "time_us": 80.0,
+        "outp_V": 2.67123050747585,
+        "outn_V": 2.32544979252415,
+        "diff_V": 0.3457807149516996,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.0453720048219104,
+        "output_CM_V": 2.4983401499999998,
+        "input_CM_V": 1.44821412650985,
+        "input_diff_mV": 0.0016999999998823512,
+        "late_change_mV": 0.15689795234996584,
+        "tail_settling_us": 12.295904699999998,
+        "reset_outp_V": 2.49913433,
+        "reset_outn_V": 2.49913433
+      },
+      {
+        "time_us": 180.0,
+        "outp_V": 2.6712304974775,
+        "outn_V": 2.3254498025225,
+        "diff_V": 0.3457806949550002,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.045392001521318,
+        "output_CM_V": 2.4983401499999998,
+        "input_CM_V": 1.44821412760125,
+        "input_diff_mV": 0.0017020474998297175,
+        "late_change_mV": 0.15689795249990146,
+        "tail_settling_us": 12.295904999999992,
+        "reset_outp_V": 2.49913434,
+        "reset_outn_V": 2.49913434
+      }
+    ],
+    "last": {
+      "time_us": 180.0,
+      "outp_V": 2.6712304974775,
+      "outn_V": 2.3254498025225,
+      "diff_V": 0.3457806949550002,
+      "ideal_diff_V": 0.3478260869565215,
+      "diff_error_mV": -2.045392001521318,
+      "output_CM_V": 2.4983401499999998,
+      "input_CM_V": 1.44821412760125,
+      "input_diff_mV": 0.0017020474998297175,
+      "late_change_mV": 0.15689795249990146,
+      "tail_settling_us": 12.295904999999992,
+      "reset_outp_V": 2.49913434,
+      "reset_outn_V": 2.49913434
+    },
+    "max_sampled_diff_error_mV": 2.045392001521318,
+    "max_late_change_mV": 0.15689795249990146,
+    "avg_total_VDD_power_uW": 262.5270852008047,
+    "outp_range_V": [
+      0.699337656,
+      2.78125016
+    ],
+    "outn_range_V": [
+      0.857001671,
+      2.50181862
+    ],
+    "min_rxp_V": -0.233812325,
+    "min_rxn_V": -0.0150626391
+  },
+  "fine": {
+    "name": "fd_ota_tg_7faec228e36d",
+    "parameters": {
+      "arch": "fd_ota",
+      "switch": "tg",
+      "cp": 7,
+      "cn": 5,
+      "cfb": 40,
+      "vdd": 5.5,
+      "vref": 2.5,
+      "mos": "bnwp49_5v",
+      "temp": 85,
+      "res": "typ",
+      "load": 5,
+      "auxload": 5,
+      "dt": 5,
+      "stop_us": 200,
+      "wn": 10,
+      "wp": 20,
+      "vbn": 3,
+      "junction": "estimated",
+      "advance_ns": 1000,
+      "probe": false,
+      "clock_edge_ns": 1000
+    },
+    "status": "OK",
+    "ideal": {
+      "outp_V": 2.6739130434782608,
+      "outn_V": 2.3260869565217392,
+      "input_CM_V": 1.4565217391304348,
+      "diff_V": 0.3478260869565215
+    },
+    "samples": [
+      {
+        "time_us": 80.0,
+        "outp_V": 2.6712289842564,
+        "outn_V": 2.3254513386154,
+        "diff_V": 0.3457776456410002,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.0484413155212877,
+        "output_CM_V": 2.4983401614359,
+        "input_CM_V": 1.4482165683583998,
+        "input_diff_mV": 0.0017000000001043958,
+        "late_change_mV": 0.15689287179998512,
+        "tail_settling_us": 12.283564099999998,
+        "reset_outp_V": 2.49913433,
+        "reset_outn_V": 2.49913433
+      },
+      {
+        "time_us": 180.0,
+        "outp_V": 2.6712289704020002,
+        "outn_V": 2.325451349732,
+        "diff_V": 0.3457776206700003,
+        "ideal_diff_V": 0.3478260869565215,
+        "diff_error_mV": -2.048466286521222,
+        "output_CM_V": 2.4983401600670003,
+        "input_CM_V": 1.448216595142,
+        "input_diff_mV": 0.0016999999998823512,
+        "late_change_mV": 0.1568899999999651,
+        "tail_settling_us": 12.285067000000012,
+        "reset_outp_V": 2.49913434,
+        "reset_outn_V": 2.49913434
+      }
+    ],
+    "last": {
+      "time_us": 180.0,
+      "outp_V": 2.6712289704020002,
+      "outn_V": 2.325451349732,
+      "diff_V": 0.3457776206700003,
+      "ideal_diff_V": 0.3478260869565215,
+      "diff_error_mV": -2.048466286521222,
+      "output_CM_V": 2.4983401600670003,
+      "input_CM_V": 1.448216595142,
+      "input_diff_mV": 0.0016999999998823512,
+      "late_change_mV": 0.1568899999999651,
+      "tail_settling_us": 12.285067000000012,
+      "reset_outp_V": 2.49913434,
+      "reset_outn_V": 2.49913434
+    },
+    "max_sampled_diff_error_mV": 2.048466286521222,
+    "max_late_change_mV": 0.15689287179998512,
+    "avg_total_VDD_power_uW": 262.52789613718454,
+    "outp_range_V": [
+      0.699263597,
+      2.78127055
+    ],
+    "outn_range_V": [
+      0.856898945,
+      2.50181546
+    ],
+    "min_rxp_V": -0.233897428,
+    "min_rxn_V": -0.0150319049
+  },
+  "sampled_difference_uV": 3.074284999904364
+}

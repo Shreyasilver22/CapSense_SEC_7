@@ -1,0 +1,9 @@
+{
+  "xschem_netlist": "PASS",
+  "TG_count": 10,
+  "OTA_count": 1,
+  "switch_pin_mapping": "PASS",
+  "ngspice_500us_exported_schematic": "PASS",
+  "max_sample_difference_uV": 0.021846999986863125,
+  "scope": "Schematic / electrical regression; no new physical SC DRC/LVS or extracted-switch claim."
+}

@@ -1,0 +1,5 @@
+* Explicit reconstruction; NOT the missing original TG symbol or extracted switch layout.
+.subckt scl08_tg A B EN ENB VDD VSS params: wn=10u wp=20u lch=0.8u
+MN A EN B VSS N W={wn} L={lch} AD={wn*4.5u} AS={wn*4.5u} PD={2*(wn+4.5u)} PS={2*(wn+4.5u)}
+MP A ENB B VDD P W={wp} L={lch} AD={wp*4.5u} AS={wp*4.5u} PD={2*(wp+4.5u)} PS={2*(wp+4.5u)}
+.ends scl08_tg

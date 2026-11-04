@@ -1,0 +1,14 @@
+{
+  "original_project": "/mnt/c/users/hp/.codex/.chatgpt-projects/g-p-6adb159240488191a695a1c23f0296da/architecture_exploration_20261031/cmfb_revision_20261101",
+  "original_hashes": {
+    "models/layout_C.spice": "91fc7f0262dac63c6f6fc9729d2c114beecceb046e30b6e0c284f655b0c7efa9",
+    "models/schematic.spice": "c4c4b80d9402dd8e8be41eb85f70fb56a2cfad7721436224a02cd222f929b2fa",
+    "layout/ota_telescopic_layout.gds": "63f1d5aae6c65c51004cff061bea5118a7241cf2d986e999e252b901d613e603",
+    "selected.json": "8dd3cb54ee8baa958083259e95ddd255d6439e06c801b0cfddd8c4c9f5239104"
+  },
+  "geometry_unchanged": true,
+  "new_DRC_LVS_run": false,
+  "new_layout_sha256": "63f1d5aae6c65c51004cff061bea5118a7241cf2d986e999e252b901d613e603",
+  "changes": "Only externally supplied VBN changes from 2.4 V to 3.0 V; input common mode is 2.5 V; external output CM reference remains 2.5 V at nominal 5 V supply.",
+  "limitations": "Ideal reference/bias sources; adapted C-extraction only; no newly qualified full RC, mismatch/noise or new SCA integration."
+}

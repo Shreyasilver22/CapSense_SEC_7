@@ -1,0 +1,9 @@
+{
+  "xschem_netlist": "PASS",
+  "symbol_pin_order": "PASS",
+  "ngspice_exported_AC": "PASS",
+  "max_relative_AC_difference": 2.0645396521686943e-07,
+  "layout": "Identical GDS to the previously checked CMFB-v2 macro; no new DRC/LVS claimed.",
+  "xschem_exported_transient": "PASS",
+  "max_sample_difference_uV": 0.0
+}

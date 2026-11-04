@@ -1,0 +1,24 @@
+{
+  "input_common_mode_V": 2.5,
+  "output_common_mode_target_V": 2.5,
+  "VBN_V": 3,
+  "nominal_supply_V": 5,
+  "IREF_uA": 3.5,
+  "main_AC_runs_completed": 1082,
+  "main_AC_min_diff_gain_dB": 84.81409625394843,
+  "main_AC_min_CMFB_PM_deg": 65.73199104093496,
+  "main_AC_min_diff_PM_deg": 88.84532958810728,
+  "characterized_output_range_V": [
+    2.25,
+    2.75
+  ],
+  "exploratory_AC_runs_completed": 618,
+  "main_transient_runs_completed": 12,
+  "fine_transient_runs_completed": 2,
+  "initial_runtime_limit_failures_retained": 6,
+  "xschem_AC_and_transient_regression": "PASS",
+  "layout_identical_to_previously_verified_CMFB_v2": true,
+  "new_DRC_LVS_run": false,
+  "new_SCA_validation": false,
+  "qualified_full_RC_noise": false
+}
