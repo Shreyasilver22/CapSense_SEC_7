@@ -7,7 +7,10 @@ template="name=XOTA"}
 V {}
 S {}
 E {}
-B 4 -90 -130 90 130 {}
+L 4 -90 -130 90 -130 {}
+L 4 90 -130 90 130 {}
+L 4 -90 130 90 130 {}
+L 4 -90 -130 -90 130 {}
 T {@name} -75 -160 0 0 0.25 0.25 {}
 T {SCL800 telescopic
 SC input CM floats
