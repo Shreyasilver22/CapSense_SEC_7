@@ -6,306 +6,380 @@ S {}
 E {}
 T {SCL08 fully differential telescopic OTA} 25 -80 0 0 0.48 0.48 {}
 T {Continuous-time common-mode feedback   |   Final SC integration bias} 28 -36 0 0 0.24 0.24 {}
-B 4 0 0 785 695 {fill=false}
-T {(a) Telescopic signal core and bias mirror} 18 14 0 0 0.32 0.32 {}
-B 4 815 0 2070 352 {fill=false}
-T {(b) Output common-mode sensing} 833 14 0 0 0.32 0.32 {}
-B 4 815 385 2070 1000 {fill=false}
-T {(c) CMFB error amplifier and current mirrors} 833 399 0 0 0.32 0.32 {}
-B 4 0 728 785 1000 {fill=false}
-T {(d) Miller-style and shunt compensation} 18 742 0 0 0.32 0.32 {}
-C {devices/pmos4.sym} 270 130 0 1 {name=MP1 model=P w=40u l=3.2u m=1 extra="AD=180p AS=180p PD=89u PS=89u" hide_texts=true}
-T {MP1} 130 107 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 250 130 0 0 {name=L1 lab=VDD}
-C {devices/pmos4.sym} 270 250 0 1 {name=MPC1 model=P w=60u l=2.4u m=1 extra="AD=270p AS=270p PD=129u PS=129u" hide_texts=true}
-T {MPC1} 130 227 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 250 250 0 0 {name=L2 lab=VDD}
-C {devices/nmos4.sym} 270 430 0 1 {name=MNC1 model=N w=30u l=2.4u m=1 extra="AD=135p AS=135p PD=69u PS=69u" hide_texts=true}
-T {MNC1} 130 407 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 250 430 0 0 {name=L3 lab=VSS}
-C {devices/nmos4.sym} 230 550 0 0 {name=MN1 model=N w=15u l=2.4u m=1 extra="AD=67.5p AS=67.5p PD=39u PS=39u" hide_texts=true}
-T {MN1} 277 527 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 250 550 0 1 {name=L4 lab=VSS}
-N 210 550 175 550 {lab=INP}
-C {devices/lab_pin.sym} 175 550 0 0 {name=L5 lab=INP}
-N 250 100 250 77 {lab=VDD}
-N 250 160 250 190 {lab=PX1}
-N 250 190 250 220 {lab=PX1}
-C {devices/lab_pin.sym} 250 190 0 0 {name=L6 lab=PX1}
-N 250 280 250 340 {lab=OUTM}
-N 250 340 250 400 {lab=OUTM}
-N 250 340 145 340 {lab=OUTM}
-C {devices/lab_pin.sym} 145 340 0 0 {name=L7 lab=OUTM}
-N 250 460 250 490 {lab=NX1}
-N 250 490 250 520 {lab=NX1}
-C {devices/lab_pin.sym} 250 490 0 0 {name=L8 lab=NX1}
-N 250 580 250 595 {lab=TAIL}
-C {devices/pmos4.sym} 520 130 0 0 {name=MP2 model=P w=40u l=3.2u m=1 extra="AD=180p AS=180p PD=89u PS=89u" hide_texts=true}
-T {MP2} 567 107 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 540 130 0 1 {name=L9 lab=VDD}
-C {devices/pmos4.sym} 520 250 0 0 {name=MPC2 model=P w=60u l=2.4u m=1 extra="AD=270p AS=270p PD=129u PS=129u" hide_texts=true}
-T {MPC2} 567 227 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 540 250 0 1 {name=L10 lab=VDD}
-C {devices/nmos4.sym} 520 430 0 0 {name=MNC2 model=N w=30u l=2.4u m=1 extra="AD=135p AS=135p PD=69u PS=69u" hide_texts=true}
-T {MNC2} 567 407 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 540 430 0 1 {name=L11 lab=VSS}
-C {devices/nmos4.sym} 560 550 0 1 {name=MN2 model=N w=15u l=2.4u m=1 extra="AD=67.5p AS=67.5p PD=39u PS=39u" hide_texts=true}
-T {MN2} 420 527 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 540 550 0 0 {name=L12 lab=VSS}
-N 580 550 615 550 {lab=INN}
-C {devices/lab_pin.sym} 615 550 0 1 {name=L13 lab=INN}
-N 540 100 540 77 {lab=VDD}
-N 540 160 540 190 {lab=PX2}
-N 540 190 540 220 {lab=PX2}
-C {devices/lab_pin.sym} 540 190 0 1 {name=L14 lab=PX2}
-N 540 280 540 340 {lab=OUTP}
-N 540 340 540 400 {lab=OUTP}
-N 540 340 645 340 {lab=OUTP}
-C {devices/lab_pin.sym} 645 340 0 1 {name=L15 lab=OUTP}
-N 540 460 540 490 {lab=NX2}
-N 540 490 540 520 {lab=NX2}
-C {devices/lab_pin.sym} 540 490 0 1 {name=L16 lab=NX2}
-N 540 580 540 595 {lab=TAIL}
-N 250 77 540 77 {lab=VDD}
-C {devices/lab_pin.sym} 250 77 0 0 {name=L17 lab=VDD}
-N 290 130 500 130 {lab=PC}
-C {devices/lab_pin.sym} 395 130 0 1 {name=L18 lab=PC}
-N 290 250 500 250 {lab=VBP}
-C {devices/lab_pin.sym} 395 250 0 1 {name=L19 lab=VBP}
-N 290 430 500 430 {lab=VBN}
-C {devices/lab_pin.sym} 395 430 0 1 {name=L20 lab=VBN}
-N 250 595 395 595 {lab=TAIL}
-N 395 595 540 595 {lab=TAIL}
-C {devices/lab_pin.sym} 395 595 0 1 {name=L21 lab=TAIL}
-C {devices/nmos4.sym} 375 640 0 0 {name=MTAIL model=N w=80.0u l=3.2u m=1 extra="AD=360p AS=360p PD=169u PS=169u" hide_texts=true}
-T {MTAIL} 422 617 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 395 640 0 1 {name=L22 lab=VSS}
-N 395 595 395 610 {lab=TAIL}
-C {devices/nmos4.sym} 145 640 0 1 {name=MREF model=N w=20u l=3.2u m=1 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MREF} 5 617 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 125 640 0 0 {name=L23 lab=VSS}
-N 165 640 183 640 {lab=IREF}
-N 183 640 183 585 {lab=IREF}
-N 183 585 125 585 {lab=IREF}
-N 125 585 125 610 {lab=IREF}
-C {devices/lab_pin.sym} 125 585 0 0 {name=L24 lab=IREF}
-N 165 640 183 640 {lab=IREF}
-N 183 640 355 640 {lab=IREF}
-N 125 670 395 670 {lab=VSS}
-C {devices/lab_pin.sym} 125 670 0 0 {name=L25 lab=VSS}
-C {devices/nmos4.sym} 980 106 0 0 {name=MSP model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSP ×4} 1027 83 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1000 106 0 1 {name=L26 lab=VSS}
-N 960 106 925 106 {lab=OUTP}
-C {devices/lab_pin.sym} 925 106 0 0 {name=L27 lab=OUTP}
-N 1000 76 1000 65 {lab=VDD}
-C {devices/lab_pin.sym} 1000 65 0 1 {name=L28 lab=VDD}
-C {devices/nmos4.sym} 980 218 0 0 {name=MSIP model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSIP ×2} 1027 195 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1000 218 0 1 {name=L29 lab=VSS}
-N 960 218 925 218 {lab=IREF}
-C {devices/lab_pin.sym} 925 218 0 0 {name=L30 lab=IREF}
-N 1000 248 1000 266 {lab=VSS}
-C {devices/lab_pin.sym} 1000 266 0 1 {name=L31 lab=VSS}
-N 1000 136 1000 164 {lab=SP}
-N 1000 164 1000 188 {lab=SP}
-N 1000 164 1090 164 {lab=SP}
-C {devices/lab_pin.sym} 1090 164 0 1 {name=L32 lab=SP}
-C {devices/nmos4.sym} 1360 106 0 0 {name=MSM model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSM ×4} 1407 83 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1380 106 0 1 {name=L33 lab=VSS}
-N 1340 106 1305 106 {lab=OUTM}
-C {devices/lab_pin.sym} 1305 106 0 0 {name=L34 lab=OUTM}
-N 1380 76 1380 65 {lab=VDD}
-C {devices/lab_pin.sym} 1380 65 0 1 {name=L35 lab=VDD}
-C {devices/nmos4.sym} 1360 218 0 0 {name=MSIM model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSIM ×2} 1407 195 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1380 218 0 1 {name=L36 lab=VSS}
-N 1340 218 1305 218 {lab=IREF}
-C {devices/lab_pin.sym} 1305 218 0 0 {name=L37 lab=IREF}
-N 1380 248 1380 266 {lab=VSS}
-C {devices/lab_pin.sym} 1380 266 0 1 {name=L38 lab=VSS}
-N 1380 136 1380 164 {lab=SM}
-N 1380 164 1380 188 {lab=SM}
-N 1380 164 1470 164 {lab=SM}
-C {devices/lab_pin.sym} 1470 164 0 1 {name=L39 lab=SM}
-C {devices/nmos4.sym} 1740 106 0 0 {name=MSR model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSR ×4} 1787 83 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1760 106 0 1 {name=L40 lab=VSS}
-N 1720 106 1685 106 {lab=VCM}
-C {devices/lab_pin.sym} 1685 106 0 0 {name=L41 lab=VCM}
-N 1760 76 1760 65 {lab=VDD}
-C {devices/lab_pin.sym} 1760 65 0 1 {name=L42 lab=VDD}
-C {devices/nmos4.sym} 1740 218 0 0 {name=MSIR model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MSIR ×2} 1787 195 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1760 218 0 1 {name=L43 lab=VSS}
-N 1720 218 1685 218 {lab=IREF}
-C {devices/lab_pin.sym} 1685 218 0 0 {name=L44 lab=IREF}
-N 1760 248 1760 266 {lab=VSS}
-C {devices/lab_pin.sym} 1760 266 0 1 {name=L45 lab=VSS}
-N 1760 136 1760 164 {lab=SR}
-N 1760 164 1760 188 {lab=SR}
-N 1760 164 1850 164 {lab=SR}
-C {devices/lab_pin.sym} 1850 164 0 1 {name=L46 lab=SR}
-C {scl08_rpp_cmfb.sym} 1190 311 0 0 {name=XSP w=2.4u l=17142.857143u}
-C {scl08_rpp_cmfb.sym} 1530 311 0 1 {name=XSM w=2.4u l=17142.857143u}
-N 1100 311 1160 311 {lab=SP}
-C {devices/lab_pin.sym} 1100 311 0 0 {name=L47 lab=SP}
-N 1220 311 1360 311 {lab=SENSE}
-N 1360 311 1500 311 {lab=SENSE}
-C {devices/lab_pin.sym} 1360 311 0 1 {name=L48 lab=SENSE}
-N 1560 311 1620 311 {lab=SM}
-C {devices/lab_pin.sym} 1620 311 0 1 {name=L49 lab=SM}
-C {devices/pmos4.sym} 1260 495 0 0 {name=MCT model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCT} 1307 472 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1280 495 0 1 {name=L50 lab=VDD}
-N 1240 495 1205 495 {lab=CB}
-C {devices/lab_pin.sym} 1205 495 0 0 {name=L51 lab=CB}
-N 1280 465 1280 456 {lab=VDD}
-C {devices/lab_pin.sym} 1280 456 0 1 {name=L52 lab=VDD}
-C {devices/pmos4.sym} 980 665 0 1 {name=MCBI model=P w=20u l=3.2u m=1 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MCBI} 840 642 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 960 665 0 0 {name=L53 lab=VDD}
-N 1000 665 1018 665 {lab=CB}
-N 1018 665 1018 720 {lab=CB}
-N 1018 720 960 720 {lab=CB}
-N 960 720 960 695 {lab=CB}
-N 960 635 960 596 {lab=VDD}
-C {devices/lab_pin.sym} 960 596 0 1 {name=L54 lab=VDD}
-C {devices/nmos4.sym} 940 875 0 0 {name=MCBN model=N w=11.428571u l=3.2u m=1 extra="AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u" hide_texts=true}
-T {MCBN} 987 852 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 960 875 0 1 {name=L55 lab=VSS}
-N 920 875 885 875 {lab=IREF}
-C {devices/lab_pin.sym} 885 875 0 0 {name=L56 lab=IREF}
-C {devices/pmos4.sym} 1150 665 0 0 {name=MCS model=P w=5u l=2.4u m=1 extra="AD=22.5p AS=22.5p PD=19u PS=19u" hide_texts=true}
-T {MCS} 1197 642 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1170 665 0 1 {name=L57 lab=VDD}
-N 1130 665 1124 665 {lab=SENSE}
-C {devices/lab_pin.sym} 1124 665 0 0 {name=L58 lab=SENSE}
-C {devices/pmos4.sym} 1410 665 0 1 {name=MCR model=P w=5u l=2.4u m=1 extra="AD=22.5p AS=22.5p PD=19u PS=19u" hide_texts=true}
-T {MCR} 1270 642 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1390 665 0 0 {name=L59 lab=VDD}
-N 1430 665 1465 665 {lab=SR}
-C {devices/lab_pin.sym} 1465 665 0 1 {name=L60 lab=SR}
-C {devices/nmos4.sym} 1150 875 0 0 {name=MCFN1 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFN1} 1197 852 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1170 875 0 1 {name=L61 lab=VSS}
-N 1130 875 1112 875 {lab=CA}
-N 1112 875 1112 820 {lab=CA}
-N 1112 820 1170 820 {lab=CA}
-N 1170 820 1170 845 {lab=CA}
-C {devices/nmos4.sym} 1370 875 0 0 {name=MCFN3 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFN3} 1417 852 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1390 875 0 1 {name=L62 lab=VSS}
-N 1350 875 1332 875 {lab=RCM}
-N 1332 875 1332 820 {lab=RCM}
-N 1332 820 1390 820 {lab=RCM}
-N 1390 820 1390 845 {lab=RCM}
-C {devices/pmos4.sym} 1630 665 0 1 {name=MCFP1 model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFP1} 1490 642 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1610 665 0 0 {name=L63 lab=VDD}
-N 1650 665 1668 665 {lab=PBIAS}
-N 1668 665 1668 720 {lab=PBIAS}
-N 1668 720 1610 720 {lab=PBIAS}
-N 1610 720 1610 695 {lab=PBIAS}
-N 1610 635 1610 596 {lab=VDD}
-C {devices/lab_pin.sym} 1610 596 0 1 {name=L64 lab=VDD}
-C {devices/nmos4.sym} 1590 875 0 0 {name=MCFN4 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFN4} 1637 852 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1610 875 0 1 {name=L65 lab=VSS}
-N 1570 875 1535 875 {lab=RCM}
-C {devices/lab_pin.sym} 1535 875 0 0 {name=L66 lab=RCM}
-C {devices/pmos4.sym} 1830 665 0 0 {name=MCFP2 model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFP2} 1877 642 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1850 665 0 1 {name=L67 lab=VDD}
-N 1810 665 1775 665 {lab=PBIAS}
-C {devices/lab_pin.sym} 1775 665 0 0 {name=L68 lab=PBIAS}
-N 1850 635 1850 596 {lab=VDD}
-C {devices/lab_pin.sym} 1850 596 0 1 {name=L69 lab=VDD}
-C {devices/nmos4.sym} 1830 875 0 0 {name=MCFN2 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
-T {MCFN2} 1877 852 0 0 0.2 0.2 {}
-C {devices/lab_pin.sym} 1850 875 0 1 {name=L70 lab=VSS}
-N 1810 875 1775 875 {lab=CA}
-C {devices/lab_pin.sym} 1775 875 0 0 {name=L71 lab=CA}
-N 1280 525 1280 570 {lab=CT}
-N 1170 635 1170 570 {lab=CT}
-N 1170 570 1280 570 {lab=CT}
-N 1280 570 1390 570 {lab=CT}
-N 1390 570 1390 635 {lab=CT}
-C {devices/lab_pin.sym} 1280 570 0 1 {name=L72 lab=CT}
-N 960 720 960 773 {lab=CB}
-N 960 773 960 845 {lab=CB}
-N 960 773 1025 773 {lab=CB}
-C {devices/lab_pin.sym} 1025 773 0 1 {name=L73 lab=CB}
-N 1170 695 1170 773 {lab=CA}
-N 1170 773 1170 820 {lab=CA}
-N 1170 773 1235 773 {lab=CA}
-C {devices/lab_pin.sym} 1235 773 0 1 {name=L74 lab=CA}
-N 1390 695 1390 773 {lab=RCM}
-N 1390 773 1390 820 {lab=RCM}
-N 1390 773 1455 773 {lab=RCM}
-C {devices/lab_pin.sym} 1455 773 0 1 {name=L75 lab=RCM}
-N 1610 720 1610 773 {lab=PBIAS}
-N 1610 773 1610 845 {lab=PBIAS}
-N 1610 773 1675 773 {lab=PBIAS}
-C {devices/lab_pin.sym} 1675 773 0 1 {name=L76 lab=PBIAS}
-N 1850 695 1850 773 {lab=PC}
-N 1850 773 1850 845 {lab=PC}
-N 1850 773 1915 773 {lab=PC}
-C {devices/lab_pin.sym} 1915 773 0 1 {name=L77 lab=PC}
-N 960 905 960 952 {lab=VSS}
-N 1170 905 1170 952 {lab=VSS}
-N 1390 905 1390 952 {lab=VSS}
-N 1610 905 1610 952 {lab=VSS}
-N 1850 905 1850 952 {lab=VSS}
-N 960 952 1170 952 {lab=VSS}
-N 1170 952 1390 952 {lab=VSS}
-N 1390 952 1610 952 {lab=VSS}
-N 1610 952 1850 952 {lab=VSS}
-C {devices/lab_pin.sym} 960 952 0 0 {name=L78 lab=VSS}
-C {devices/pmos4.sym} 140 862 0 0 {name=MCC model=P w=20u l=10u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MCC ×4} 187 839 0 0 0.2 0.2 {}
-N 160 832 160 808 {lab=VDD}
-N 160 808 225 808 {lab=VDD}
-N 225 808 225 916 {lab=VDD}
-N 225 916 160 916 {lab=VDD}
-N 160 916 160 892 {lab=VDD}
-N 160 862 225 862 {lab=VDD}
-C {devices/lab_pin.sym} 225 808 0 1 {name=L79 lab=VDD}
-N 120 862 120 955 {lab=PC}
-C {devices/pmos4.sym} 375 862 0 0 {name=MCM1 model=P w=20u l=10u m=12 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MCM1 ×12} 422 839 0 0 0.2 0.2 {}
-N 395 832 395 808 {lab=OUTP}
-N 395 808 460 808 {lab=OUTP}
-N 460 808 460 916 {lab=OUTP}
-N 460 916 395 916 {lab=OUTP}
-N 395 916 395 892 {lab=OUTP}
-N 395 862 460 862 {lab=OUTP}
-C {devices/lab_pin.sym} 460 808 0 1 {name=L80 lab=OUTP}
-N 355 862 355 955 {lab=PC}
-C {devices/pmos4.sym} 615 862 0 0 {name=MCM2 model=P w=20u l=10u m=12 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
-T {MCM2 ×12} 662 839 0 0 0.2 0.2 {}
-N 635 832 635 808 {lab=OUTM}
-N 635 808 700 808 {lab=OUTM}
-N 700 808 700 916 {lab=OUTM}
-N 700 916 635 916 {lab=OUTM}
-N 635 916 635 892 {lab=OUTM}
-N 635 862 700 862 {lab=OUTM}
-C {devices/lab_pin.sym} 700 808 0 1 {name=L81 lab=OUTM}
-N 595 862 595 955 {lab=PC}
-N 120 955 355 955 {lab=PC}
-N 355 955 595 955 {lab=PC}
-N 595 955 695 955 {lab=PC}
-C {devices/lab_pin.sym} 695 955 0 1 {name=L82 lab=PC}
-C {devices/iopin.sym} 85 1055 0 0 {name=P0 lab=INP}
-C {devices/iopin.sym} 289 1055 0 0 {name=P1 lab=INN}
-C {devices/iopin.sym} 493 1055 0 0 {name=P2 lab=OUTP}
-C {devices/iopin.sym} 697 1055 0 0 {name=P3 lab=OUTM}
-C {devices/iopin.sym} 901 1055 0 0 {name=P4 lab=VDD}
-C {devices/iopin.sym} 1105 1055 0 0 {name=P5 lab=VSS}
-C {devices/iopin.sym} 1309 1055 0 0 {name=P6 lab=IREF}
-C {devices/iopin.sym} 1513 1055 0 0 {name=P7 lab=VCM}
-C {devices/iopin.sym} 1717 1055 0 0 {name=P8 lab=VBN}
-C {devices/iopin.sym} 1921 1055 0 0 {name=P9 lab=VBP}
-T {Nominal bias   VDD 5 V   VSS 0 V   IREF 3.5 uA   VBN 3.0 V   VBP = VDD - 2.2 V   VCM 2.5 V} 0 1091 0 0 0.24 0.24 {}
-T {Matching labels connect across panels. MOS capacitor bulks connect to their local source and drain.} 0 1120 0 0 0.2 0.2 {}
+T {(a) Telescopic signal core and bias mirror} 18 14 0 0 0.39 0.39 {}
+T {(b) Output common-mode sensing} 1293 14 0 0 0.39 0.39 {}
+T {(c) CMFB error amplifier and current mirrors} 1293 694 0 0 0.39 0.39 {}
+T {(d) Miller-style and shunt compensation} 18 1222 0 0 0.39 0.39 {}
+C {devices/pmos4.sym} 305 200 0 1 {name=MP1 model=P w=40u l=3.2u m=1 extra="AD=180p AS=180p PD=89u PS=89u" hide_texts=true}
+T {MP1} 202 169 0 0 0.24 0.24 {}
+C {devices/pmos4.sym} 305 320 0 1 {name=MPC1 model=P w=60u l=2.4u m=1 extra="AD=270p AS=270p PD=129u PS=129u" hide_texts=true}
+T {MPC1} 202 289 0 0 0.24 0.24 {}
+C {devices/nmos4.sym} 305 725 0 1 {name=MNC1 model=N w=30u l=2.4u m=1 extra="AD=135p AS=135p PD=69u PS=69u" hide_texts=true}
+T {MNC1} 202 694 0 0 0.24 0.24 {}
+C {devices/nmos4.sym} 265 895 0 0 {name=MN1 model=N w=15u l=2.4u m=1 extra="AD=67.5p AS=67.5p PD=39u PS=39u" hide_texts=true}
+T {MN1} 315 864 0 0 0.24 0.24 {}
+N 245 895 210 895 {lab=INP}
+N 285 170 285 147 {lab=VDD}
+N 285 230 285 260 {lab=PX1}
+N 285 260 285 290 {lab=PX1}
+N 285 350 285 525 {lab=OUTM}
+N 285 525 285 695 {lab=OUTM}
+N 285 525 180 525 {lab=OUTM}
+N 285 755 285 835 {lab=NX1}
+N 285 835 285 865 {lab=NX1}
+N 285 925 285 985 {lab=TAIL}
+C {devices/pmos4.sym} 645 200 0 0 {name=MP2 model=P w=40u l=3.2u m=1 extra="AD=180p AS=180p PD=89u PS=89u" hide_texts=true}
+T {MP2} 695 169 0 0 0.24 0.24 {}
+C {devices/pmos4.sym} 645 320 0 0 {name=MPC2 model=P w=60u l=2.4u m=1 extra="AD=270p AS=270p PD=129u PS=129u" hide_texts=true}
+T {MPC2} 695 289 0 0 0.24 0.24 {}
+C {devices/nmos4.sym} 645 725 0 0 {name=MNC2 model=N w=30u l=2.4u m=1 extra="AD=135p AS=135p PD=69u PS=69u" hide_texts=true}
+T {MNC2} 695 694 0 0 0.24 0.24 {}
+C {devices/nmos4.sym} 685 895 0 1 {name=MN2 model=N w=15u l=2.4u m=1 extra="AD=67.5p AS=67.5p PD=39u PS=39u" hide_texts=true}
+T {MN2} 582 864 0 0 0.24 0.24 {}
+N 705 895 740 895 {lab=INN}
+N 665 170 665 147 {lab=VDD}
+N 665 230 665 260 {lab=PX2}
+N 665 260 665 290 {lab=PX2}
+N 665 350 665 525 {lab=OUTP}
+N 665 525 665 695 {lab=OUTP}
+N 665 525 770 525 {lab=OUTP}
+N 665 755 665 835 {lab=NX2}
+N 665 835 665 865 {lab=NX2}
+N 665 925 665 985 {lab=TAIL}
+N 285 147 665 147 {lab=VDD}
+N 325 200 625 200 {lab=PC}
+N 325 320 625 320 {lab=VBP}
+N 325 725 625 725 {lab=VBN}
+N 285 985 475 985 {lab=TAIL}
+N 475 985 665 985 {lab=TAIL}
+C {devices/nmos4.sym} 455 1030 0 0 {name=MTAIL model=N w=80.0u l=3.2u m=1 extra="AD=360p AS=360p PD=169u PS=169u" hide_texts=true}
+T {MTAIL} 505 999 0 0 0.24 0.24 {}
+N 475 985 475 1000 {lab=TAIL}
+C {devices/nmos4.sym} 180 1030 0 1 {name=MREF model=N w=20u l=3.2u m=1 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MREF} 77 999 0 0 0.24 0.24 {}
+N 200 1030 218 1030 {lab=IREF}
+N 218 1030 218 975 {lab=IREF}
+N 218 975 160 975 {lab=IREF}
+N 160 975 160 1000 {lab=IREF}
+N 218 1030 435 1030 {lab=IREF}
+N 160 1060 475 1060 {lab=VSS}
+C {devices/nmos4.sym} 1490 176 0 0 {name=MSP model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSP ×4} 1540 145 0 0 0.24 0.24 {}
+N 1470 176 1435 176 {lab=OUTP}
+N 1510 146 1510 100 {lab=VDD}
+C {devices/nmos4.sym} 1490 288 0 0 {name=MSIP model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSIP ×2} 1540 257 0 0 0.24 0.24 {}
+N 1470 288 1435 288 {lab=IREF}
+N 1510 318 1510 336 {lab=VSS}
+N 1510 206 1510 234 {lab=SP}
+N 1510 234 1510 258 {lab=SP}
+N 1510 234 1735 234 {lab=SP}
+C {devices/nmos4.sym} 2090 176 0 0 {name=MSM model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSM ×4} 2140 145 0 0 0.24 0.24 {}
+N 2070 176 2005 176 {lab=OUTM}
+N 2110 146 2110 100 {lab=VDD}
+C {devices/nmos4.sym} 2090 288 0 0 {name=MSIM model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSIM ×2} 2140 257 0 0 0.24 0.24 {}
+N 2070 288 2005 288 {lab=IREF}
+N 2110 318 2110 336 {lab=VSS}
+N 2110 206 2110 234 {lab=SM}
+N 2110 234 2110 258 {lab=SM}
+N 2110 234 2200 234 {lab=SM}
+C {devices/nmos4.sym} 2605 176 0 0 {name=MSR model=N w=20u l=1.6u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSR ×4} 2655 145 0 0 0.24 0.24 {}
+N 2585 176 2550 176 {lab=VCM}
+N 2625 146 2625 100 {lab=VDD}
+C {devices/nmos4.sym} 2605 288 0 0 {name=MSIR model=N w=20u l=3.2u m=2 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MSIR ×2} 2655 257 0 0 0.24 0.24 {}
+N 2585 288 2550 288 {lab=IREF}
+N 2625 318 2625 336 {lab=VSS}
+N 2625 206 2625 234 {lab=SR}
+N 2625 234 2625 258 {lab=SR}
+N 2625 234 2715 234 {lab=SR}
+C {scl08_rpp_cmfb.sym} 1890 431 0 0 {name=XSP w=2.4u l=17142.857143u}
+C {scl08_rpp_cmfb.sym} 2330 431 0 1 {name=XSM w=2.4u l=17142.857143u}
+N 1745 431 1860 431 {lab=SP}
+N 1920 431 2090 431 {lab=SENSE}
+N 2090 431 2300 431 {lab=SENSE}
+N 2360 431 2420 431 {lab=SM}
+C {devices/pmos4.sym} 1960 840 0 0 {name=MCT model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCT} 2010 809 0 0 0.24 0.24 {}
+N 1940 840 1905 840 {lab=CB}
+N 1980 810 1980 751 {lab=VDD}
+C {devices/pmos4.sym} 1490 1055 0 1 {name=MCBI model=P w=20u l=3.2u m=1 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MCBI} 1387 1024 0 0 0.24 0.24 {}
+N 1510 1055 1528 1055 {lab=CB}
+N 1528 1055 1528 1155 {lab=CB}
+N 1528 1155 1470 1155 {lab=CB}
+N 1470 1155 1470 1085 {lab=CB}
+N 1470 1025 1470 986 {lab=VDD}
+C {devices/nmos4.sym} 1450 1460 0 0 {name=MCBN model=N w=11.428571u l=3.2u m=1 extra="AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u" hide_texts=true}
+T {MCBN} 1500 1429 0 0 0.24 0.24 {}
+N 1430 1460 1345 1460 {lab=IREF}
+C {devices/pmos4.sym} 1850 1055 0 0 {name=MCS model=P w=5u l=2.4u m=1 extra="AD=22.5p AS=22.5p PD=19u PS=19u" hide_texts=true}
+T {MCS} 1900 1024 0 0 0.24 0.24 {}
+N 1830 1055 1824 1055 {lab=SENSE}
+C {devices/pmos4.sym} 2140 1055 0 1 {name=MCR model=P w=5u l=2.4u m=1 extra="AD=22.5p AS=22.5p PD=19u PS=19u" hide_texts=true}
+T {MCR} 2037 1024 0 0 0.24 0.24 {}
+N 2160 1055 2195 1055 {lab=SR}
+C {devices/nmos4.sym} 1850 1460 0 0 {name=MCFN1 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFN1} 1900 1429 0 0 0.24 0.24 {}
+N 1830 1460 1812 1460 {lab=CA}
+N 1812 1460 1812 1405 {lab=CA}
+N 1812 1405 1870 1405 {lab=CA}
+N 1870 1405 1870 1430 {lab=CA}
+C {devices/nmos4.sym} 2100 1460 0 0 {name=MCFN3 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFN3} 2150 1429 0 0 0.24 0.24 {}
+N 2080 1460 2062 1460 {lab=RCM}
+N 2062 1460 2062 1405 {lab=RCM}
+N 2062 1405 2120 1405 {lab=RCM}
+N 2120 1405 2120 1430 {lab=RCM}
+C {devices/pmos4.sym} 2430 1055 0 1 {name=MCFP1 model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFP1} 2327 1024 0 0 0.24 0.24 {}
+N 2450 1055 2468 1055 {lab=PBIAS}
+N 2468 1055 2468 1155 {lab=PBIAS}
+N 2468 1155 2410 1155 {lab=PBIAS}
+N 2410 1155 2410 1085 {lab=PBIAS}
+N 2410 1025 2410 986 {lab=VDD}
+C {devices/nmos4.sym} 2390 1460 0 0 {name=MCFN4 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFN4} 2440 1429 0 0 0.24 0.24 {}
+N 2370 1460 2335 1460 {lab=RCM}
+C {devices/pmos4.sym} 2695 1055 0 0 {name=MCFP2 model=P w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFP2} 2745 1024 0 0 0.24 0.24 {}
+N 2675 1055 2640 1055 {lab=PBIAS}
+N 2715 1025 2715 986 {lab=VDD}
+C {devices/nmos4.sym} 2695 1460 0 0 {name=MCFN2 model=N w=10u l=3.2u m=1 extra="AD=45p AS=45p PD=29u PS=29u" hide_texts=true}
+T {MCFN2} 2745 1429 0 0 0.24 0.24 {}
+N 2675 1460 2640 1460 {lab=CA}
+N 1980 870 1980 915 {lab=CT}
+N 1870 1025 1870 915 {lab=CT}
+N 1870 915 1980 915 {lab=CT}
+N 1980 915 2120 915 {lab=CT}
+N 2120 915 2120 1025 {lab=CT}
+N 1470 1155 1470 1303 {lab=CB}
+N 1470 1303 1470 1430 {lab=CB}
+N 1470 1303 1535 1303 {lab=CB}
+N 1870 1085 1870 1303 {lab=CA}
+N 1870 1303 1870 1405 {lab=CA}
+N 1870 1303 1935 1303 {lab=CA}
+N 2120 1085 2120 1303 {lab=RCM}
+N 2120 1303 2120 1405 {lab=RCM}
+N 2120 1303 2185 1303 {lab=RCM}
+N 2410 1155 2410 1303 {lab=PBIAS}
+N 2410 1303 2410 1430 {lab=PBIAS}
+N 2410 1303 2475 1303 {lab=PBIAS}
+N 2715 1085 2715 1303 {lab=PC}
+N 2715 1303 2715 1430 {lab=PC}
+N 2715 1303 2835 1303 {lab=PC}
+N 1470 1490 1470 1602 {lab=VSS}
+N 1870 1490 1870 1602 {lab=VSS}
+N 2120 1490 2120 1602 {lab=VSS}
+N 2410 1490 2410 1602 {lab=VSS}
+N 2715 1490 2715 1602 {lab=VSS}
+N 1470 1602 1870 1602 {lab=VSS}
+N 1870 1602 2120 1602 {lab=VSS}
+N 2120 1602 2410 1602 {lab=VSS}
+N 2410 1602 2715 1602 {lab=VSS}
+C {devices/pmos4.sym} 175 1447 0 0 {name=MCC model=P w=20u l=10u m=4 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MCC ×4} 225 1416 0 0 0.24 0.24 {}
+N 195 1417 195 1338 {lab=VDD}
+N 195 1338 260 1338 {lab=VDD}
+N 260 1338 260 1501 {lab=VDD}
+N 260 1501 195 1501 {lab=VDD}
+N 195 1501 195 1477 {lab=VDD}
+N 195 1447 260 1447 {lab=VDD}
+N 155 1447 155 1605 {lab=PC}
+C {devices/pmos4.sym} 455 1447 0 0 {name=MCM1 model=P w=20u l=10u m=12 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MCM1 ×12} 505 1416 0 0 0.24 0.24 {}
+N 475 1417 475 1338 {lab=OUTP}
+N 475 1338 585 1338 {lab=OUTP}
+N 585 1338 585 1501 {lab=OUTP}
+N 585 1501 475 1501 {lab=OUTP}
+N 475 1501 475 1477 {lab=OUTP}
+N 475 1447 585 1447 {lab=OUTP}
+N 435 1447 435 1605 {lab=PC}
+C {devices/pmos4.sym} 740 1447 0 0 {name=MCM2 model=P w=20u l=10u m=12 extra="AD=90p AS=90p PD=49u PS=49u" hide_texts=true}
+T {MCM2 ×12} 790 1416 0 0 0.24 0.24 {}
+N 760 1417 760 1338 {lab=OUTM}
+N 760 1338 860 1338 {lab=OUTM}
+N 860 1338 860 1501 {lab=OUTM}
+N 860 1501 760 1501 {lab=OUTM}
+N 760 1501 760 1477 {lab=OUTM}
+N 760 1447 860 1447 {lab=OUTM}
+N 720 1447 720 1605 {lab=PC}
+N 155 1605 435 1605 {lab=PC}
+N 435 1605 720 1605 {lab=PC}
+N 720 1605 855 1605 {lab=PC}
+T {Nominal bias   VDD 5 V   VSS 0 V   IREF 3.5 uA   VBN 3.0 V   VBP = VDD - 2.2 V   VCM 2.5 V} 0 1886 0 0 0.24 0.24 {}
+C {devices/iopin.sym} 210 895 0 1 {name=P0 lab=INP}
+C {devices/iopin.sym} 740 895 0 0 {name=P1 lab=INN}
+C {devices/iopin.sym} 770 610 0 0 {name=P2 lab=OUTP}
+C {devices/iopin.sym} 180 610 0 1 {name=P3 lab=OUTM}
+C {devices/iopin.sym} 35 90 0 1 {name=P4 lab=VDD}
+C {devices/iopin.sym} 35 1755 0 1 {name=P5 lab=VSS}
+C {devices/iopin.sym} 160 975 0 1 {name=P6 lab=IREF}
+C {devices/iopin.sym} 2550 176 0 1 {name=P7 lab=VCM}
+C {devices/iopin.sym} 475 750 0 0 {name=P8 lab=VBN}
+C {devices/iopin.sym} 475 345 0 0 {name=P9 lab=VBP}
+N 475 725 475 750 {lab=VBN}
+N 475 320 475 345 {lab=VBP}
+N 770 525 770 610 {lab=OUTP}
+N 180 525 180 610 {lab=OUTM}
+N 35 90 3165 90 {lab=VDD}
+N 285 147 285 90 {lab=VDD}
+N 285 200 250 200 {lab=VDD}
+N 250 200 250 90 {lab=VDD}
+N 285 320 250 320 {lab=VDD}
+N 250 320 250 200 {lab=VDD}
+N 665 200 700 200 {lab=VDD}
+N 700 200 700 90 {lab=VDD}
+N 665 320 700 320 {lab=VDD}
+N 700 320 700 200 {lab=VDD}
+N 1510 100 1510 90 {lab=VDD}
+N 2110 100 2110 90 {lab=VDD}
+N 2625 100 2625 90 {lab=VDD}
+N 3165 90 3165 986 {lab=VDD}
+N 3165 986 2715 986 {lab=VDD}
+N 2715 986 2410 986 {lab=VDD}
+N 2410 986 2310 986 {lab=VDD}
+N 2310 986 2310 751 {lab=VDD}
+N 2310 751 1980 751 {lab=VDD}
+N 1980 840 2045 840 {lab=VDD}
+N 2045 840 2045 751 {lab=VDD}
+N 1470 986 1470 735 {lab=VDD}
+N 1470 735 2310 735 {lab=VDD}
+N 2310 735 2310 751 {lab=VDD}
+N 1470 1055 1435 1055 {lab=VDD}
+N 1435 1055 1435 986 {lab=VDD}
+N 1435 986 1470 986 {lab=VDD}
+N 1870 1055 1905 1055 {lab=VDD}
+N 1905 1055 1905 992 {lab=VDD}
+N 1905 992 2180 992 {lab=VDD}
+N 2180 992 2180 735 {lab=VDD}
+N 2120 1055 2085 1055 {lab=VDD}
+N 2085 1055 2085 992 {lab=VDD}
+N 2410 1055 2375 1055 {lab=VDD}
+N 2375 1055 2375 986 {lab=VDD}
+N 2715 1055 2750 1055 {lab=VDD}
+N 2750 1055 2750 986 {lab=VDD}
+N 260 1338 50 1338 {lab=VDD}
+N 50 1338 50 90 {lab=VDD}
+N 35 1755 3080 1755 {lab=VSS}
+N 3080 1755 3080 336 {lab=VSS}
+N 3080 336 2625 336 {lab=VSS}
+N 2625 336 2110 336 {lab=VSS}
+N 2110 336 1510 336 {lab=VSS}
+N 1510 176 1640 176 {lab=VSS}
+N 1640 176 1640 336 {lab=VSS}
+N 1510 288 1640 288 {lab=VSS}
+N 2110 176 2155 176 {lab=VSS}
+N 2155 176 2155 336 {lab=VSS}
+N 2110 288 2155 288 {lab=VSS}
+N 2625 176 2670 176 {lab=VSS}
+N 2670 176 2670 336 {lab=VSS}
+N 2625 288 2670 288 {lab=VSS}
+N 160 1060 65 1060 {lab=VSS}
+N 65 1060 65 1755 {lab=VSS}
+N 160 1030 135 1030 {lab=VSS}
+N 135 1030 135 1060 {lab=VSS}
+N 475 1030 505 1030 {lab=VSS}
+N 505 1030 505 1060 {lab=VSS}
+N 505 1060 475 1060 {lab=VSS}
+N 285 725 230 725 {lab=VSS}
+N 230 725 230 850 {lab=VSS}
+N 230 850 345 850 {lab=VSS}
+N 345 850 345 1060 {lab=VSS}
+N 285 895 345 895 {lab=VSS}
+N 665 725 720 725 {lab=VSS}
+N 720 725 720 850 {lab=VSS}
+N 720 850 605 850 {lab=VSS}
+N 605 850 605 1060 {lab=VSS}
+N 605 1060 505 1060 {lab=VSS}
+N 665 895 605 895 {lab=VSS}
+N 2715 1602 2715 1755 {lab=VSS}
+N 1470 1460 1515 1460 {lab=VSS}
+N 1515 1460 1515 1602 {lab=VSS}
+N 1515 1602 1470 1602 {lab=VSS}
+N 1870 1460 1915 1460 {lab=VSS}
+N 1915 1460 1915 1602 {lab=VSS}
+N 1915 1602 1870 1602 {lab=VSS}
+N 2120 1460 2165 1460 {lab=VSS}
+N 2165 1460 2165 1602 {lab=VSS}
+N 2165 1602 2120 1602 {lab=VSS}
+N 2410 1460 2455 1460 {lab=VSS}
+N 2455 1460 2455 1602 {lab=VSS}
+N 2455 1602 2410 1602 {lab=VSS}
+N 2715 1460 2815 1460 {lab=VSS}
+N 2815 1460 2815 1602 {lab=VSS}
+N 2815 1602 2715 1602 {lab=VSS}
+N 770 525 865 525 {lab=OUTP}
+N 865 525 865 176 {lab=OUTP}
+N 865 176 1435 176 {lab=OUTP}
+N 585 1338 585 1228 {lab=OUTP}
+N 585 1228 865 1228 {lab=OUTP}
+N 865 1228 865 525 {lab=OUTP}
+N 180 525 120 525 {lab=OUTM}
+N 120 525 120 361 {lab=OUTM}
+N 120 361 975 361 {lab=OUTM}
+N 975 361 975 211 {lab=OUTM}
+N 975 211 2005 211 {lab=OUTM}
+N 2005 211 2005 176 {lab=OUTM}
+N 860 1338 960 1338 {lab=OUTM}
+N 960 1338 960 361 {lab=OUTM}
+N 218 1030 218 1090 {lab=IREF}
+N 218 1090 1070 1090 {lab=IREF}
+N 1070 1090 1070 288 {lab=IREF}
+N 1070 288 1435 288 {lab=IREF}
+N 1435 288 1435 300 {lab=IREF}
+N 1435 300 2550 300 {lab=IREF}
+N 2550 300 2550 288 {lab=IREF}
+N 2005 288 2005 300 {lab=IREF}
+N 1070 1090 1070 1460 {lab=IREF}
+N 1070 1460 1345 1460 {lab=IREF}
+N 1735 234 1735 431 {lab=SP}
+N 1735 431 1745 431 {lab=SP}
+N 2200 234 2420 234 {lab=SM}
+N 2420 234 2420 431 {lab=SM}
+N 2715 234 2855 234 {lab=SR}
+N 2855 234 2855 893 {lab=SR}
+N 2855 893 2195 893 {lab=SR}
+N 2195 893 2195 1055 {lab=SR}
+N 2090 431 2090 615 {lab=SENSE}
+N 2090 615 1824 615 {lab=SENSE}
+N 1824 615 1824 1055 {lab=SENSE}
+N 1535 1303 1640 1303 {lab=CB}
+N 1640 1303 1640 840 {lab=CB}
+N 1640 840 1905 840 {lab=CB}
+N 1935 1303 1960 1303 {lab=CA}
+N 1960 1303 1960 1575 {lab=CA}
+N 1960 1575 2640 1575 {lab=CA}
+N 2640 1575 2640 1460 {lab=CA}
+N 2185 1303 2295 1303 {lab=RCM}
+N 2295 1303 2295 1460 {lab=RCM}
+N 2295 1460 2335 1460 {lab=RCM}
+N 2475 1303 2600 1303 {lab=PBIAS}
+N 2600 1303 2600 1055 {lab=PBIAS}
+N 2600 1055 2640 1055 {lab=PBIAS}
+N 2835 1303 2960 1303 {lab=PC}
+N 2960 1303 2960 1680 {lab=PC}
+N 2960 1680 855 1680 {lab=PC}
+N 855 1680 855 1605 {lab=PC}
+N 475 200 475 248 {lab=PC}
+N 475 248 795 248 {lab=PC}
+N 795 248 795 1605 {lab=PC}
+C {devices/lab_pin.sym} 285 260 0 1 {name=PROBE0 lab=PX1}
+C {devices/lab_pin.sym} 665 260 0 0 {name=PROBE1 lab=PX2}
+C {devices/lab_pin.sym} 285 835 0 1 {name=PROBE2 lab=NX1}
+C {devices/lab_pin.sym} 665 835 0 0 {name=PROBE3 lab=NX2}
+C {devices/lab_pin.sym} 475 985 0 0 {name=PROBE4 lab=TAIL}
+C {devices/lab_pin.sym} 855 1605 0 0 {name=PROBE5 lab=PC}
+C {devices/lab_pin.sym} 1735 234 0 0 {name=PROBE6 lab=SP}
+C {devices/lab_pin.sym} 2200 234 0 0 {name=PROBE7 lab=SM}
+C {devices/lab_pin.sym} 2715 234 0 0 {name=PROBE8 lab=SR}
+C {devices/lab_pin.sym} 2090 431 0 0 {name=PROBE9 lab=SENSE}
+C {devices/lab_pin.sym} 1535 1303 0 0 {name=PROBE10 lab=CB}
+C {devices/lab_pin.sym} 1980 915 0 0 {name=PROBE11 lab=CT}
+C {devices/lab_pin.sym} 1935 1303 0 0 {name=PROBE12 lab=CA}
+C {devices/lab_pin.sym} 2185 1303 0 0 {name=PROBE13 lab=RCM}
+C {devices/lab_pin.sym} 2475 1303 0 0 {name=PROBE14 lab=PBIAS}
+T {Crossings without a junction dot are separate wires.} 0 1925 0 0 0.22 0.22 {}

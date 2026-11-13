@@ -15,10 +15,25 @@ The selected CapSense OTA is a fully differential telescopic CMOS amplifier in S
 
 OTA figures use the extracted-capacitance model at 27 °C, typical devices, 2.5 V input common mode, and 5 pF per output. The high-gain corner screen covers settled outputs near 2.25–2.75 V per side.
 
-- [Publication schematic (PDF)](plots/ota_complete_publication.pdf), [editable Xschem core](designs/ota_core.sch), and [reusable symbol](symbols/ota_cm2p5.sym).
+- [Fully wired Xschem schematic](designs/ota_core.sch), [white-background figure (PNG)](plots/ota_wired_white.png), [vector PDF](plots/ota_wired_white.pdf), and [reusable OTA symbol](symbols/ota_cm2p5.sym).
 - [GDS](layout/ota_telescopic_layout.gds) and [extracted-capacitance SPICE macro](models/ota_cm2p5_C.spice). The GDS is the locally DRC/LVS-checked CMFB revision 2 macro. The 3.0 V bias is supplied externally.
 - [OTA verification report](OTA_VERIFICATION.md) and [corner data](final_ac_grid.csv). The report records the original study layout and filenames.
 - [SC integration](sc_integration/) uses one shared OTA. At 10 kHz the nominal sampled differential output is 326.29 mV. All 49 tested corner and load cases completed, with about 2.05 mV worst sampled differential error and 16.6 µs worst settling. Switching glitches require late sampling.
+
+## Schematic structure
+
+![Fully wired telescopic OTA schematic](plots/ota_wired_white.png)
+
+- **A. Telescopic signal core and bias mirror.** MN1 and MN2 steer the tail current. The NMOS and PMOS cascodes raise output resistance and differential gain.
+- **B. Output common-mode sensing.** Two equal 200 kΩ poly resistors average the level-shifted outputs at SENSE. A matching follower produces SR from the 2.5 V reference.
+- **C. Common-mode error amplifier.** The error amplifier compares SENSE with SR. Its current mirrors drive PC, which adjusts the current supplied by both PMOS loads.
+- **D. Common-mode compensation.** Two symmetric MOS capacitor banks connect PC to the outputs, and a third bank connects PC to VDD.
+
+Open the transistor-level schematic from this directory:
+
+```bash
+xschem --rcfile "$PWD/xschemrc" designs/ota_core.sch
+```
 
 ## Run the benches
 
