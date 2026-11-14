@@ -1,1 +1,1 @@
-Switch capcitor circuit for sampling of pressure change 
+Switch capacitor circuit for sampling of pressure change 
