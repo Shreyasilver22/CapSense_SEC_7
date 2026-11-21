@@ -1,0 +1,82 @@
+** sch_path: /tmp/capsense_14nov.f3qqKH/diff_1411.sch
+**.subckt diff_1411
+xdrive_p vdd txp phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xdischarge_p vref txp phi2 phi2b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+CSp rxp txp {CP} m=1
+xclamp_p 0 rxp phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xtransfer_p rxp sump phit phitb vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xreset_p sump outp phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xdrive_n vdd txn phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xdischarge_n vref txn phi2 phi2b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+CSn rxn txn {CN} m=1
+xclamp_n 0 rxn phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xtransfer_n rxn sumn phit phitb vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+xreset_n sumn outn phi1 phi1b vdd 0 scl08_tg wn=10u wp=20u lch=0.8u
+VDD vdd 0 5
+VREF vref 0 2.5
+XOTA sumn sump outp outn vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+MCFP outp sump outp outp p L=202.7u W=100u ad=186p as=186p pd=138.6u ps=138.6u nrd=0.018 nrs=0.018
++ m=1
+MCFN outn sumn outn outn p L=202.7u W=100u ad=186p as=186p pd=138.6u ps=138.6u nrd=0.018 nrs=0.018
++ m=1
+Vbn vbn 0 3
+vbp vbp 0 2.7
+**** begin user architecture code
+
+
+* Models
+.include /home/your-user/pdk/scl08/ngspice_models49/mos/tntp49_5v
+.include /home/your-user/pdk/scl08/ngspice_models49/res/typ/ppr
+
+.include "/home/your-user/final year project/ota/final_design/sc_integration/models/scl08_tg.spice"
+.include "/home/your-user/final year project/ota/final_design/models/ota_cm2p5_C.spice"
+
+.param CP=7p CN=5p
+
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12
+.options method=gear maxord=2 numdgt=12
+
+* Feed current into the existing OTA bias node
+IREF vdd bias DC 3.5u
+
+* Clocks
+VPHI1 phi1 0 PULSE(5 0 41u 1u 1u 58u 100u)
+VPHI2 phi2 0 PULSE(0 5 46u 1u 1u 43u 100u)
+VPHIT phit 0 PULSE(0 5 45u 1u 1u 44u 100u)
+
+BPHI1B phi1b 0 V=5-v(phi1)
+BPHI2B phi2b 0 V=5-v(phi2)
+BPHITB phitb 0 V=5-v(phit)
+
+* Output loads
+CLP outp 0 5p
+CLN outn 0 5p
+
+**** end user architecture code
+**.ends
+VPRE pre 0 2.5
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+BTR trb 0 V=5-v(tr)
+BPR prb 0 V=5-v(pr)
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p pre pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p pre prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n pre pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n pre prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+
+VTR tr 0 PULSE(0 5 70u .5u .5u 9.25u 100u)
+VPR pr 0 PULSE(5 0 65u .5u .5u 24.5u 100u)
+
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 20n 300u 0 20n
+wrdata matched_hold_7_5.dat v(outp) v(outn) v(sump) v(sumn) v(txp) v(txn) v(holdp) v(holdn)
+.endc
+.end

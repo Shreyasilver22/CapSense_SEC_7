@@ -1,0 +1,99 @@
+
+Magic 8.3 revision 105 - Compiled on Mon, 06 Dec 2021 22:32:27 +0200.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Input style lambda=0.09(generic): scaleFactor=9, multiplier=1
+Processing system .magicrc file
+Loading "extract.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "ota_boosted_layout".
+Extracting ota_boosted_layout into ota_boosted_layout.ext:
+ota_boosted_layout: 20 warnings
+exttospice finished.
+Extraction feedback count: 20
+Feedback #1: device missing 1 terminal;
+ connecting remainder to node VDD
+device missing 1 terminal;
+ connecting remainder to node VDD
+Feedback #2: device missing 1 terminal;
+ connecting remainder to node VDD
+device missing 1 terminal;
+ connecting remainder to node VDD
+Feedback #3: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #4: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #5: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #6: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #7: device missing 1 terminal;
+ connecting remainder to node VDD
+device missing 1 terminal;
+ connecting remainder to node VDD
+Feedback #8: device missing 1 terminal;
+ connecting remainder to node VDD
+device missing 1 terminal;
+ connecting remainder to node VDD
+Feedback #9: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #10: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #11: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #12: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #13: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #14: device missing 1 terminal;
+ connecting remainder to node OUTP
+device missing 1 terminal;
+ connecting remainder to node OUTP
+Feedback #15: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #16: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #17: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #18: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #19: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+Feedback #20: device missing 1 terminal;
+ connecting remainder to node OUTM
+device missing 1 terminal;
+ connecting remainder to node OUTM
+CIF file read warning: CIF style lambda=0.09(generic): units rescaled by factor of 10 / 1
+CIF file read warning: Input off lambda grid by 4/9; grid redefined.
+Total of 20 warnings.

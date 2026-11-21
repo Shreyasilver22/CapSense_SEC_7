@@ -1,0 +1,214 @@
+* SCL08 prototypes. Include native 5 V MOS and RPP models in the top-level deck.
+
+.subckt inv08 a y vdd vss params: w=5u
+MN y a vss vss N W={w} L=.8u
+MP y a vdd vdd P W={2*w} L=.8u
+.ends inv08
+
+.subckt nand08 a b y vdd vss
+MN1 y a series vss N W=10u L=.8u
+MN2 series b vss vss N W=10u L=.8u
+MP1 y a vdd vdd P W=10u L=.8u
+MP2 y b vdd vdd P W=10u L=.8u
+.ends nand08
+
+* Output high when a exceeds b. Continuous-time differential pair plus buffers.
+.subckt compare08 a b y vdd vss bias
+MNA left a tail vss N W=20u L=2.4u
+MNB raw b tail vss N W=20u L=2.4u
+MPA left left vdd vdd P W=12u L=2.4u
+MPB raw left vdd vdd P W=12u L=2.4u
+MNT tail bias vss vss N W=4u L=4u
+* Long-channel inverter limits crossover current when raw lingers at midrail.
+MNBUF yn raw vss vss N W=5u L=12u
+MPBUF yn raw vdd vdd P W=10u L=12u
+XB2 yn y vdd vss inv08 w=3u
+.ends compare08
+
+* Rails and one 10 kHz input. Ladder taps set the phase timings.
+* Current-limited TX drivers set slew and have fast turn-off devices.
+.subckt phase_trim08 clk d0 d1 d2 vdd vss s1 s1b rx rxb tx txb pre preb track trackb chg chgb params:
++ lramp=2.2u lslew=16u lfall=14.5u ldead=50000u
+XIN1 clk clk_b vdd vss inv08
+XIN2 clk_b clk_i vdd vss inv08 w=15u
+XED clk_i delayed RPP W=2.4u L=12000u
+MED delayed vss vss vss N W=100u L=20u M=36
+XEDB delayed delayed_b vdd vss inv08
+XEDGE clk_i delayed_b rst_b vdd vss nand08
+MRST ramp rst_b vdd vdd P W=150u L=.8u
+XBIAS vdd nb RPP W=2.4u L=10000u
+MBIAS nb nb vss vss N W=20u L=2.4u
+MDIS ramp nb vss vss N W={lramp} L=36u
+MCR ramp vss vss vss N W=100u L=20u M=25
+MSENSE vdd ramp sensed vss N W=10u L=1.6u
+MSINK sensed nb vss vss N W=3u L=12u
+XL41 v41 v43 RPP W=2.4u L=293.398u
+XL43 v43 v46 RPP W=2.4u L=243.245u
+XL46 v46 v65 RPP W=2.4u L=1945.957u
+XL65 v65 v70 RPP W=2.4u L=561.720u
+XL70 v70 v80 RPP W=2.4u L=902.764u
+XL80 v80 v90 RPP W=2.4u L=952.917u
+XINV_d0 d0 d0b vdd vss inv08
+XINV_d1 d1 d1b vdd vss inv08
+XINV_d2 d2 d2b vdd vss inv08
+XDECA0 d0b d1b decab0 vdd vss nand08
+XDECB0 decab0 deca0 vdd vss inv08
+XDECC0 deca0 d2b selb0 vdd vss nand08
+XDECD0 selb0 sel0 vdd vss inv08
+XLOW0 v90 low0 RPP W=2.4u L=6745.683u
+XHIGH0 v41 high0 RPP W=2.4u L=13534.173u
+MLOW0 low0 sel0 vss vss N W=60u L=.8u
+MHIGH0 high0 selb0 vdd vdd P W=100u L=.8u
+XDECA1 d0 d1b decab1 vdd vss nand08
+XDECB1 decab1 deca1 vdd vss inv08
+XDECC1 deca1 d2b selb1 vdd vss nand08
+XDECD1 selb1 sel1 vdd vss inv08
+XLOW1 v90 low1 RPP W=2.4u L=9231.250u
+XHIGH1 v41 high1 RPP W=2.4u L=15035.417u
+MLOW1 low1 sel1 vss vss N W=60u L=.8u
+MHIGH1 high1 selb1 vdd vdd P W=100u L=.8u
+XDECA2 d0b d1 decab2 vdd vss nand08
+XDECB2 decab2 deca2 vdd vss inv08
+XDECC2 deca2 d2b selb2 vdd vss nand08
+XDECD2 selb2 sel2 vdd vss inv08
+XLOW2 v90 low2 RPP W=2.4u L=8795.902u
+XHIGH2 v41 high2 RPP W=2.4u L=13080.055u
+MLOW2 low2 sel2 vss vss N W=60u L=.8u
+MHIGH2 high2 selb2 vdd vdd P W=100u L=.8u
+XDECA3 d0 d1 decab3 vdd vss nand08
+XDECB3 decab3 deca3 vdd vss inv08
+XDECC3 deca3 d2b selb3 vdd vss nand08
+XDECD3 selb3 sel3 vdd vss inv08
+XLOW3 v90 low3 RPP W=2.4u L=8350.563u
+XHIGH3 v41 high3 RPP W=2.4u L=11826.203u
+MLOW3 low3 sel3 vss vss N W=60u L=.8u
+MHIGH3 high3 selb3 vdd vdd P W=100u L=.8u
+XDECA4 d0b d1b decab4 vdd vss nand08
+XDECB4 decab4 deca4 vdd vss inv08
+XDECC4 deca4 d2 selb4 vdd vss nand08
+XDECD4 selb4 sel4 vdd vss inv08
+XLOW4 v90 low4 RPP W=2.4u L=8090.976u
+XHIGH4 v41 high4 RPP W=2.4u L=10911.463u
+MLOW4 low4 sel4 vss vss N W=60u L=.8u
+MHIGH4 high4 selb4 vdd vdd P W=100u L=.8u
+XDECA5 d0 d1b decab5 vdd vss nand08
+XDECB5 decab5 deca5 vdd vss inv08
+XDECC5 deca5 d2 selb5 vdd vss nand08
+XDECD5 selb5 sel5 vdd vss inv08
+XLOW5 v90 low5 RPP W=2.4u L=9035.822u
+XHIGH5 v41 high5 RPP W=2.4u L=9221.078u
+MLOW5 low5 sel5 vss vss N W=60u L=.8u
+MHIGH5 high5 selb5 vdd vdd P W=100u L=.8u
+XDECA6 d0b d1 decab6 vdd vss nand08
+XDECB6 decab6 deca6 vdd vss inv08
+XDECC6 deca6 d2 selb6 vdd vss nand08
+XDECD6 selb6 sel6 vdd vss inv08
+XLOW6 v90 low6 RPP W=2.4u L=8006.459u
+XHIGH6 v41 high6 RPP W=2.4u L=10538.517u
+MLOW6 low6 sel6 vss vss N W=60u L=.8u
+MHIGH6 high6 selb6 vdd vdd P W=100u L=.8u
+XDECA7 d0 d1 decab7 vdd vss nand08
+XDECB7 decab7 deca7 vdd vss inv08
+XDECC7 deca7 d2 selb7 vdd vss nand08
+XDECD7 selb7 sel7 vdd vss inv08
+XLOW7 v90 low7 RPP W=2.4u L=8350.563u
+XHIGH7 v41 high7 RPP W=2.4u L=11826.203u
+MLOW7 low7 sel7 vss vss N W=60u L=.8u
+MHIGH7 high7 selb7 vdd vdd P W=100u L=.8u
+XC41 sensed v41 q41 vdd vss nb compare08
+XC43 v43 sensed q43 vdd vss nb compare08
+XC46 v46 sensed q46 vdd vss nb compare08
+XC65 sensed v65 q65 vdd vss nb compare08
+XC70 v70 sensed q70 vdd vss nb compare08
+XC80 sensed v80 q80 vdd vss nb compare08
+XC90 sensed v90 q90 vdd vss nb compare08
+XNR1 q41 q41 n41 vdd vss nand08
+XRS0 n41 q90 s1_req vdd vss nand08
+XRSB s1_req s1_off vdd vss inv08
+XRSM s1_off rst_b s1_drive vdd vss nand08
+* Give the TX discharge transmission gates time to turn off before reset.
+XDRST s1_drive s1_del RPP W=2.4u L={ldead}
+MDRN s1_del vss vss vss N W=100u L=20u
+MDRP s1_del vdd vdd vdd P W=100u L=20u
+XRS1 s1_del s1b vdd vss inv08 w=20u
+XRS2 s1b s1 vdd vss inv08 w=20u
+* Interlock RX with a delayed copy of the physical reset release.
+XRXGDEAD s1b rx_delay RPP W=2.4u L=65000u
+MRXGN rx_delay vss vss vss N W=100u L=20u
+MRXGP rx_delay vdd vdd vdd P W=100u L=20u
+XRXGI rx_delay reset_safe_b vdd vss inv08
+XRXGB reset_safe_b reset_safe vdd vss inv08
+XRXG q43 reset_safe rx_guard_b vdd vss nand08
+XRXGG rx_guard_b rx_guard vdd vss inv08
+XRX0 rx_guard q90 rx_qual_b vdd vss nand08
+XRXM rx_qual_b rx_qual vdd vss inv08
+XRXRST rx_qual rst_b rxb vdd vss nand08
+XRX1 rxb rx vdd vss inv08 w=20u
+XPRE0 q65 q65 n65 vdd vss nand08
+XPRE1 n65 q90 pre_req vdd vss nand08
+XPREB pre_req pre_off vdd vss inv08
+XPREM pre_off rst_b pre_d vdd vss nand08
+XPRE2 pre_d preb_d vdd vss inv08 w=20u
+* Shape the hold precharge edges to reduce capacitive feedthrough into VREF.
+XPREN pre_d pre RPP W=2.4u L=60000u
+XPREP preb_d preb RPP W=2.4u L=60000u
+MPREN pre vss vss vss N W=100u L=20u
+MPREP pre vdd vdd vdd P W=100u L=20u
+MPREBN preb vss vss vss N W=100u L=20u
+MPREBP preb vdd vdd vdd P W=100u L=20u
+XTR0 q70 q80 tr_req_b vdd vss nand08
+XTRB tr_req_b tr_req vdd vss inv08
+XTRM tr_req rst_b trackb vdd vss nand08
+XTR1 trackb track vdd vss inv08 w=20u
+XTX0 q46 rx tx_off vdd vss nand08
+XTX1 tx_off tx_on vdd vss inv08 w=25u
+MNDIODE pb nb vss vss N W=4u L={lslew}
+MPDIODE pb pb vdd vdd P W=10u L=2.4u
+MUP tx_high pb vdd vdd P W=10u L=2.4u
+MUPEN tx tx_off tx_high vdd P W=30u L=.8u
+MDN tx_low nb vss vss N W=4u L={lfall}
+MDNEN txb tx_on tx_low vss N W=20u L=.8u
+MCTN tx vss vss vss N W=100u L=20u M=10
+MCTP txb vdd vdd vdd P W=100u L=20u M=10
+MCTN2 tx vdd vdd vdd P W=100u L=20u M=10
+MCTP2 txb vss vss vss N W=100u L=20u M=10
+MFASTN tx tx_off vss vss N W=40u L=.8u
+MFASTP txb tx_on vdd vdd P W=50u L=.8u
+* Clamp RX and reset the OTA before recharging the sensors. Slower TX
+* recharge limits the current pulse returned through the RX clamp.
+MCHBIAS ch_pb nb vss vss N W=4u L=2.4u
+MCHDIODE ch_pb ch_pb vdd vdd P W=10u L=2.4u
+MCHUP ch_hi ch_pb vdd vdd P W=10u L=2.4u
+MCHUPEN chg s1b ch_hi vdd P W=30u L=.8u
+MCHDN ch_lo nb vss vss N W=4u L=2.4u
+MCHDNEN chgb s1 ch_lo vss N W=20u L=.8u
+MCHFASTN chg s1b vss vss N W=40u L=.8u
+MCHFASTP chgb s1 vdd vdd P W=50u L=.8u
+MCHC1 chg vss vss vss N W=100u L=20u M=10
+MCHC2 chg vdd vdd vdd P W=100u L=20u M=10
+MCHC3 chgb vss vss vss N W=100u L=20u M=10
+MCHC4 chgb vdd vdd vdd P W=100u L=20u M=10
+.ends phase_trim08
+
+* Unity-gain reference driver with NMOS differential input, PMOS pull-up,
+* and a continuous NMOS current sink. The clean DC reference is an input.
+.subckt refbuf08 ref out boost vdd vss
+XRBIAS vdd nb RPP W=2.4u L=5500u
+MBIAS nb nb vss vss N W=20u L=2.4u
+MT tail nb vss vss N W=24u L=2.4u
+M1 left out tail vss N W=80u L=2.4u
+M2 gain ref tail vss N W=80u L=2.4u
+M3 left left vdd vdd P W=60u L=2.4u
+M4 gain left vdd vdd P W=60u L=2.4u
+MP out gain vdd vdd P W=200u L=1.6u
+MN out nb vss vss N W=72u L=2.4u
+* Enable extra sink current in the upper trim codes, including the hot code.
+XBOOST boost boost_b vdd vss inv08
+MBSWN nb_extra boost nb vss N W=5u L=.8u
+MBSWP nb_extra boost_b nb vdd P W=10u L=.8u
+MBOFF nb_extra boost_b vss vss N W=5u L=.8u
+MBEXTRA out nb_extra vss vss N W=64u L=2.4u
+XNULL gain comp RPP W=2.4u L=20u
+* MOS Miller capacitor, biased between the output and the PMOS drive node.
+MCC out comp out out P W=50u L=20u
+.ends refbuf08

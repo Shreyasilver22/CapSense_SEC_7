@@ -1,0 +1,44 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=XOTA"}
+V {}
+S {}
+E {}
+L 4 -95 -177 95 -177 {}
+L 4 95 -177 95 177 {}
+L 4 95 177 -95 177 {}
+L 4 -95 177 -95 -177 {}
+L 4 -115 150 -95 150 {}
+B 5 -117.5 147.5 -112.5 152.5 {name=INP dir=inout pinnumber=1}
+L 4 -115 -150 -95 -150 {}
+B 5 -117.5 -152.5 -112.5 -147.5 {name=INN dir=inout pinnumber=2}
+L 4 115 -150 95 -150 {}
+B 5 112.5 -152.5 117.5 -147.5 {name=OUTP dir=inout pinnumber=3}
+L 4 115 150 95 150 {}
+B 5 112.5 147.5 117.5 152.5 {name=OUTM dir=inout pinnumber=4}
+L 4 115 -52 95 -52 {}
+B 5 112.5 -54.5 117.5 -49.5 {name=VDD dir=inout pinnumber=5}
+L 4 115 -18 95 -18 {}
+B 5 112.5 -20.5 117.5 -15.5 {name=VSS dir=inout pinnumber=6}
+L 4 115 18 95 18 {}
+B 5 112.5 15.5 117.5 20.5 {name=IREF dir=inout pinnumber=7}
+L 4 -115 -18 -95 -18 {}
+B 5 -117.5 -20.5 -112.5 -15.5 {name=VCM dir=inout pinnumber=8}
+L 4 -115 18 -95 18 {}
+B 5 -117.5 15.5 -112.5 20.5 {name=VBN dir=inout pinnumber=9}
+L 4 -115 52 -95 52 {}
+B 5 -117.5 49.5 -112.5 54.5 {name=VBP dir=inout pinnumber=10}
+T {INN (-)} -86 -161 0 0 0.31 0.31 {layer=4}
+T {INP (+)} -86 138 0 0 0.31 0.31 {layer=4}
+T {OUTP} 39 -161 0 0 0.31 0.31 {layer=4}
+T {OUTN} 39 138 0 0 0.31 0.31 {layer=4}
+T {Telescopic OTA} -68 -106 0 0 0.4 0.4 {layer=4}
+T {with CMFB} -50 -81 0 0 0.34 0.34 {layer=4}
+T {VCM} -87 -29 0 0 0.28 0.28 {layer=4}
+T {VBN} -87 7 0 0 0.28 0.28 {layer=4}
+T {VBP} -87 41 0 0 0.28 0.28 {layer=4}
+T {VDD} 59 -63 0 0 0.28 0.28 {layer=4}
+T {VSS} 59 -29 0 0 0.28 0.28 {layer=4}
+T {IREF} 59 7 0 0 0.28 0.28 {layer=4}

@@ -1,0 +1,23 @@
+{
+  "MOS_units": 65,
+  "resistor_segments": 320,
+  "bbox_um": [
+    3.5,
+    -1.5,
+    1330.728,
+    2027.5
+  ],
+  "area_mm2": 2.6929456120000004,
+  "ports": [
+    "INP",
+    "INN",
+    "OUTP",
+    "OUTM",
+    "VDD",
+    "VSS",
+    "IREF",
+    "VCM",
+    "NBOOST",
+    "PBOOST"
+  ]
+}

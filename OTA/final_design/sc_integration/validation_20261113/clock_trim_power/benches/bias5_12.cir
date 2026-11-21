@@ -1,0 +1,81 @@
+SCL08 physical clock and SC reference integration
+.include "/home/your-user/pdk/scl08/ngspice_models49/mos/bnwp49_5v"
+.include "/home/your-user/pdk/scl08/ngspice_models49/res/worst/ppr"
+.include "/home/your-user/final year project/ota/final_design/models/ota_cm2p5_C.spice"
+.param CP=12p CN=12p CF=40p
+.temp 85
+.options reltol=4e-4 vntol=3u abstol=1e-11 numdgt=12 method=gear maxord=2
+VDD vdd 0 5.5
+* Single external 10 kHz clock, nominal 50% midpoint duty.
+VCLK clk10k 0 PULSE(0 5.5 0 1u 1u 49u 100u)
+
+
+CSp txp rxp {CP}
+CSn txn rxn {CN}
+CLP outp 0 5p
+CLN outn 0 5p
+MN_drive_p vdd chg txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_p vdd chgb txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_p vref_sw phi2 txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_p vref_sw phi2b txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_p vref_sw phi1 rxp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_p vref_sw phi1b rxp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_p rxp phit sump 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_p rxp phitb sump vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_p sump phi1 outp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_p sump phi1b outp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_drive_n vdd chg txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_n vdd chgb txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_n vref_sw phi2 txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_n vref_sw phi2b txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_n vref_sw phi1 rxn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_n vref_sw phi1b rxn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_n rxn phit sumn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_n rxn phitb sumn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_n sumn phi1 outn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_n sumn phi1b outn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+XOTA sumn sump outp outn vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+MCFp sump outp sump sump P W=20u L=10u M=121 AD=90p AS=90p PD=49u PS=49u
+MCFn sumn outn sumn sumn P W=20u L=10u M=121 AD=90p AS=90p PD=49u PS=49u
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p vref_sw pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p vref_sw prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n vref_sw pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n vref_sw prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+
+
+
+VREFSRC ref_src 0 2.5
+XREF ref_src vref_driven d2 buf_vdd 0 refbuf08
+VREFSENSE ref_src vref 0
+
+XCLK clk10k d0 d1 d2 clk_vdd 0 phi1 phi1b phit phitb phi2 phi2b pr prb tr trb chg chgb phase_trim08 
+
+.include blocks.spice
+VCLKDD vdd clk_vdd 0
+VTRIM0 d0 0 5.5
+VTRIM1 d1 0 0
+VTRIM2 d2 0 5.5
+VBUFDD vdd buf_vdd 0
+VDRIVE vref_driven vref_sw 0
+MREFBYPASS vdd vref_sw vdd vdd P W=20u L=10u M=150
+
+.include ota_bias.spice
+VBIASDD vdd bias_vdd 0
+XB ref_src bias_vdd 0 vbn vbp bias_src ota_bias08
+VIREF bias_src bias 0
+.save v(clk10k) v(phi1) v(phit) v(phi2) v(phi2b) v(pr) v(tr) v(vref_sw) v(vref) v(outp) v(outn) v(sump) v(sumn) v(holdp) v(holdn) v(txp) v(rxp) i(VBUFDD) i(VCLKDD) i(VDD) i(VDRIVE) v(vbn) v(vbp) i(VIREF) i(VBIASDD)
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=10
+tran 120n 103u 0 120n
+wrdata trace.dat v(clk10k) v(phi1) v(phit) v(phi2) v(phi2b) v(pr) v(tr) v(vref_sw) v(vref) v(outp) v(outn) v(sump) v(sumn) v(holdp) v(holdn) v(txp) v(rxp) i(VBUFDD) i(VCLKDD) i(VDD) i(VDRIVE) v(vbn) v(vbp) i(VIREF) i(VBIASDD)
+quit
+.endc
+.end

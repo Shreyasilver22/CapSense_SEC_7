@@ -1,0 +1,29 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=XG"}
+V {}
+S {}
+E {}
+B 4 -80 -70 100 70 {}
+L 4 -100 -50 -80 -50 {}
+B 5 -102.5 -52.5 -97.5 -47.5 {name=SENSE dir=in}
+L 4 -100 50 -80 50 {}
+B 5 -102.5 47.5 -97.5 52.5 {name=SP dir=in}
+L 4 0 -100 0 -70 {}
+B 5 -2.5 -102.5 2.5 -97.5 {name=vdd dir=inout}
+L 4 0 100 0 70 {}
+B 5 -2.5 97.5 2.5 102.5 {name=vss dir=inout}
+L 4 -40 100 -40 70 {}
+B 5 -42.5 97.5 -37.5 102.5 {name=vbn dir=in}
+L 4 140 0 100 0 {}
+B 5 137.5 -2.5 142.5 2.5 {name=IOUT dir=in}
+T {@name} -60 -130 0 0 0.3 0.3 {}
+T {SENSE} -74 -55 0 0 0.22 0.22 {}
+T {SP} -74 40 0 0 0.22 0.22 {}
+T {IOUT} 25 -5 0 0 0.22 0.22 {}
+T {5T gm} -55 -10 0 0 0.3 0.3 {}
+T {vdd} 8 -98 0 0 0.2 0.2 {}
+T {vss} 8 80 0 0 0.2 0.2 {}
+T {vbn} -80 80 0 0 0.2 0.2 {}

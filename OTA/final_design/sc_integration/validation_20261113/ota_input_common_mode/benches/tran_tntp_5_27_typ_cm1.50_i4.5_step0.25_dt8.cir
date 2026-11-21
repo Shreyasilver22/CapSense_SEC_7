@@ -1,0 +1,29 @@
+SCL08 extracted-capacitance OTA input common-mode characterization
+.include "/home/your-user/pdk/scl08/ngspice_models49/mos/tntp49_5v"
+.include "/home/your-user/pdk/scl08/ngspice_models49/res/typ/ppr"
+.include "/home/your-user/final year project/ota/final_design/models/ota_cm2p5_C.spice"
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12 method=gear maxord=2
+VDD vdd 0 5
+IREF vdd bn 4.5u
+VCM vcm 0 2.5
+VBN vbn 0 3
+VBP vbp vdd -2.2
+XOTA inp inn op om vdd 0 bn vcm vbn vbp ota_telescopic_cm2p5
+CLP op 0 5p
+CLM om 0 5p
+EOD od 0 op om 1
+VICM icm 0 1.5
+EIP inp icm cmd od 0.5
+EIM inn icm od cmd 0.5
+VCMD cmd 0 PWL(0 -0.25 10u -0.25 10.01u 0.25 26u 0.25 26.01u -0.25 42u -0.25)
+.save v(op) v(om) v(inp) v(inn) i(VDD) v(cmd) @m.xota.m1007[vds] @m.xota.m1007[vdsat] @m.xota.m1059[vds] @m.xota.m1059[vdsat] @m.xota.m1015[vds] @m.xota.m1015[vdsat] @m.xota.m1033[vds] @m.xota.m1033[vdsat] @m.xota.m1041[vds] @m.xota.m1041[vdsat] @m.xota.m1042[vds] @m.xota.m1042[vdsat] @m.xota.m1039[vds] @m.xota.m1039[vdsat] @m.xota.m1008[vds] @m.xota.m1008[vdsat] @m.xota.m1045[vds] @m.xota.m1045[vdsat] @m.xota.m1053[vds] @m.xota.m1053[vdsat]
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 8n 42u 0 8n
+wrdata tran.dat v(op) v(om) v(inp) v(inn) i(VDD) v(cmd) @m.xota.m1007[vds] @m.xota.m1007[vdsat] @m.xota.m1059[vds] @m.xota.m1059[vdsat] @m.xota.m1015[vds] @m.xota.m1015[vdsat] @m.xota.m1033[vds] @m.xota.m1033[vdsat] @m.xota.m1041[vds] @m.xota.m1041[vdsat] @m.xota.m1042[vds] @m.xota.m1042[vdsat] @m.xota.m1039[vds] @m.xota.m1039[vdsat] @m.xota.m1008[vds] @m.xota.m1008[vdsat] @m.xota.m1045[vds] @m.xota.m1045[vdsat] @m.xota.m1053[vds] @m.xota.m1053[vdsat]
+quit
+.endc
+.end

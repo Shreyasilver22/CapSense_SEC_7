@@ -1,0 +1,16 @@
+
+   X server connection failed, although DISPLAY shell variable is set.
+   A possible reason is that the X server is not running or DISPLAY shell variable
+   is incorrectly set.
+   Starting Xschem in text only mode.
+
+tclvareval(): error executing update_recent_file {/tmp/capsense-gm5.fXS5V7/tb/gm_ota_symbol_tb.sch}: can't read "f": no such variable
+-----------/tmp/capsense-gm5.fXS5V7/tb/gm_ota_symbol_tb.sch
+Error: undriven node: out
+Error: undriven node: sp
+Error: undriven node: vbn
+Warning: open net: vdd
+Error: undriven node: sense
+-----------/tmp/capsense-gm5.fXS5V7/designs/gm_ota.sch
+-----------/tmp/capsense-gm5.fXS5V7/tb/gm_ota_symbol_tb.sch
+

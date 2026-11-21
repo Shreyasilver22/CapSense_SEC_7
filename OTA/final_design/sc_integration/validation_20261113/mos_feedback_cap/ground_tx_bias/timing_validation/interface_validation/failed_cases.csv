@@ -1,0 +1,11 @@
+group,cp,cn,p_units,n_units,sum_shunt_pf,acquisition_pf,precharge_v,track_at_us,model,supply,temp,step_ns
+load,12,7,121,121,0,10,0,70,tntp49_5v,5,27,20
+load,12,7,121,121,0,10,0,76,tntp49_5v,5,27,20
+load,12,7,121,121,0,10,0,78,tntp49_5v,5,27,20
+load,12,7,121,121,0,20,0,70,tntp49_5v,5,27,20
+load,12,7,121,121,0,20,0,78,tntp49_5v,5,27,20
+load_corner,12,7,121,121,0,10,0,70,wnbp49_5v,4.5,85,20
+load_corner,12,7,121,121,0,10,0,78,wnbp49_5v,4.5,85,20
+load_corner,12,7,121,121,0,10,0,70,bnwp49_5v,5.5,0,20
+load_corner,12,7,121,121,0,10,0,78,bnwp49_5v,5.5,0,20
+fine,12,7,121,121,0,10,0,78,tntp49_5v,5,27,5

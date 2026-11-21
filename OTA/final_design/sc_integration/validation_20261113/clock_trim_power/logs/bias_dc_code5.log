@@ -1,0 +1,52 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: physical bias fanout test, scl08
+
+Warning: Model issue on line 7 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 8 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 1
+v(vbn) = 2.998925e+00
+v(vbp) = 3.286288e+00
+v(bn) = 4.905714e-01
+i(viread) = 3.714065e-06
+i(vb) = 5.899853e-05
+v(op) = 2.499105e+00
+v(om) = 2.499105e+00
+v(xb.sense) = 2.499288e+00
+ngspice-42 done

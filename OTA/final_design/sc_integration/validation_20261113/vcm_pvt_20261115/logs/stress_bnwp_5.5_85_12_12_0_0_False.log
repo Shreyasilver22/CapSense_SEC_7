@@ -1,0 +1,157 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: shreyas sc network: fd_ota, tg; explicit reconstruction of missing symbols
+
+Warning: Model issue on line 7 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 8 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Note: True gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        5.5
+clk10k                                       0
+clk_normal                                   0
+xphase.xreset_end.line_in                    0
+xphase.reset_end                             0
+xphase.xrx_on.line_in                        0
+xphase.rx_on                                 0
+xphase.xtransfer_end.line_in                 0
+xphase.transfer_end                          0
+xphase.xpre_off.line_in                      0
+xphase.pre_off                               0
+xphase.xpre_on.line_in                       0
+xphase.pre_on                                0
+xphase.xtrack_on.line_in                     0
+xphase.track_on                              0
+xphase.xtrack_off.line_in                    0
+xphase.track_off                             0
+xphase.xtx_46.line_in                        0
+xphase.tx_46                                 0
+xphase.xtx_47.line_in                        0
+xphase.tx_47                                 0
+xphase.xtx_48.line_in                        0
+xphase.tx_48                                 0
+xphase.xtx_49.line_in                        0
+xphase.tx_49                                 0
+xphase.xtx_50.line_in                        0
+xphase.tx_50                                 0
+xphase.xtx_51.line_in                        0
+xphase.tx_51                                 0
+xphase.xtx_52.line_in                        0
+xphase.tx_52                                 0
+xphase.xtx_53.line_in                        0
+xphase.tx_53                                 0
+phi1_raw                                     0
+phit_raw                                     0
+xphase.tx_slew                               0
+phi2_raw                                     0
+pr_raw                                       5
+tr_raw                                       0
+phi1                                         0
+phit                                         0
+phi2                                         0
+pr                                         5.5
+tr                                           0
+phi1b                                      5.5
+phi2b                                      5.5
+txp                                    2.85547
+rxp                                    2.85538
+txn                                    2.85547
+rxn                                    2.85538
+outp                                   2.49898
+outn                                   2.49898
+phitb                                      5.5
+vref_sw                                    2.5
+sump                                   2.86023
+sumn                                   2.86023
+vbn                                          3
+vbp                                        3.3
+bias                                  0.505721
+vref                                       2.5
+holdp                                      2.5
+holdn                                      2.5
+trb                                        5.5
+prb                                          0
+ref_src                                    2.5
+bpr#branch                                   0
+btr#branch                                   0
+bt#branch                                    0
+b2#branch                                    0
+b1#branch                                    0
+bscr#branch                                  0
+bscp#branch                                  0
+bsc2#branch                                  0
+bsct#branch                                  0
+bsc1#branch                                  0
+b.xphase.btrack#branch                       0
+b.xphase.bpre#branch                         0
+b.xphase.bphi2#branch                        0
+b.xphase.bphitx#branch                       0
+b.xphase.bphit#branch                        0
+b.xphase.bphi1#branch                        0
+bnorm#branch                                 0
+e.xphase.xtx_53.ebuf#branch                  0
+e.xphase.xtx_52.ebuf#branch                  0
+e.xphase.xtx_51.ebuf#branch                  0
+e.xphase.xtx_50.ebuf#branch                  0
+e.xphase.xtx_49.ebuf#branch                  0
+e.xphase.xtx_48.ebuf#branch                  0
+e.xphase.xtx_47.ebuf#branch                  0
+e.xphase.xtx_46.ebuf#branch                  0
+e.xphase.xtrack_off.ebuf#branch               0
+e.xphase.xtrack_on.ebuf#branch               0
+e.xphase.xpre_on.ebuf#branch                 0
+e.xphase.xpre_off.ebuf#branch                0
+e.xphase.xtransfer_end.ebuf#branch               0
+e.xphase.xrx_on.ebuf#branch                  0
+e.xphase.xreset_end.ebuf#branch               0
+vrefsense#branch                             0
+vrefwire#branch                   -6.80012e-12
+vrefsrc#branch                     6.80012e-12
+vbp#branch                                   0
+vbn#branch                                   0
+vclk#branch                                  0
+vdd#branch                        -5.93921e-05
+
+
+No. of Data Rows : 16126
+ngspice-42 done

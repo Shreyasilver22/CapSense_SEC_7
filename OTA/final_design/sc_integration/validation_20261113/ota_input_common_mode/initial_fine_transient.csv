@@ -1,0 +1,9 @@
+input_cm_V,iref_uA,mos,supply_V,temperature_C,rpp,case,status
+1.1,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.10_i4.5_step0.1_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.99221015600051 seconds"
+1.1,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.10_i4.5_step0.25_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.97419795099995 seconds"
+1.15,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.15_i4.5_step0.1_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.97393674200066 seconds"
+1.15,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.15_i4.5_step0.25_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.98320439500094 seconds"
+1.2,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.20_i4.5_step0.1_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.98405545100104 seconds"
+1.2,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.20_i4.5_step0.25_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.98437749100049 seconds"
+1.5,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.50_i4.5_step0.1_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.98427086899756 seconds"
+1.5,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm1.50_i4.5_step0.25_dt5,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.97132891500223 seconds"

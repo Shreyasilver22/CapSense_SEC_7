@@ -98,3 +98,13 @@ The worst raw-error corner was separately repeated with5 ns maximum timestep: sa
 The repo was read at commit327c0a9; original SCA upload1266134. Its TG and behavioral symbols are missing, so this is an explicit reconstruction of the visible labeled network, not a byte-identical original netlist reproduction. The behavioral model text was available and retained for controls. The original upload is available in the repository SCA directory.
 
 Only the OTA uses the existing adapted C-extraction model. Full wire/contact/well/substrate RC, quantitative noise, mismatch, actual clock/reference circuits and reliability remain unqualified. **Both40 pF feedback capacitors remain ideal linear elements**; MOS compensation inside the OTA does not implement these precision capacitors. There is no full SC physical layout or new system DRC/LVS. Existing OTA DRC/LVS apply to its unchanged macro only. The SAR ADC has not been connected. The shared-OTA transfer and clock/driver changes must be reflected in the system model before treating this as the final ASIC front end.
+
+
+## Integrated readout and later verification
+
+- [Editable SC + telescopic OTA](integrated_sc_ota) includes the Xschem
+  hierarchy, MOS switch tests, and capacitor sizing sweep.
+- [SC validation history](validation_20261113) covers the earlier 10 kHz
+  clock, common-mode, feedback, and bias studies.
+- [Matched OTA and SC comparison](comparison_20261121) includes the
+  gain-boosted layout and the supplied-SC sensor-reset diagnostic.

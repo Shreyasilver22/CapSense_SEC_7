@@ -1,0 +1,9 @@
+2026-11-20 19:25:31 +0000: Starting running SCL C1D Klayout LVS runset on /home/your-user/final year project/ota/sc_ota_integration_comparison/boosted_layout/layout/ota_boosted_layout.gds
+2026-11-20 19:25:31 +0000: deep mode is enabled.
+2026-11-20 19:25:31 +0000: Netlist file: /home/your-user/final year project/ota/sc_ota_integration_comparison/boosted_layout/schematic/layout_C.cdl
+2026-11-20 19:25:31 +0000: Extracted netlist file: /home/your-user/final year project/ota/sc_ota_integration_comparison/boosted_layout/verification/layout_C_reference.cir
+2026-11-20 19:25:31 +0000: Final report: /home/your-user/final year project/ota/sc_ota_integration_comparison/boosted_layout/verification/layout_C.lvsdb
+2026-11-20 19:25:31 +0000: LVS Total Run time 0.737929 seconds
+2026-11-20 19:25:31 +0000: ==========================================
+2026-11-20 19:25:31 +0000: INFO : Congratulations! Netlists match.
+2026-11-20 19:25:31 +0000: ==========================================

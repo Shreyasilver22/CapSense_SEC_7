@@ -1,0 +1,2 @@
+input_cm_V,iref_uA,mos,supply_V,temperature_C,rpp,case,output_step_per_side_V,dwell_us,up_settle_us,down_settle_us,worst_settle_us,worst_target_diff_settle_us,worst_static_diff_error_mV,peak_output_cm_error_mV,status
+0.6,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.60_i4.5_step0.1_dt80,0.1,220,nan,nan,nan,191.20091557819998,0.11610537665732168,524.7176404409996,ok

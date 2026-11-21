@@ -1,0 +1,76 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: Unusual leading characters like '$' or others out of '= [] ? () & % $"!:,\f'
+    in netlist or included files, will be replaced with '*'.
+    Check line no 6:  $******pmos digital **********************
+
+
+Circuit: scl08 extracted-capacitance ota input common-mode characterization
+
+Warning: Model issue on line 5 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 7 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+bn                                    0.843663
+vcm                                        2.5
+vbn                                          3
+vbp                                        2.8
+om                                     2.62615
+op                                     2.37616
+inn                                   0.600001
+inp                                   0.599999
+od                                   -0.249997
+icm                                        0.6
+cmd                                      -0.25
+eim#branch                                   0
+eip#branch                                   0
+eod#branch                                   0
+vcmd#branch                                  0
+vicm#branch                                  0
+vbp#branch                                   0
+vbn#branch                                   0
+vcm#branch                                   0
+vdd#branch                         -3.5752e-05
+
+
+No. of Data Rows : 9079
+ngspice-42 done

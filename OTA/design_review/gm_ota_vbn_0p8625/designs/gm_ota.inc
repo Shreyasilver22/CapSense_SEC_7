@@ -1,0 +1,14 @@
+.subckt gm_ota SENSE SP vdd vss vbn IOUT
+*.ipin SENSE
+*.ipin SP
+*.iopin vdd
+*.iopin vss
+*.ipin vbn
+*.ipin IOUT
+M3 n1 n1 vdd vdd P w=2.5u l=3.2u m=1
+M4 IOUT n1 vdd vdd P w=2.5u l=3.2u m=1
+M1 n1 SP tail vss N w=2.5u l=3.2u m=1
+M2 IOUT SENSE tail vss N w=2.5u l=3.2u m=1
+M5 tail vbn vss vss N w=5u l=3.2u m=1
+.ends
+

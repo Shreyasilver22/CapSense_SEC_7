@@ -1,0 +1,20 @@
+SCL08 uploaded five-transistor OTA, VBN = 0.8625 V
+.include "/home/your-user/pdk/scl08/ngspice_models49/mos/tntp49_5v"
+.include "/tmp/capsense-gm5.fXS5V7/designs/gm_ota.inc"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-13 method=gear maxord=2
+VDD vdd 0 5
+VBN vbn 0 0.8625
+XG sense sp vdd 0 vbn out gm_ota
+CL out 0 5p
+VSP sp 0 PULSE(1.5 3.5 10u 10n 10n 40u 80u)
+ESENSE sense 0 out 0 1
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 90u 0 2n
+wrdata transient.dat v(sp) v(out)
+quit
+.endc
+.end

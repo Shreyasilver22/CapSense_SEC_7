@@ -1,0 +1,103 @@
+Shreyas SC network: fd_ota, tg; explicit reconstruction of missing symbols
+.include "/home/your-user/final year project/ota/final_design/models/scl08_models.inc"
+.include "/home/your-user/final year project/ota/final_design/models/ota_cm2p5_C.spice"
+.param CP=12p CN=7p CF=40p
+.temp 27
+.options reltol=1e-5 vntol=1e-8 abstol=1e-12 numdgt=12 method=gear maxord=2
+VDD vdd 0 5
+VTXL txlo 0 2.5
+VREF vref 0 2.5
+* Single external 10 kHz clock, nominal 50% midpoint duty.
+VCLK clk10k 0 PULSE(0 5 0 1u 1u 49u 100u)
+XPHASE clk10k phi1 phit phi2 pr tr phases_10k
+
+* Behavioral phase generator. Ideal transport delays and gates are used
+* to reproduce the original timing from a single clock at 50% duty.
+* Run one complete period for the longest delay to fill.
+.subckt delay_ideal in out params: td=1u
+Ebuf line_in 0 in 0 1
+Tdelay line_in 0 out 0 Z0=50 TD={td}
+Rterm out 0 50
+.ends delay_ideal
+.subckt phases_10k clk phi1 phit phi2 pre track
+Xreset_end clk reset_end delay_ideal td=91u
+Xrx_on clk rx_on delay_ideal td=43u
+Xtransfer_end clk transfer_end delay_ideal td=40u
+Xpre_off clk pre_off delay_ideal td=64.75u
+Xpre_on clk pre_on delay_ideal td=39.75u
+Xtrack_on clk track_on delay_ideal td=69.75u
+Xtrack_off clk track_off delay_ideal td=29.5u
+Xtx_46 clk tx_46 delay_ideal td=46u
+Xtx_47 clk tx_47 delay_ideal td=47u
+Xtx_48 clk tx_48 delay_ideal td=48u
+Xtx_49 clk tx_49 delay_ideal td=49u
+Xtx_50 clk tx_50 delay_ideal td=50u
+Xtx_51 clk tx_51 delay_ideal td=51u
+Xtx_52 clk tx_52 delay_ideal td=52u
+Xtx_53 clk tx_53 delay_ideal td=53u
+Bphi1 phi1 0 V=min(v(clk),v(reset_end))
+Bphit phit 0 V=min(v(rx_on),v(transfer_end))
+* Eight delayed 1 us ramps reproduce the 8 us TX turn-on slew.
+Bphitx tx_slew 0 V=(v(tx_46)+v(tx_47)+v(tx_48)+v(tx_49)
++ +v(tx_50)+v(tx_51)+v(tx_52)+v(tx_53))/8
+Bphi2 phi2 0 V=min(v(tx_slew),v(transfer_end))
+* Center each half-microsecond transition within the 1 us input edge.
+Bpre pre 0 V=5-max(0,min(5,2*min(v(pre_off),v(pre_on))-2.5))
+Btrack track 0 V=max(0,min(5,2*min(v(track_on),v(track_off))-2.5))
+.ends phases_10k
+
+B1 phi1b 0 V=5-v(phi1)
+B2 phi2b 0 V=5-v(phi2)
+CSp txp rxp {CP}
+CSn txn rxn {CN}
+CLP outp 0 5p
+CLN outn 0 5p
+BT phitb 0 V=5-v(phit)
+MN_drive_p vdd phi1 txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_p vdd phi1b txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_p txlo phi2 txp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_p txlo phi2b txp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_p 0 phi1 rxp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_p 0 phi1b rxp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_p rxp phit sump 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_p rxp phitb sump vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_p sump phi1 outp 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_p sump phi1b outp vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_drive_n vdd phi1 txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_drive_n vdd phi1b txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_discharge_n txlo phi2 txn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_discharge_n txlo phi2b txn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_clamp_n 0 phi1 rxn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_clamp_n 0 phi1b rxn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_transfer_n rxn phit sumn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_transfer_n rxn phitb sumn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+MN_reset_n sumn phi1 outn 0 N W=10u L=0.8u AD=45.0p AS=45.0p PD=29.0u PS=29.0u
+MP_reset_n sumn phi1b outn vdd P W=20u L=0.8u AD=90.0p AS=90.0p PD=49.0u PS=49.0u
+VBN vbn 0 3
+VBP vbp vdd -2.2
+IREF vdd bias 4.5u
+XOTA sumn sump outp outn vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+MCFp sump outp sump sump P W=20u L=10u M=121 AD=90p AS=90p PD=49u PS=49u
+MCFn sumn outn sumn sumn P W=20u L=10u M=121 AD=90p AS=90p PD=49u PS=49u
+VPRE pre 0 2.5
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+BTR trb 0 V=5-v(tr)
+BPR prb 0 V=5-v(pr)
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p pre pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p pre prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n pre pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n pre prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 20n 300u 0 20n
+wrdata tx_25.dat v(outp) v(outn) v(sump) v(sumn) v(txp) v(txn) v(holdp) v(holdn)
+.endc
+.end

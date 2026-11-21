@@ -1,0 +1,17 @@
+{
+  "tool": "Magic 8.3.688",
+  "original_tech_sha256": "4b4bcdf7c2b32eb1c1d0450af46931efe08fcbbc43a364eb48d15541ff6c3e55",
+  "original_tech_unmodified": true,
+  "raw_marker_paint_omitted": [
+    "nwell_rev",
+    "boron_rev",
+    "boron",
+    "CONT",
+    "respin"
+  ],
+  "poly_resistor_body_cap_alias": true,
+  "limits": "Extraction-only adaptations as in prior OTA study; not foundry-qualified. C-only extraction; no claim of full wire/well/substrate RC verification.",
+  "RC_attempt": false,
+  "substrate_tile_errors": 0,
+  "missing_substrate_connections": 0
+}

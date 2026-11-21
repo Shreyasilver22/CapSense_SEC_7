@@ -1,0 +1,77 @@
+** sch_path: /home/your-user/final year project/ota/sc_ota_integration_comparison/integrated_sc_ota/sc_ota_integrated.sch
+**.subckt sc_ota_integrated
+XOTA sumn sump outp outn ota_vdd 0 bias vref vbn vbp ota_core
+CMEMP 0 sensp 10.5p
+XSENSEP sensp txp phi2 phi2b vdd 0 corrected_tg
+XSRESETP sensp 0 phi1 phi1b vdd 0 corrected_tg
+XCHARGEP vp txp phi1 phi1b vdd 0 corrected_tg
+CSP txp rxp 10p
+XRRESETP rxp 0 phi1 phi1b vdd 0 corrected_tg
+XXFERP rxp sump phit phitb vdd 0 corrected_tg
+XCFP sump outp corrected_pmos_bank
+XFBRESETP sump outp phi1 phi1b vdd 0 corrected_tg
+CLP outp 0 5p
+CMEMN 0 sensn 10p
+XSENSEN sensn txn phi2 phi2b vdd 0 corrected_tg
+XSRESETN 0 sensn phi1 phi1b vdd 0 corrected_tg
+XCHARGEN txn vp phi1 phi1b vdd 0 corrected_tg
+CSN txn rxn 10p
+XRRESETN 0 rxn phi1 phi1b vdd 0 corrected_tg
+XXFERN rxn sumn phit phitb vdd 0 corrected_tg
+XCFN sumn outn corrected_pmos_bank
+XFBRESETN sumn outn phi1 phi1b vdd 0 corrected_tg
+CLN 0 outn 5p
+**** begin user architecture code
+.include bench_support_schematic.spice
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_core.sym # of pins=10
+** sym_path: /home/your-user/final year project/ota/sc_ota_integration_comparison/integrated_sc_ota/ota_core.sym
+** sch_path: /home/your-user/final year project/ota/sc_ota_integration_comparison/integrated_sc_ota/ota_core.sch
+.subckt ota_core INP INN OUTP OUTM VDD VSS IREF VCM VBN VBP
+*.iopin INP
+*.iopin INN
+*.iopin OUTP
+*.iopin OUTM
+*.iopin VDD
+*.iopin VSS
+*.iopin IREF
+*.iopin VCM
+*.iopin VBN
+*.iopin VBP
+MP1 PX1 PC VDD VDD P w=40u l=3.2u AD=180p AS=180p PD=89u PS=89u m=1
+MPC1 OUTM VBP PX1 VDD P w=60u l=2.4u AD=270p AS=270p PD=129u PS=129u m=1
+MNC1 OUTM VBN NX1 VSS N w=30u l=2.4u AD=135p AS=135p PD=69u PS=69u m=1
+MN1 NX1 INP TAIL VSS N w=15u l=2.4u AD=67.5p AS=67.5p PD=39u PS=39u m=1
+MP2 PX2 PC VDD VDD P w=40u l=3.2u AD=180p AS=180p PD=89u PS=89u m=1
+MPC2 OUTP VBP PX2 VDD P w=60u l=2.4u AD=270p AS=270p PD=129u PS=129u m=1
+MNC2 OUTP VBN NX2 VSS N w=30u l=2.4u AD=135p AS=135p PD=69u PS=69u m=1
+MN2 NX2 INN TAIL VSS N w=15u l=2.4u AD=67.5p AS=67.5p PD=39u PS=39u m=1
+MTAIL TAIL IREF VSS VSS N w=80.0u l=3.2u AD=360p AS=360p PD=169u PS=169u m=1
+MREF IREF IREF VSS VSS N w=20u l=3.2u AD=90p AS=90p PD=49u PS=49u m=1
+MSP VDD OUTP SP VSS N w=20u l=1.6u AD=90p AS=90p PD=49u PS=49u m=4
+MSIP SP IREF VSS VSS N w=20u l=3.2u AD=90p AS=90p PD=49u PS=49u m=2
+MSM VDD OUTM SM VSS N w=20u l=1.6u AD=90p AS=90p PD=49u PS=49u m=4
+MSIM SM IREF VSS VSS N w=20u l=3.2u AD=90p AS=90p PD=49u PS=49u m=2
+MSR VDD VCM SR VSS N w=20u l=1.6u AD=90p AS=90p PD=49u PS=49u m=4
+MSIR SR IREF VSS VSS N w=20u l=3.2u AD=90p AS=90p PD=49u PS=49u m=2
+XSP SP SENSE RPP W=2.4u L=17142.857143u
+XSM SM SENSE RPP W=2.4u L=17142.857143u
+MCT CT CB VDD VDD P w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCBI CB CB VDD VDD P w=20u l=3.2u AD=90p AS=90p PD=49u PS=49u m=1
+MCBN CB IREF VSS VSS N w=11.428571u l=3.2u AD=51.4286p AS=51.4286p PD=31.8571u PS=31.8571u m=1
+MCS CA SENSE CT VDD P w=5u l=2.4u AD=22.5p AS=22.5p PD=19u PS=19u m=1
+MCR RCM SR CT VDD P w=5u l=2.4u AD=22.5p AS=22.5p PD=19u PS=19u m=1
+MCFN1 CA CA VSS VSS N w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCFN3 RCM RCM VSS VSS N w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCFP1 PBIAS PBIAS VDD VDD P w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCFN4 PBIAS RCM VSS VSS N w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCFP2 PC PBIAS VDD VDD P w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCFN2 PC CA VSS VSS N w=10u l=3.2u AD=45p AS=45p PD=29u PS=29u m=1
+MCC VDD PC VDD VDD P w=20u l=10u AD=90p AS=90p PD=49u PS=49u m=4
+MCM1 OUTP PC OUTP OUTP P w=20u l=10u AD=90p AS=90p PD=49u PS=49u m=12
+MCM2 OUTM PC OUTM OUTM P w=20u l=10u AD=90p AS=90p PD=49u PS=49u m=12
+.ends
+
+.end

@@ -1,0 +1,7 @@
+input_cm_V,iref_uA,mos,supply_V,temperature_C,rpp,case,status,output_step_per_side_V,dwell_us,up_settle_us,down_settle_us,worst_settle_us,worst_target_diff_settle_us,worst_static_diff_error_mV,peak_output_cm_error_mV
+0.6,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.60_i4.5_step0.1_dt50,"Command '['ngspice', '-b', '-o', 'run.log', 'tb.cir']' timed out after 69.9816418679984 seconds",,,,,,,,
+0.6,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.60_i4.5_step0.25_dt50,ok,0.25,220,nan,nan,nan,218.6433771921,0.9415114173512151,524.3178819054997
+0.65,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.65_i4.5_step0.1_dt50,ok,0.1,220,nan,nan,nan,218.5646664725,0.2778035699337045,565.7500075845002
+0.65,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.65_i4.5_step0.25_dt50,ok,0.25,220,nan,nan,nan,214.8557782113,0.32774581736561004,565.9914692790001
+0.7,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.70_i4.5_step0.1_dt50,ok,0.1,220,52.047543011589994,52.04691146289997,52.047543011589994,10.546911462899999,0.0010469054338158035,29.163274942999973
+0.7,4.5,tntp,5,27,typ,tran_tntp_5_27_typ_cm0.70_i4.5_step0.25_dt50,ok,0.25,220,52.41289649776,52.384305374700034,52.41289649776,10.084305374699994,0.00261850159999355,109.43737403950004

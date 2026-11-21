@@ -1,0 +1,30 @@
+{
+  "symbol_instance_pins": "sense sp vdd 0 vbn out",
+  "native_vs_bench_max_relative_AC_difference": 9.223770812469199e-05,
+  "source_files": {
+    "gm_ota.sch": "4debf7721c3a3cec0d16cbd3aecda48db8cd1d62f3dce265ce2072b13fda8a82",
+    "gm_ota.sym": "c2a9f2dcfebe5145bc378989ceb3e3fb447ee5e0ee442f258f25c8bbb6dfa930"
+  },
+  "timestep_checks": [
+    {
+      "step_V": 0.1,
+      "sample_us": 45.0,
+      "coarse_minus_fine_uV": 1.000000082740371e-05
+    },
+    {
+      "step_V": 0.1,
+      "sample_us": 85.0,
+      "coarse_minus_fine_uV": 6.999734125656687e-06
+    },
+    {
+      "step_V": 2.0,
+      "sample_us": 45.0,
+      "coarse_minus_fine_uV": 1.000088900582341e-06
+    },
+    {
+      "step_V": 2.0,
+      "sample_us": 85.0,
+      "coarse_minus_fine_uV": 6.000089314284196e-06
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# PMOS feedback capacitor size sweep
+
+Both feedback banks use equal counts of the SCL08 20 µm by 10 µm PMOS unit. The gates connect to OUTP and OUTN. Source, drain and bulk of each bank connect to the corresponding summing node. The capacitance labels use the nominal incremental capacitance of 412.55 fF per unit on the accumulation plateau. The simulations use the transistor banks themselves.
+
+The 10 kHz SC bench uses 2.5 V for the TX transfer level, a grounded RX sampling clamp, and the final telescopic OTA with capacitance extraction. The model cards are typical at 5 V and 27 °C. Sampling is at 80 µs into the second cycle. Sensitivity is the centered difference around CP = 12 pF with CN fixed at 7 pF and a 0.10 pF span. Equal 12 pF branches test the switching common-mode dip. Settling is measured from TX switching at 46 µs to the last entry into a band of 0.1% of the 88 µs value, with a 100 µV minimum band.
+
+The sensor noise calculation propagates independent kT/C charge from CP and CN through the clocked circuit. It injects positive and negative charge before transfer, measures the gain to the sampling instant, then combines the two contributions in quadrature. Dividing the differential RMS voltage by local sensitivity gives the equivalent input capacitance noise in aF. This estimate covers sensor sampling alone. OTA, reset, MOS bank, reference, and ADC noise require separate clocked analysis. The sweep uses schematic PMOS banks, so it omits dedicated well and routing parasitics and mismatch.
+
+Run python3 sweep.py and python3 plot.py here. The sweep reuses the parent PMOS study, the earlier TX reference study and the released SC testbench.
+
+All 51 transients completed, including 24 signal cases, 24 sensor charge perturbations, and three timestep checks. The 10 ns reruns differ by at most 1.01 µV at the differential sample. The 30 pF bank improves local sensitivity by 23% relative to 40 pF while raising sensor equivalent noise from 72.3 to 77.6 aF. The 60 pF bank reduces sensor equivalent noise to 66.9 aF and improves input common-mode headroom, but lowers sensitivity to 69.5 mV/pF. At 20 pF the balanced 12/12 pF switching event drives input common-mode down to 0.419 V. PVT and extracted well parasitics have yet to be checked for the resized banks.

@@ -1,0 +1,2 @@
+kind,cp_pf,cn_pf,corner,supply,temp_c,step,diff_v,out_cm_v,in_cm_v,out_cm_min_v,in_cm_min_v,max_plate_minus_gate_v,min_plate_minus_gate_v,late_change_v
+mos97,12,7,tntp49_5v,5,27,10n,0.5048440750947524,2.4972286954104472,1.5381562960885797,2.102278830643251,1.3233464046141805,0.0007326617553577996,-1.2393691812053669,1.4080570565067063e-07

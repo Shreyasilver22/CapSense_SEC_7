@@ -1,0 +1,28 @@
+** sch_path: /home/your-user/final year project/ota/sc_ota_integration_comparison/corrected_sc_design/corrected_differential_sc.sch
+**.subckt corrected_differential_sc
+XOTA sumn sump outp outn ota_vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+CMEMP 0 sensp 10.5p
+XSENSEP sensp txp phi2 phi2b vdd 0 corrected_tg
+XSRESETP sensp 0 phi1 phi1b vdd 0 corrected_tg
+XCHARGEP vp txp phi1 phi1b vdd 0 corrected_tg
+CSP txp rxp 10p
+XRRESETP rxp 0 phi1 phi1b vdd 0 corrected_tg
+XXFERP rxp sump phit phitb vdd 0 corrected_tg
+XCFP sump outp corrected_pmos_bank
+XFBRESETP sump outp phi1 phi1b vdd 0 corrected_tg
+CLP outp 0 5p
+CMEMN 0 sensn 10p
+XSENSEN sensn txn phi2 phi2b vdd 0 corrected_tg
+XSRESETN 0 sensn phi1 phi1b vdd 0 corrected_tg
+XCHARGEN txn vp phi1 phi1b vdd 0 corrected_tg
+CSN txn rxn 10p
+XRRESETN 0 rxn phi1 phi1b vdd 0 corrected_tg
+XXFERN rxn sumn phit phitb vdd 0 corrected_tg
+XCFN sumn outn corrected_pmos_bank
+XFBRESETN sumn outn phi1 phi1b vdd 0 corrected_tg
+CLN 0 outn 5p
+**** begin user architecture code
+.include bench_support.spice
+**** end user architecture code
+**.ends
+.end

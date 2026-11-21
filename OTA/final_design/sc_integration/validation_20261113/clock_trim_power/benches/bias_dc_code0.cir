@@ -1,0 +1,25 @@
+Physical bias fanout test, SCL08
+.include "/home/your-user/pdk/scl08/ngspice_models49/mos/wnwp49_5v"
+.include "/home/your-user/pdk/scl08/ngspice_models49/res/best/ppr"
+.include "/home/your-user/final year project/ota/final_design/models/ota_cm2p5_C.spice"
+.include ota_bias.spice
+VDD vdd 0 4.5
+VB vdd vb 0
+VREF ref 0 2.5
+XB ref vb 0 vbn vbp isrc ota_bias08
+VIREAD isrc bn 0
+XOTA inp inn op om vdd 0 bn ref vbn vbp ota_telescopic_cm2p5
+VCM icm 0 2.1
+EIP inp icm 0 od .5
+EIM inn icm od 0 .5
+EOD od 0 op om 1
+CL1 op 0 5p
+CL2 om 0 5p
+.temp 0
+.options reltol=1e-4
+.control
+op
+print v(vbn) v(vbp) v(bn) i(VIREAD) i(VB) v(op) v(om) v(xb.sense)
+quit
+.endc
+.end

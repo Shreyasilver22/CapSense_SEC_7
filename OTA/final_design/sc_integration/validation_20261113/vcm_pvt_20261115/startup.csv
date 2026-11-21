@@ -1,0 +1,7 @@
+name,mos,vdd,temp,rpp,cp,cn,ohms,pf,split,dt_ns,cycles,vbp,nodeset,startup_reset,status
+start_bnbp_7,bnbp,5.5,85,worst,12,7,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.9999674990013 seconds"
+start_bnbp_12,bnbp,5.5,85,worst,12,12,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99997428799907 seconds"
+start_wnbp_7,wnbp,5.5,85,worst,12,7,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99998078600038 seconds"
+start_wnbp_12,wnbp,5.5,85,worst,12,12,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99994531599987 seconds"
+start_bnwp_7,bnwp,5.5,85,worst,12,7,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.9999815629999 seconds"
+start_bnwp_12,bnwp,5.5,85,worst,12,12,0,0,False,20,3,,False,True,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99998867000068 seconds"

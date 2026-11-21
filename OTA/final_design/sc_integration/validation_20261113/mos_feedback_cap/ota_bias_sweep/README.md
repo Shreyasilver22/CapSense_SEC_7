@@ -1,0 +1,9 @@
+# OTA bias sweep in the switched-capacitor readout
+
+The extracted-capacitance telescopic OTA drives the 10 kHz SC circuit with the 2.5 V TX transfer level and two 97-unit PMOS feedback banks. Typical SCL08 MOS and resistor models, 5 V supply, 27 °C and 5 pF per output are used. The sampled output is measured at 80 µs into the second cycle. Sensitivity is a centered ±0.05 pF perturbation around CP/CN = 12/7 pF with CN held fixed. Differential settling uses a 0.1% band about the 88 µs value, with a minimum width of 100 µV, and starts at TX switching at 46 µs. Main rail power includes the modeled OTA and SC load on VDD. Bias and clock generation and the separate reference rail are excluded.
+
+All 13 bias settings yielded 95.771–95.793 mV/pF at the nominal operating point. At VBN/VBP = 3.0/2.8 V, changing IREF from 3.5 to 4.5 µA reduces settling from 7.28 to 6.19 µs and raises rail power from 240 to 304 µW. At 5.5 and 7.0 µA, settling is slower than at 4.5 µA. At 2.5 µA, settling increases to 9.25 µs while main rail power drops to 175 µW. The available time is 34 µs. VBN and VBP changes had little effect on nominal sensitivity. This does not establish equivalent performance at corners, other output swings, or with an ADC.
+
+The sensor thermal estimate uses independent charge perturbations on the two sensor capacitors and propagates their kT/C variance through the clocked circuit to the sample. The OTA-only noise diagnostic uses the standalone differential AC bench with a 1.538 V input common-mode, balanced outputs and a DC servo. The plotted spot noise is the input-referred density reported by ngspice at 1 MHz. The model produces a strong low-frequency rise. This diagnostic describes the standalone fixed operating point and does not provide the total sampled noise of the switched circuit.
+
+Run python3 sweep.py and python3 ota_noise.py followed by python3 plot.py. The scripts reuse the parent PMOS study and the installed SCL08 models.

@@ -1,0 +1,96 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: Unusual leading characters like '$' or others out of '= [] ? () & % $"!:,\f'
+    in netlist or included files, will be replaced with '*'.
+    Check line no 6:  $******pmos digital **********************
+
+
+Circuit: ** sch_path: /tmp/capsense_14nov.f3qqkh/diff_1411.sch
+
+Warning: Model issue on line 5 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 7 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+phi1                                         5
+txp                                          5
+phi1b                                        0
+vref                                       2.5
+phi2                                         0
+phi2b                                        5
+rxp                                4.53466e-09
+phit                                         0
+sump                                   2.49913
+phitb                                        5
+outp                                   2.49913
+txn                                          5
+rxn                                4.53466e-09
+sumn                                   2.49913
+outn                                   2.49913
+bias                                  0.824871
+vbn                                          3
+vbp                                        2.7
+pre                                        2.5
+holdp                                      2.5
+holdn                                      2.5
+trb                                          5
+tr                                           0
+prb                                          0
+pr                                           5
+bpr#branch                                   0
+btr#branch                                   0
+bphitb#branch                                0
+bphi2b#branch                                0
+bphi1b#branch                                0
+vpr#branch                                   0
+vtr#branch                                   0
+vpre#branch                        4.44089e-16
+vphit#branch                                 0
+vphi2#branch                                 0
+vphi1#branch                                 0
+vbp#branch                                   0
+vbn#branch                                   0
+vref#branch                        2.66454e-14
+vdd#branch                        -4.66079e-05
+
+
+No. of Data Rows : 16537
+Note: Simulation executed from .control section 

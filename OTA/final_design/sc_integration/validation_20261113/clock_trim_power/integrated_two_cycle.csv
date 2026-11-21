@@ -1,0 +1,6 @@
+case,code,mos,vdd,temp,status,reset_off_us,rx_on_us,tx10_us,tx90_us,pre_off_us,track_on_us,track_off_us,rx_off_us,clock_mw,buffer_mw,total_mw,peak_ref_mv,transfer_ref_mv,min_cm_V,max_cm_V,held_diff_mV,held_cm_V
+integrated3_7,3,tntp,5,27,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 109.94485148799868 seconds",,,,,,,,,,,,,,,,,
+integrated3_12,3,tntp,5,27,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 109.97954976999972 seconds",,,,,,,,,,,,,,,,,
+integrated5_12,5,bnwp,5.5,85,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 109.99985872699835 seconds",,,,,,,,,,,,,,,,,
+integrated5_7,5,bnwp,5.5,85,ok,44.98956390502095,45.161484965491795,48.040353946501725,74.55591957969048,65.67852895119886,69.77523103483294,80.746401155649,90.97943138187723,1.332584029803682,3.2720744390555168,4.936308952550922,8.252837000000124,1.6441359999999072,2.39942681595,2.54626820055,235.15199713003219,2.4987652357939205
+integrated0_7,0,wnwp,4.5,0,ngspice run stopped,,,,,,,,,,,,,,,,,

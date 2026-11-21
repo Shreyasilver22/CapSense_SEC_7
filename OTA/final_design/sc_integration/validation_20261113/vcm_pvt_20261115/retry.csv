@@ -1,0 +1,3 @@
+name,mos,vdd,temp,rpp,cp,cn,ohms,pf,split,dt_ns,cycles,status
+bnbp_5.5_85_12_7,bnbp,5.5,85,worst,12,7,0,0,False,50,2,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99997314100074 seconds"
+bnbp_5.5_85_12_12,bnbp,5.5,85,worst,12,12,0,0,False,50,2,"Command '['ngspice', '-b', '-o', 'run.log', 'run.cir']' timed out after 179.99996358799945 seconds"

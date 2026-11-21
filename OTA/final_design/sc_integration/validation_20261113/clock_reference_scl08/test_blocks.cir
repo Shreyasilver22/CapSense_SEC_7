@@ -1,0 +1,24 @@
+SCL08 phase generator and reference buffer tests
+.include "/home/your-user/final year project/ota/final_design/models/scl08_models.inc"
+.include blocks.spice
+VDD vdd 0 5
+VREF ref 0 2.5 AC 0
+VCLK clk 0 PULSE(0 5 0 1u 1u 49u 100u)
+XCLK clk vdd 0 s1 s1b rx rxb tx txb pre preb track trackb chg chgb phase08
+XREF ref driven vdd 0 refbuf08
+CLOAD driven 0 25p
+ILOAD 0 driven PULSE(0 400u 126u 50n 50n 0.8u 100u) AC 1
+.temp 27
+.options method=gear reltol=1e-4
+.control
+set wr_vecnames
+set wr_singlescale
+tran 50n 305u 0 50n
+wrdata blocks.dat v(clk) v(s1) v(rx) v(tx) v(txb) v(pre) v(track) v(xclk.ramp) v(xclk.rst_b) v(xclk.sensed) v(xclk.q41) v(xclk.q43) v(xclk.q46) v(xclk.q65) v(xclk.q70) v(xclk.q80) v(xclk.q90) v(driven) i(VDD) v(chg) v(chgb)
+op
+print v(xref.nb) v(xref.gain) @m.xref.mbias[id] @m.xref.mt[id] @m.xref.mn[id] @m.xref.mp[id] @m.xclk.mbias[id]
+ac dec 50 100 100Meg
+wrdata ac_ref.dat vm(driven)
+quit
+.endc
+.end

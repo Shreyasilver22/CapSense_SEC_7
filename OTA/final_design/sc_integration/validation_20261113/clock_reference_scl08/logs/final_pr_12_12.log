@@ -1,0 +1,189 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: Unusual leading characters like '$' or others out of '= [] ? () & % $"!:,\f'
+    in netlist or included files, will be replaced with '*'.
+    Check line no 6:  $******pmos digital **********************
+
+
+Circuit: scl08 physical clock and sc reference integration
+
+Warning: Model issue on line 5 :
+  .model n nmos level 49 version 3.2 hspver 98.2 paramchk 1 binflag 0 mobm ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (php) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+
+Warning: Model issue on line 7 :
+  .model p pmos level 49 version 3.2 hspver 98.2 paramchk 1 mobmod 1 capmo ...
+unrecognized parameter (hspver) - ignored
+unrecognized parameter (nlev) - ignored
+unrecognized parameter (sfvtflag) - ignored
+unrecognized parameter (vfbflag) - ignored
+unrecognized parameter (binflag) - ignored
+unrecognized parameter (-) - ignored
+unrecognized parameter (cgs0) - ignored
+unrecognized parameter (cgd0) - ignored
+unrecognized parameter (cgb0) - ignored
+unrecognized parameter (nds) - ignored
+unrecognized parameter (vnds) - ignored
+unrecognized parameter (fc) - ignored
+unrecognized parameter (tt) - ignored
+unrecognized parameter (php) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+clk10k                                       0
+txp                                          5
+rxp                                    2.50011
+txn                                          5
+rxn                                    2.50011
+outp                                   2.49897
+outn                                   2.49897
+chg                                          5
+chgb                                 1.684e-06
+vref_sw                                2.50011
+phi2                               5.28784e-09
+phi2b                                        5
+phi1                                         5
+phi1b                              1.16876e-09
+phit                               1.16875e-09
+sump                                   2.49897
+phitb                                        5
+sumn                                   2.49897
+vbn                                          3
+vbp                                        2.8
+bias                                  0.843663
+vref                                       2.5
+holdp                                  2.50011
+holdn                                  2.50011
+tr                                 1.16875e-09
+trb                                          5
+pr                                           5
+prb                                3.50234e-06
+ref_src                                    2.5
+buf_vdd                                      5
+xref.nb                                 1.1549
+xref.tail                              1.14868
+xref.left                              3.40087
+vref_driven                            2.50011
+xref.gain                              3.41022
+xref.comp                              3.41022
+xclk.clk_b                                   5
+clk_vdd                                      5
+xclk.clk_i                         1.52031e-09
+xclk.delayed                       1.52029e-09
+xclk.delayed_b                               5
+xclk.rst_b                                   5
+xclk.xedge.series                   6.2891e-10
+xclk.ramp                          1.29622e-05
+xclk.nb                                1.03923
+xclk.sensed                        3.04625e-09
+xclk.v90                                 1.645
+xclk.v80                                 1.835
+xclk.v70                                 2.015
+xclk.v65                                 2.127
+xclk.v46                                 2.515
+xclk.v43                                2.5635
+xclk.v41                                 2.622
+xclk.xc41.left                         4.37971
+xclk.xc41.tail                     5.52908e-07
+xclk.xc41.raw                      5.61371e-07
+xclk.xc41.yn                                 5
+xclk.q41                           1.88767e-09
+xclk.xc43.left                         3.72979
+xclk.xc43.tail                         1.33918
+xclk.xc43.raw                                5
+xclk.xc43.yn                       5.00429e-09
+xclk.q43                                     5
+xclk.xc46.left                         3.72981
+xclk.xc46.tail                         1.30083
+xclk.xc46.raw                                5
+xclk.xc46.yn                       5.00429e-09
+xclk.q46                                     5
+xclk.xc65.left                         4.37971
+xclk.xc65.tail                      5.5291e-07
+xclk.xc65.raw                      5.63754e-07
+xclk.xc65.yn                                 5
+xclk.q65                           1.88767e-09
+xclk.xc70.left                         3.73007
+xclk.xc70.tail                        0.910956
+xclk.xc70.raw                                5
+xclk.xc70.yn                       5.00429e-09
+xclk.q70                                     5
+xclk.xc80.left                         4.37971
+xclk.xc80.tail                     5.52907e-07
+xclk.xc80.raw                      5.66143e-07
+xclk.xc80.yn                                 5
+xclk.q80                           1.88767e-09
+xclk.xc90.left                         4.37971
+xclk.xc90.tail                     5.52896e-07
+xclk.xc90.raw                      5.68494e-07
+xclk.xc90.yn                                 5
+xclk.q90                           1.88767e-09
+xclk.n41                                     5
+xclk.xnr1.series                     0.0328818
+xclk.s1_req                                  5
+xclk.xrs0.series                        4.1323
+xclk.s1_off                        5.00429e-09
+xclk.s1_drive                                5
+xclk.xrsm.series                   6.28911e-10
+xclk.s1_del                                  5
+xclk.rx_guard_b                    8.64749e-09
+xclk.xrxg.series                   4.32375e-09
+xclk.rx_guard                                5
+xclk.rx_qual_b                               5
+xclk.xrx0.series                        4.1323
+xclk.rx_qual                       5.00429e-09
+xclk.xrxrst.series                 6.28911e-10
+xclk.n65                                     5
+xclk.xpre0.series                    0.0328818
+xclk.pre_req                                 5
+xclk.xpre1.series                       4.1323
+xclk.pre_off                       5.00429e-09
+xclk.pre_d                                   5
+xclk.xprem.series                  6.28911e-10
+xclk.preb_d                        2.14902e-09
+xclk.tr_req_b                                5
+xclk.xtr0.series                        4.1323
+xclk.tr_req                        5.00429e-09
+xclk.xtrm.series                   6.28911e-10
+xclk.tx_off                                  5
+xclk.xtx0.series                        4.1323
+xclk.tx_on                         9.65001e-10
+xclk.pb                                3.82097
+xclk.tx_high                                 5
+xclk.tx_low                        9.16949e-07
+xclk.ch_pb                             3.63717
+xclk.ch_hi                                   5
+xclk.ch_lo                         1.67298e-06
+vdrive#branch                      -2.4647e-14
+vbufdd#branch                      0.000893551
+vclkdd#branch                      6.25916e-05
+vrefsense#branch                             0
+vrefsrc#branch                               0
+vbp#branch                                   0
+vbn#branch                                   0
+vclk#branch                                  0
+vdd#branch                         -0.00101561
+
+
+No. of Data Rows : 11621
+ngspice-42 done

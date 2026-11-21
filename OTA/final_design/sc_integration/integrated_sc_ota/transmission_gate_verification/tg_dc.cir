@@ -1,0 +1,26 @@
+SCL08 transmission gate DC test at 27 C
+.include "/home/your-user/pdk/scl08/ngspice_models49/mos/tntp49_5v"
+.subckt corrected_tg A B PHI PHIB VDD VSS
+MN A PHI B VSS N W=10u L=0.8u AD=45p AS=45p PD=29u PS=29u
+MP A PHIB B VDD P W=20u L=0.8u AD=90p AS=90p PD=49u PS=49u
+.ends corrected_tg
+VDD vdd 0 5
+VBIAS vcm 0 0
+VA a vcm 5m
+VB b vcm -5m
+VP phi 0 5
+VPB phib 0 0
+XTEST a b phi phib vdd 0 corrected_tg
+.temp 27
+.control
+set wr_singlescale
+set wr_vecnames
+dc VBIAS .25 4.75 .25
+wrdata tg_on.dat i(VA) i(VB)
+alter VP 0
+alter VPB 5
+dc VBIAS .25 4.75 .25
+wrdata tg_off.dat i(VA) i(VB)
+quit
+.endc
+.end

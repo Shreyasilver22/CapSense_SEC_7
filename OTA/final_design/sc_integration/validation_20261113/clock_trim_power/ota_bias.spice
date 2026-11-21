@@ -1,0 +1,31 @@
+* Prototype OTA bias fanout referenced to an external 2.5 V master.
+* An existing clean reference is exposed as a pin rather than generated here.
+.subckt bias_amp08 ref sense out vdd vss nb
+MT tail nb vss vss N W=15u L=2.4u
+M1 left sense tail vss N W=30u L=2.4u
+M2 gain ref tail vss N W=30u L=2.4u
+MP1 left left vdd vdd P W=15u L=2.4u
+MP2 gain left vdd vdd P W=15u L=2.4u
+MP3 out gain vdd vdd P W=20u L=2.4u
+MN3 out nb vss vss N W=30u L=2.4u
+MCOMP out gain out out P W=25u L=20u
+.ends bias_amp08
+
+.subckt ota_bias08 ref vdd vss vbn vbp iref
+XRBIAS vdd nb RPP W=2.4u L=50000u
+MB nb nb vss vss N W=20u L=2.4u
+XBN ref bn_fb vbn vdd vss nb bias_amp08
+XRT vbn bn_fb RPP W=2.4u L=10000u
+XRB bn_fb vss RPP W=2.4u L=50000u
+
+* Regulate the voltage across RSET, then mirror the resulting current.
+XSET ref sense gate vdd vss nb bias_amp08
+MSET pr gate sense vss N W=24u L=4u
+XRSET sense vss RPP W=2.4u L=50000u
+MPD pr pr vdd vdd P W=18u L=12u
+MPI iref pr vdd vdd P W=18.2u L=12u
+MPN nbp pr vdd vdd P W=18u L=12u
+MND nbp nbp vss vss N W=15u L=14u
+MNO vbp nbp vss vss N W=15u L=14u
+XRP vdd vbp RPP W=2.4u L=42500u
+.ends ota_bias08

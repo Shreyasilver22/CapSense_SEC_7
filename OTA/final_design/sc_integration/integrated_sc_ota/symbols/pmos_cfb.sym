@@ -1,0 +1,15 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+spice_primitive=true
+format="@name @pinlist corrected_pmos_bank"
+template="name=XCF"}
+V {}
+S {}
+E {}
+L 4 -40 0 -8 0 {}
+L 4 8 0 40 0 {}
+L 4 -8 -17 -8 17 {}
+L 4 8 -17 8 17 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=SUM dir=inout pinnumber=1}
+B 5 37.5 -2.5 42.5 2.5 {name=OUT dir=inout pinnumber=2}

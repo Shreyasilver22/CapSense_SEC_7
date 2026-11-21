@@ -1,0 +1,49 @@
+** sch_path: /tmp/capsense-gm5.fXS5V7/tb/gm_ota_symbol_tb.sch
+**.subckt gm_ota_symbol_tb
+XG sense sp vdd 0 vbn out gm_ota
+**** begin user architecture code
+
+
+.include /home/your-user/pdk/scl08/ngspice_models49/mos/tntp49_5v
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-13
+VDD vdd 0 5
+VBN vbn 0 0.8625
+VSP sp 0 2.5
+VSENSE sense 0 DC 2.5 AC 1
+CL out 0 5p
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+op
+print v(out) v(xg.n1) v(xg.tail) i(vdd)
+ac dec 100 1 1G
+let gr=real(v(out))
+let gi=imag(v(out))
+wrdata symbol_ac.dat gr gi
+quit
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  gm_ota.sym # of pins=6
+** sym_path: /tmp/capsense-gm5.fXS5V7/designs/gm_ota.sym
+** sch_path: /tmp/capsense-gm5.fXS5V7/designs/gm_ota.sch
+.subckt gm_ota SENSE SP vdd vss vbn IOUT
+*.ipin SENSE
+*.ipin SP
+*.iopin vdd
+*.iopin vss
+*.ipin vbn
+*.ipin IOUT
+M3 n1 n1 vdd vdd P w=2.5u l=3.2u m=1
+M4 IOUT n1 vdd vdd P w=2.5u l=3.2u m=1
+M1 n1 SP tail vss N w=2.5u l=3.2u m=1
+M2 IOUT SENSE tail vss N w=2.5u l=3.2u m=1
+M5 tail vbn vss vss N w=5u l=3.2u m=1
+.ends
+
+.end

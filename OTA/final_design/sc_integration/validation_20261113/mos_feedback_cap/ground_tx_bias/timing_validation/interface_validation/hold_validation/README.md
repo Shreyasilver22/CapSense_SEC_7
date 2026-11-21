@@ -1,0 +1,15 @@
+# Hold-edge and sampled thermal noise check
+
+The readout is the 10 kHz, TX-to-ground circuit with the 8 µs TX gate ramp, 3 µs RX lead, 4.5 µA OTA reference current and 121 PMOS feedback devices per branch. It drives two acquisition capacitors through native SCL08 transmission gates, initially precharged to 2.5 V. Their acquisition command starts at 70 µs. The falling clock is centered at 80 µs. We evaluate the held voltages at 81 µs and drift to 88 µs, before the SC resets. The clock midpoint is a timing reference and the actual isolation instant depends on switch conduction. The unloaded SC sample at 80 µs provides the comparison.
+
+The hold simulation includes MOS channel-charge and overlap effects as modeled by the native models. The selected MOS, supply and temperature combinations are a screen, and the acquisition capacitor itself is ideal. Clock ramps, references and OTA bias sources are ideal. The fixture excludes a SAR comparator, DAC switching, layout-dependent mismatch and routing parasitics.
+
+Three thermal contributions are estimated at 27 °C. Sensor and feedback-reset contributions use separate positive and negative charge perturbations before transfer to measure coupling to the held sample. The reset calculation uses independent equilibrium kT/C based on the nominal feedback capacitance. The acquisition contribution is sqrt(2kT/C) for two independent equal hold capacitors. Their quadrature sum assumes independence. This estimate excludes OTA broadband and flicker noise, correlated thermal terms and reference and clock noise. It is not a total sampled noise or resolution measurement.
+
+Run python3 hold.py, python3 reset_noise.py and python3 plot.py. The scripts use the parent interface fixture and local SCL08 model files.
+
+For the 12/7 pF sensor pair, the nominal held sample error relative to the unloaded output was +1.673, +1.099, and +0.655 mV at 5, 10, and 20 pF per output. With 10 pF and the original 20 µm acquisition PMOS, the 5 ns rerun changed the held error by about 2.1 µV relative to 20 ns. The standard 10 pF fixture drifts about −1.75 µV from 81 to 88 µs at this sensor pair.
+
+The acquisition-switch width sweep scales PMOS junction area with width and holds the modeled junction perimeter at 49 µm. The NMOS stays at 10 µm / 0.8 µm and PMOS length stays at 0.8 µm. Reducing PMOS width to 7.5 µm decreases the 10 pF nominal turn-off shift from 1.101 to 0.618 mV. The largest absolute turn-off shift is 0.634 mV across the 15 selected cases. This compares before and after the hold edge and excludes upstream conversion error. Run python3 width.py to reproduce. The supplied hold_10pf_narrow.cir uses those same dimensions and geometry assumptions.
+
+The combined thermal estimates for 5, 10, and 20 pF are 43.1, 32.0, and 24.7 µV RMS differential, respectively. These numbers use the original 20 µm PMOS acquisition switch fixture for signal propagation. The three contributions and capacitance-referred figures are in sampled_thermal_estimate.csv. OTA and clocked noise beyond the three approximated terms remain open.

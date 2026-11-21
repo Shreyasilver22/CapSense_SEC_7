@@ -1,0 +1,80 @@
+* Extracted by KLayout with SCL C1D LVS runset on : 20/11/2026 19:25
+
+* cell ota_telescopic_layout
+* pin INP
+* pin INN
+* pin OUTP
+* pin OUTM
+* pin VDD
+* pin IREF
+* pin VBN
+* pin VBP
+* pin VCM
+* pin VSS
+.SUBCKT ota_telescopic_layout INP INN OUTP OUTM VDD IREF VBN VBP VCM VSS
+* device instance $1 r0 *1 313.4,875.2 N
+M$1 \$25 \$24 VSS VSS N L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $2 r0 *1 289.8,794.514 N
+M$2 \$20 IREF VSS VSS N L=3.2U W=11.429U AS=51.4305P AD=51.4305P PS=31.858U
++ PD=31.858U
+* device instance $3 r0 *1 239,875.2 N
+M$3 \$15 \$21 VSS VSS N L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $4 r0 *1 276.2,483 N
+M$4 \$19 IREF VSS VSS N L=3.2U W=40U AS=180P AD=180P PS=98U PD=98U
+* device instance $6 r0 *1 201.8,483 N
+M$6 \$17 IREF VSS VSS N L=3.2U W=40U AS=180P AD=180P PS=98U PD=98U
+* device instance $7 r0 *1 307,411.2 N
+M$7 \$16 IREF VSS VSS N L=3.2U W=40U AS=180P AD=180P PS=98U PD=98U
+* device instance $8 r0 *1 270.6,411.2 N
+M$8 VDD VCM \$19 VSS N L=1.6U W=80U AS=360P AD=360P PS=196U PD=196U
+* device instance $10 r0 *1 310.6,86.4 N
+M$10 OUTP VBN \$12 VSS N L=2.4U W=30U AS=135P AD=135P PS=69U PD=69U
+* device instance $11 r0 *1 237.8,78.9 N
+M$11 \$12 INN \$10 VSS N L=2.4U W=15U AS=67.5P AD=67.5P PS=39U PD=39U
+* device instance $14 r0 *1 275.4,227.6 N
+M$14 IREF IREF VSS VSS N L=3.2U W=20U AS=90P AD=90P PS=49U PD=49U
+* device instance $15 r0 *1 274.2,86.4 N
+M$15 OUTM VBN \$11 VSS N L=2.4U W=30U AS=135P AD=135P PS=69U PD=69U
+* device instance $16 r0 *1 347.4,227.6 N
+M$16 VDD OUTP \$16 VSS N L=1.6U W=80U AS=360P AD=360P PS=196U PD=196U
+* device instance $17 r0 *1 276.2,875.2 N
+M$17 \$24 \$24 VSS VSS N L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $18 r0 *1 201.8,875.2 N
+M$18 \$21 \$21 VSS VSS N L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $19 r0 *1 164.6,111.4 N
+M$19 \$10 IREF VSS VSS N L=3.2U W=80U AS=360P AD=360P PS=169U PD=169U
+* device instance $21 r0 *1 201.4,78.9 N
+M$21 \$11 INP \$10 VSS N L=2.4U W=15U AS=67.5P AD=67.5P PS=39U PD=39U
+* device instance $24 r0 *1 306.2,339.4 N
+M$24 VDD OUTM \$17 VSS N L=1.6U W=80U AS=360P AD=360P PS=196U PD=196U
+* device instance $30 r0 *1 347,101.4 P
+M$30 OUTM VBP \$13 VDD P L=2.4U W=60U AS=270P AD=270P PS=129U PD=129U
+* device instance $31 r0 *1 164.2,247.6 P
+M$31 OUTP VBP \$14 VDD P L=2.4U W=60U AS=270P AD=270P PS=129U PD=129U
+* device instance $32 r0 *1 201,237.6 P
+M$32 \$13 \$15 VDD VDD P L=3.2U W=40U AS=180P AD=180P PS=89U PD=89U
+* device instance $33 r0 *1 238.2,237.6 P
+M$33 \$14 \$15 VDD VDD P L=3.2U W=40U AS=180P AD=180P PS=89U PD=89U
+* device instance $34 r0 *1 168,540.4 P
+M$34 VDD \$15 VDD VDD P L=10U W=80U AS=360P AD=360P PS=196U PD=196U
+* device instance $36 r0 *1 256,540.4 P
+M$36 OUTP \$15 OUTP OUTP P L=10U W=240U AS=1080P AD=1080P PS=588U PD=588U
+* device instance $50 r0 *1 256,650.4 P
+M$50 OUTM \$15 OUTM OUTM P L=10U W=240U AS=1080P AD=1080P PS=588U PD=588U
+* device instance $60 r0 *1 164.6,875.2 P
+M$60 \$23 \$20 VDD VDD P L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $63 r0 *1 252.6,798.8 P
+M$63 \$20 \$20 VDD VDD P L=3.2U W=20U AS=90P AD=90P PS=49U PD=49U
+* device instance $64 r0 *1 326.6,791.3 P
+M$64 \$21 \$22 \$23 VDD P L=2.4U W=5U AS=22.5P AD=22.5P PS=19U PD=19U
+* device instance $65 r0 *1 350.6,875.2 P
+M$65 \$25 \$25 VDD VDD P L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $66 r0 *1 363,791.3 P
+M$66 \$24 \$19 \$23 VDD P L=2.4U W=5U AS=22.5P AD=22.5P PS=19U PD=19U
+* device instance $67 r0 *1 164.6,922.6 P
+M$67 \$15 \$25 VDD VDD P L=3.2U W=10U AS=45P AD=45P PS=29U PD=29U
+* device instance $146 r0 *1 379.285,1210.6 RPP
+R$146 \$22 \$16 199999.8 RPP
+* device instance $147 r0 *1 842.856,1210.6 RPP
+R$147 \$22 \$17 199999.8 RPP
+.ENDS ota_telescopic_layout

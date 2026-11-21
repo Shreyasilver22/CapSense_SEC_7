@@ -6,3 +6,11 @@
 - [Original design 1](design_1/) and [original design 2](design_2/): earlier publications, preserved.
 
 Read each study's assumptions and verification limits before reuse.
+
+
+## Integrated CapSense readout
+
+The [SC + telescopic OTA hierarchy](final_design/sc_integration/integrated_sc_ota)
+contains the editable OTA, MOS switches, sensor reset, and sensitivity tests.
+The [design review material](design_review) captures the accompanying slides,
+derivations, and architecture comparison.

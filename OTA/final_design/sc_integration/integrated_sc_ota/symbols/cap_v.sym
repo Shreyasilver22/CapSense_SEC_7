@@ -1,0 +1,15 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+spice_primitive=true
+format="@name @pinlist @value"
+template="name=C1 value=5p"}
+V {}
+S {}
+E {}
+L 4 0 -40 0 -8 {}
+L 4 0 8 0 40 {}
+L 4 -17 -8 17 -8 {}
+L 4 -17 8 17 8 {}
+B 5 -2.5 -42.5 2.5 -37.5 {name=A dir=inout pinnumber=1}
+B 5 -2.5 37.5 2.5 42.5 {name=B dir=inout pinnumber=2}

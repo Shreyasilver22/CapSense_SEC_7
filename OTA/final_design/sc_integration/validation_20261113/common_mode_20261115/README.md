@@ -1,0 +1,7 @@
+# Common-mode during charge transfer
+
+These ngspice transients use the SCL08 typical models, 5 V supply, 27 °C, the same telescopic OTA and feedback banks, the same 10 pF hold load per branch and one 10 kHz input. The phase generator is behavioral. Transfer common-mode extrema cover 40–70 µs of the third cycle. Held values are sampled at 81 µs. CSV columns distinguish the OTA input summing nodes, live OTA outputs and held outputs.
+
+The base testbench uses TX discharge and RX precharge at ground with an 8 µs TX switch-control ramp. The voltage sweep changes the TX discharge reference while keeping RX precharge and timing fixed. The slew sweep changes the switch-control ramp, so the resulting TX sensor-node waveform is determined by switch conduction and loading. The precharge variants also change the RX sampling clamp. In the matched 2.5 V variant the RX clamp uses VREF and TX discharge uses a separate ideal 2.5 V source. A physical reference would have finite drive impedance and needs verification under the transient load.
+
+Run a .cir file from testbenches with ngspice -b -o run.log <case>.cir. It writes the corresponding waveform .dat file. The includes point to the local SCL08 model installation. ngspice may report warnings for unsupported HSPICE model parameters. The sweep covers nominal transient behavior, without a transistor-level clock generator, sampled noise, process corners or SAR loading.

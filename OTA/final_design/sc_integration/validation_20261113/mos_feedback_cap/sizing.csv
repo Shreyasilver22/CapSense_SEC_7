@@ -1,0 +1,4 @@
+kind,units,unit_w_um,unit_l_um,total_gate_um2
+local,417,20,10,83400
+charge,260,20,10,52000
+reversed,97,20,10,19400

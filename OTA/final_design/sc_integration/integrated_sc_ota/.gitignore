@@ -1,0 +1,12 @@
+__pycache__/
+.xschem/
+*.raw
+/bench_support.spice
+/bench_support_schematic.spice
+/results/xschem.log
+/results/cp_*
+/sensitivity_optimization/cs*/
+/transmission_gate_verification/cg_*
+/transmission_gate_verification/*.dat
+/transmission_gate_verification/bench_support_tg.spice
+/transmission_gate_verification/xschem.log

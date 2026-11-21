@@ -1,0 +1,9 @@
+{
+  "native_RPP_sections": 320,
+  "exported_tee_halves": 640,
+  "topology_LVS": "MATCH against GDS after restoring both native resistor halves",
+  "resistor_body_ground_C_pF": 54.72,
+  "total_explicit_cap_count": 1027,
+  "gds_sha256": "15d288d03a51983920a08c20628a5a6d768854d1dea5bca53f6c54bb47c8f34b",
+  "limits": "Resistor body C uses engineering alias of existing poly coefficients, not a qualified foundry extraction rule. C-only model; no full wire/substrate RC claim."
+}

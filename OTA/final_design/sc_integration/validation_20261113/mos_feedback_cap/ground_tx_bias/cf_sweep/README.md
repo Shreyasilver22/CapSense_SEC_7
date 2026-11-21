@@ -1,0 +1,11 @@
+# Feedback bank size at 0 V TX transfer
+
+The 10 kHz SC circuit uses TX = 0 V during transfer, RX clamped at ground during sampling, and OTA IREF = 4.5 µA. VBN and VBP remain 3.0 V and 2.8 V at 5 V supply. The OTA output common-mode target is 2.5 V. The runs use the capacitance-extracted telescopic OTA, 5 pF loads, typical SCL08 devices at 27 °C, and equal PMOS feedback banks with gates at the outputs. Each bank uses parallel 20 µm by 10 µm devices. Nominal capacitance uses 412.55 fF per unit from the measured accumulation plateau.
+
+The sampled differential output and local sensitivity are measured near CP/CN = 12/7 pF at 80 µs into the second cycle. The sensitivity uses a centered ±0.05 pF perturbation of CP. The equal 12 pF pair tests the switching dip. Four RX-facing NMOS body-junction currents are integrated in absolute value over 45 to 55 µs. The resulting number is a junction disturbance metric and does not directly give net sensor charge loss. Differential settling uses the 88 µs value with a 0.1% band and a 100 µV minimum band.
+
+The sensor-only noise model propagates independent kT/C charge perturbations to the sample. Capacitance-referred noise divides that RMS voltage by the local sensitivity. The schematic feedback banks omit dedicated well capacitance, interconnect parasitics, leakage validation and mismatch. This is a nominal sweep. The total sampled noise, physical capacitor implementation, corners and SAR loading remain open.
+
+Run python3 run_sweep.py and python3 plot.py from this directory. The scripts reuse the parent current sweep and PMOS feedback study.
+
+The 20 pF case gives a negative local slope and has not settled by the sampling instant. Its noise-to-slope ratio is retained in the CSV for traceability, but does not represent useful resolution. The 30 pF case settles dynamically by the sample and produces substantially less signal than expected from ideal charge balance. It also has a large RX junction disturbance. At 50 pF the selected junction charge drops by roughly two orders of magnitude relative to 40 pF, while the input still goes below ground. At 160 pF the nominal RX minimum is essentially 0 V and sensitivity is only about 44 mV/pF. Larger feedback banks also deepen the SC output common-mode dip over the 40–160 pF part of the sweep.

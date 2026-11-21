@@ -1,0 +1,80 @@
+{
+  "as_drawn": {
+    "case": "Equal inputs, no DC output servo",
+    "input_CM_V": 2.5,
+    "output_V": 3.559467129554,
+    "mirror_node_V": 3.559467129339,
+    "tail_node_V": 1.179609690039,
+    "supply_current_uA": 0.7864316454839,
+    "power_uW": 3.9321582274195,
+    "gain_dB": 44.87666206173026,
+    "gain_V_per_V": 175.32066249748183,
+    "UGBW_Hz": 149954.12549038322,
+    "estimated_PM_deg": 90.00970112521107,
+    "open_loop_3dB_Hz": 853.3098111216092
+  },
+  "follower_2p5": {
+    "case": "Follower operating point",
+    "input_CM_V": 2.5,
+    "output_V": 2.505933914785,
+    "mirror_node_V": 3.563622103081,
+    "tail_node_V": 1.181662088266,
+    "supply_current_uA": 0.7864448209171,
+    "power_uW": 3.9322241045855,
+    "gain_dB": 44.99242370813515,
+    "gain_V_per_V": 177.67289770644467,
+    "UGBW_Hz": 154543.42105587336,
+    "estimated_PM_deg": 89.98090528541677,
+    "open_loop_3dB_Hz": 867.7692605753724
+  },
+  "gm": {
+    "effective_differential_gm_uS": 4.864971772237,
+    "output_V": 2.5,
+    "mirror_node_V": 3.558902610521,
+    "tail_node_V": 1.179331409258,
+    "supply_current_uA": 0.815455046065,
+    "power_uW": 4.077275230325
+  },
+  "transient": [
+    {
+      "step_V": 0.1,
+      "edge": "rise",
+      "command_V": 2.6,
+      "attained_output_V": 2.605396345977,
+      "static_error_mV": 5.3963459770001165,
+      "dynamic_settle_us": 7.0750358131099995,
+      "ideal_settle_us": NaN,
+      "peak_output_V": 2.605396345977
+    },
+    {
+      "step_V": 0.1,
+      "edge": "fall",
+      "command_V": 2.5,
+      "attained_output_V": 2.5059339147689994,
+      "static_error_mV": 5.933914768999404,
+      "dynamic_settle_us": 7.085576871900004,
+      "ideal_settle_us": NaN,
+      "peak_output_V": 2.505933914769
+    },
+    {
+      "step_V": 2.0,
+      "edge": "rise",
+      "command_V": 3.5,
+      "attained_output_V": 3.500345029754132,
+      "static_error_mV": 0.34502975413186476,
+      "dynamic_settle_us": 15.61335609167,
+      "ideal_settle_us": 15.448356091669998,
+      "peak_output_V": 3.500345029756
+    },
+    {
+      "step_V": 2.0,
+      "edge": "fall",
+      "command_V": 1.5,
+      "attained_output_V": 1.5111180707343665,
+      "static_error_mV": 11.118070734366547,
+      "dynamic_settle_us": 16.31689681411,
+      "ideal_settle_us": NaN,
+      "peak_output_V": 1.511118070733
+    }
+  ]
+}
