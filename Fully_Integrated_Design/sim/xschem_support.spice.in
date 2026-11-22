@@ -1,0 +1,63 @@
+.include "%%mos_card%%"
+.include "%%res_card%%"
+.include "%%ota_model%%"
+.temp 27
+.options reltol=4e-4 vntol=3u abstol=1e-11 numdgt=12 method=gear maxord=2
+VDD vdd 0 5
+VCLK clk10k 0 PULSE(0 5 0 1u 1u 49u 100u)
+VOTA vdd ota_vdd 0
+VREFSRC ref_src 0 2.5
+VREFSENSE ref_src vref 0
+XCLK clk10k d0 d1 d2 clk_vdd 0 phi1 phi1b phit phitb phi2 phi2b pr prb tr trb chg chgb phase_trim08 
+.include "%%clock_model%%"
+VCLKDD vdd clk_vdd 0
+VTRIM0 d0 0 5
+VTRIM1 d1 0 5
+VTRIM2 d2 0 0
+.include "%%bias_model%%"
+VBIASDD vdd bias_vdd 0
+XB ref_src bias_vdd 0 vbn vbp bias_src ota_bias08
+VIREF bias_src bias 0
+VEXC vp 0 5
+RLEAKP sensp 0 1e12
+RLEAKN sensn 0 1e12
+.save v(outp) v(outn) v(sump) v(sumn) v(txp) v(txn) v(rxp) v(rxn) v(sensp) v(sensn) v(phi1) v(phi2) v(phit) @m.xota.m1039[vds] @m.xota.m1039[vdsat]  v(tr) v(trb) v(pr) v(pinp) v(pinn) v(adcp) v(adcn) v(holdp) v(holdn) i(vdd) v(vbn) v(vbp) i(viref) i(vota) i(vbiasdd) i(vexC) v(xicm.cm_x) v(xicm.cm_hold) v(adc_sw)
+.options method=gear reltol=4e-4 trtol=10
+.tran 80n 795u 0 80n
+.subckt corrected_tg A B PHI PHIB VDD VSS
+MN A PHI B VSS N W=10u L=0.8u AD=45p AS=45p PD=29u PS=29u
+MP A PHIB B VDD P W=20u L=0.8u AD=90p AS=90p PD=49u PS=49u
+.ends corrected_tg
+.subckt corrected_pmos_bank SUM OUT
+MFB SUM OUT SUM SUM P W=20u L=10u M=60 AD=90p AS=90p PD=49u PS=49u
+.ends corrected_pmos_bank
+
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p acq_ref pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p acq_ref prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n acq_ref pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n acq_ref prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+RPKGp holdp pinp 5
+CBOARDp pinp 0 7.01p
+RBUFFERp pinp 0 100Meg
+RPKGn holdn pinn 5
+CBOARDn pinn 0 7.01p
+RBUFFERn pinn 0 100Meg
+XREFH ref_src acq_ref d2 refh_vdd 0 refbuf08
+VREFHDD vdd refh_vdd 0
+* The following switches represent the illustrative external ADC input.
+VADC adc_sw 0 PULSE(0 1 88.1u 1n 1n 1u 100u)
+VDIS dis_sw 0 PULSE(1 0 88u 1n 1n 1.3u 100u)
+.model SW_ACQ SW(Ron=100 Roff=1e13 Vt=.5 Vh=.01)
+CADCp adcp 0 5p
+SADCp pinp adcp adc_sw 0 SW_ACQ
+SDISp adcp 0 dis_sw 0 SW_ACQ
+CADCn adcn 0 5p
+SADCn pinn adcn adc_sw 0 SW_ACQ
+SDISn adcn 0 dis_sw 0 SW_ACQ
+

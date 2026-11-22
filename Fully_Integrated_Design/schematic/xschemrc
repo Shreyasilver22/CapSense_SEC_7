@@ -1,0 +1,10 @@
+set design_dir [file normalize [file dirname [info script]]]
+set standard_library /usr/share/xschem/xschem_library
+if {[info exists env(XSCHEM_SYSTEM_LIBRARY)]} {
+    set standard_library $env(XSCHEM_SYSTEM_LIBRARY)
+}
+set XSCHEM_LIBRARY_PATH "$design_dir:$design_dir/symbols:$standard_library"
+set netlist_dir [file join $design_dir netlist]
+file mkdir $netlist_dir
+set dark_colorscheme 0
+set color_ps 1

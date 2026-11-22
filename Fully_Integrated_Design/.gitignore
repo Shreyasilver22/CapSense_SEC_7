@@ -1,0 +1,4 @@
+__pycache__/
+/runs/
+/schematic/netlist/
+/schematic/bench_support.spice

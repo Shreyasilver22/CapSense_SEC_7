@@ -1,0 +1,82 @@
+* Integrated SC + telescopic OTA + input common-mode correction
+**.subckt corrected_differential_sc
+XOTA sumn sump outp outn ota_vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+CMEMP 0 sensp %%cp%%p
+XSENSEP sensp txp phi2 phi2b vdd 0 corrected_tg
+XSRESETP sensp 0 phi1 phi1b vdd 0 corrected_tg
+XCHARGEP vp txp phi1 phi1b vdd 0 corrected_tg
+CSP txp rxp 10p
+XRRESETP rxp 0 phi1 phi1b vdd 0 corrected_tg
+XXFERP rxp sump phit phitb vdd 0 corrected_tg
+XCFP sump outp corrected_pmos_bank
+XFBRESETP sump outp phi1 phi1b vdd 0 corrected_tg
+CLP outp 0 5p
+CMEMN 0 sensn %%cn%%p
+XSENSEN sensn txn phi2 phi2b vdd 0 corrected_tg
+XSRESETN 0 sensn phi1 phi1b vdd 0 corrected_tg
+XCHARGEN txn vp phi1 phi1b vdd 0 corrected_tg
+CSN txn rxn 10p
+XRRESETN 0 rxn phi1 phi1b vdd 0 corrected_tg
+XXFERN rxn sumn phit phitb vdd 0 corrected_tg
+XCFN sumn outn corrected_pmos_bank
+XFBRESETN sumn outn phi1 phi1b vdd 0 corrected_tg
+CLN 0 outn 5p
+
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p acq_ref pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p acq_ref prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n acq_ref pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n acq_ref prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+RPKGp holdp pinp 5
+CBOARDp pinp 0 7.01p
+RBUFFERp pinp 0 100Meg
+RPKGn holdn pinn 5
+CBOARDn pinn 0 7.01p
+RBUFFERn pinn 0 100Meg
+XREFH ref_src acq_ref d2 refh_vdd 0 refbuf08
+VREFHDD vdd refh_vdd 0
+* The following switches represent the illustrative external ADC input.
+VADC adc_sw 0 PULSE(0 1 %%adc_us%%u 1n 1n 1u 100u)
+VDIS dis_sw 0 PULSE(1 0 %%dis_us%%u 1n 1n 1.3u 100u)
+.model SW_ACQ SW(Ron=100 Roff=1e13 Vt=.5 Vh=.01)
+CADCp adcp 0 5p
+SADCp pinp adcp adc_sw 0 SW_ACQ
+SDISp adcp 0 dis_sw 0 SW_ACQ
+CADCn adcn 0 5p
+SADCn pinn adcn adc_sw 0 SW_ACQ
+SDISn adcn 0 dis_sw 0 SW_ACQ
+
+MCORRp sump cm_x sump sump P W=20u L=10u M=40 AD=90p AS=90p PD=49u PS=49u
+MCORRn sumn cm_x sumn sumn P W=20u L=10u M=40 AD=90p AS=90p PD=49u PS=49u
+* Behavioral sampler and integrator. The previous sample controls this cycle.
+VICMSAMPLE cm_sample 0 PULSE(0 1 %%sample_us%%u 10n 10n 2u 100u)
+BICMERR 0 cm_acc I={1m*v(cm_sample)*(2.5-(v(sump)+v(sumn))/2)}
+CICMINT cm_acc 0 1n
+RICMINT cm_acc 0 1e13
+BICMCTRL cm_ctrl 0 V={max(0,min(v(vdd),2.5+v(cm_acc)))}
+VICMINIT cm_init 0 %%initial%%
+RICMHOLD cm_init cm_hold 1e13
+SICMHOLD cm_ctrl cm_hold phi1 0 icm_hold
+.model icm_hold SW(Ron=10 Roff=1e14 Vt=2 Vh=.1)
+CICMHOLD cm_hold 0 20p
+* Hold the correction until reset. Stage it with the two transfer events.
+.model icm_edge_set SW(Ron=3000 Roff=1e13 Vt=1 Vh=.05)
+.model icm_edge_reset SW(Ron=100k Roff=1e13 Vt=2 Vh=.1)
+SICMEDGE1 vdd cm_edge1 phit 0 icm_edge_set
+SICMEDGE2 vdd cm_edge2 phi2 0 icm_edge_set
+SICMRST1 cm_edge1 0 phi1 0 icm_edge_reset
+SICMRST2 cm_edge2 0 phi1 0 icm_edge_reset
+CICMEDGE1 cm_edge1 0 10p
+CICMEDGE2 cm_edge2 0 10p
+BICMDRIVE cm_x 0 V={((.68*v(cm_edge1)+.32*v(cm_edge2))/max(.1,v(vdd)))*v(cm_hold)}
+
+**** begin user architecture code
+.include "support.spice"
+**** end user architecture code
+**.ends
+.end
