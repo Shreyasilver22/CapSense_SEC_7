@@ -1,0 +1,19 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=primitive
+format="X@name @pinlist vdd user_tg_control"
+template="name=S1 model=icm_hold"}
+V {}
+S {}
+E {}
+L 4 -40 0 -25 0 {}
+L 4 25 0 40 0 {}
+L 4 -25 -20 25 -20 {}
+L 4 25 -20 25 20 {}
+L 4 25 20 -25 20 {}
+L 4 -25 20 -25 -20 {}
+L 4 0 20 0 32 {}
+T {TG+INV} -22 -8 0 0 0.15 0.15 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=A dir=inout pinnumber=1}
+B 5 37.5 -2.5 42.5 2.5 {name=B dir=inout pinnumber=2}
+B 5 -2.5 29.5 2.5 34.5 {name=CTRL dir=in pinnumber=3}

@@ -1,0 +1,26 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=XSW"}
+V {}
+S {}
+E {}
+L 4 -25 -25 25 -25 {}
+L 4 25 -25 25 25 {}
+L 4 25 25 -25 25 {}
+L 4 -25 25 -25 -25 {}
+T {TG} -12 -10 0 0 0.25 0.25 {}
+T {2.5u/4.5u} -23 9 0 0 0.12 0.12 {}
+L 4 -20 -40 -20 -25 {}
+B 5 -22.5 -42.5 -17.5 -37.5 {name=phi dir=inout}
+L 4 -20 40 -20 25 {}
+B 5 -22.5 37.5 -17.5 42.5 {name=VSS1 dir=inout}
+L 4 -40 0 -25 0 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=In dir=inout}
+L 4 40 0 25 0 {}
+B 5 37.5 -2.5 42.5 2.5 {name=Out dir=inout}
+L 4 20 40 20 25 {}
+B 5 17.5 37.5 22.5 42.5 {name=VDD dir=inout}
+L 4 20 -40 20 -25 {}
+B 5 17.5 -42.5 22.5 -37.5 {name=phibar dir=inout}

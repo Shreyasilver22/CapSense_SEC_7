@@ -1,0 +1,23 @@
+[
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0
+  }
+]

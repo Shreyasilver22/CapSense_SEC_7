@@ -1,0 +1,16 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=primitive
+format="@name @phi 0 @pinlist vdd @phib Transmission_v1_26"
+template="name=XSW phi=phi1 phib=phi1b"}
+V {}
+S {}
+E {}
+L 4 -40 0 -22 0 {}
+L 4 22 0 40 0 {}
+L 4 -17 -3 17 -22 {}
+A 4 -22 0 4 0 360 {}
+A 4 22 0 4 0 360 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=A dir=inout pinnumber=1}
+B 5 37.5 -2.5 42.5 2.5 {name=B dir=inout pinnumber=2}
+T {TG 2.5u / 4.5u} -40 25 0 0 0.16 0.16 {}

@@ -1,0 +1,10 @@
+{
+  "phi_V": 0,
+  "phibar_V": 5,
+  "sensor_cap_pF": 1,
+  "boost_start_V": 5,
+  "boost_peak_V": 5.5,
+  "sensor_voltage_at_2us_V": 5.22886352,
+  "sensor_voltage_at_3us_V": 5.32943765,
+  "interpretation": "The specified TG model does not isolate the sensor when another terminal is boosted above its supply, despite off gate commands. This is a model-based operating-range diagnostic, not an independently validated device reliability model."
+}

@@ -1,0 +1,6 @@
+{
+  "rtl": "PASS: reset and 300 edges",
+  "cosimulation": "PASS: 305us, all 7 outputs match RTL phase windows",
+  "voltage_levels": "PASS: 0/5V",
+  "main_analog": "not modified or simulated"
+}

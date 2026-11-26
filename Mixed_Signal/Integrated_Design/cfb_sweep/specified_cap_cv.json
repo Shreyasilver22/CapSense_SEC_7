@@ -1,0 +1,191 @@
+[
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": -2,
+    "capacitance_pF": 40.00005
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": -1,
+    "capacitance_pF": 10.20078
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": -0.5,
+    "capacitance_pF": 9.288025
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": 0,
+    "capacitance_pF": 40.086679999999994
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": 0.5,
+    "capacitance_pF": 40.086679999999994
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": 1,
+    "capacitance_pF": 40.086679999999994
+  },
+  {
+    "target_pF": 40,
+    "W_um": 20,
+    "L_um": 202.7,
+    "fingers": 5,
+    "gate_area_um2": 20270.0,
+    "gate_minus_sum_V": 2,
+    "capacitance_pF": 40.086679999999994
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": -2,
+    "capacitance_pF": 49.97768000000001
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": -1,
+    "capacitance_pF": 12.73072
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": -0.5,
+    "capacitance_pF": 11.58726
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": 0,
+    "capacitance_pF": 50.08596
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": 0.5,
+    "capacitance_pF": 50.08596
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": 1,
+    "capacitance_pF": 50.08596
+  },
+  {
+    "target_pF": 50,
+    "W_um": 20,
+    "L_um": 253.375,
+    "fingers": 5,
+    "gate_area_um2": 25337.5,
+    "gate_minus_sum_V": 2,
+    "capacitance_pF": 50.08596
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": -2,
+    "capacitance_pF": 59.955299999999994
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": -1,
+    "capacitance_pF": 15.26066
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": -0.5,
+    "capacitance_pF": 13.8865
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": 0,
+    "capacitance_pF": 60.085249999999995
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": 0.5,
+    "capacitance_pF": 60.085249999999995
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": 1,
+    "capacitance_pF": 60.085249999999995
+  },
+  {
+    "target_pF": 60,
+    "W_um": 20,
+    "L_um": 304.05,
+    "fingers": 5,
+    "gate_area_um2": 30405.0,
+    "gate_minus_sum_V": 2,
+    "capacitance_pF": 60.085249999999995
+  }
+]

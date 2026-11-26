@@ -1,0 +1,2 @@
+set XSCHEM_LIBRARY_PATH /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols:/usr/share/xschem/xschem_library:/usr/share/xschem/xschem_library/devices
+set netlist_dir /home/shreyas/Desktop/Sec_7/Integrated_Design/simulation

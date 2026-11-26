@@ -1,0 +1,37 @@
+{
+  "checked_on": "2026-11-26",
+  "check": "configured-copy Xschem netlisting only; no relocated full AFE transient",
+  "schematics": [
+    {
+      "schematic": "Phase_Generator_Testbench/schematic/phase_generator_tb.sch",
+      "xschem_netlist": "pass"
+    },
+    {
+      "schematic": "Integrated_Design/schematic/capsense_cfb_40pf.sch",
+      "xschem_netlist": "pass"
+    },
+    {
+      "schematic": "Integrated_Design/schematic/capsense_cfb_50pf.sch",
+      "xschem_netlist": "pass"
+    },
+    {
+      "schematic": "Integrated_Design/schematic/capsense_cfb_60pf.sch",
+      "xschem_netlist": "pass"
+    },
+    {
+      "schematic": "Integrated_Design/schematic/capsense_integrated_pmos_cs_tb.sch",
+      "xschem_netlist": "pass"
+    },
+    {
+      "schematic": "Integrated_Design/schematic/capsense_integrated_tb.sch",
+      "xschem_netlist": "pass"
+    }
+  ],
+  "python_syntax": "pass",
+  "standalone_live_cosimulation": {
+    "status": "pass",
+    "duration_us": 305,
+    "all_seven_outputs_checked": true,
+    "runtime": "existing original-workstation private runtime reused; a fresh toolchain build was not tested"
+  }
+}

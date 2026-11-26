@@ -1,0 +1,31 @@
+{
+  "cases": 1587,
+  "unique_grid_complete": true,
+  "finite_measurements_and_sensitivities": true,
+  "all_cycle_drift_under_1mV": true,
+  "max_cycle_drift_mV": 0.978490997517456,
+  "source_hashes_match": {
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/rtl/capsense_phase_gen.v": true,
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/user_tg.spice": true,
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/analog_support.spice": true,
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/rtl_recorded_edges.json": true,
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/specified_sizes.json": true,
+    "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/simulation_support_snapshot.spice": true,
+    "/home/shreyas/open_source_scl_cp8d/open_pdks/scl_cp8d/libs.tech/ngpsice/model/hspice/models49/mos/tntp49_5v": true,
+    "/home/shreyas/open_source_scl_cp8d/open_pdks/scl_cp8d/libs.tech/ngpsice/model/hspice/models49/res/typ/ppr": true
+  },
+  "original_rtl_matches_project_copy": true,
+  "drive_modes": [
+    "recorded_RTL_replay"
+  ],
+  "maxstep_ns": [
+    80,
+    400
+  ],
+  "cycles": [
+    8,
+    16,
+    32
+  ],
+  "plot_visual_review": "measurement maps for all three sizes and feedback comparison reviewed"
+}

@@ -1,0 +1,46 @@
+{
+  "duration_us": 795.0,
+  "phases": {
+    "phi1": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "phit": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "phi2": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "phi1b": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "phitb": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "phi2b": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    },
+    "sample_valid": {
+      "min_V": 0.0,
+      "max_V": 5.0
+    }
+  },
+  "signals": {
+    "tx": "saved, finite, complete",
+    "rx": "saved, finite, complete",
+    "ota_inputs": "saved, finite, complete",
+    "ota_outputs": "saved, finite, complete",
+    "commonmode": "saved, finite, complete",
+    "differential": "saved, finite, complete"
+  },
+  "TG_cell": "Transmission_v1_26",
+  "TG_NMOS_W_um": 2.5,
+  "TG_PMOS_W_um": 4.5,
+  "TG_L_um": 0.8,
+  "status": "transient completed; analog accuracy not assessed"
+}

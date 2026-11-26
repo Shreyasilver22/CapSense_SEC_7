@@ -1,0 +1,5 @@
+* User Transmission_v1_26: exact topology and W/L, evaluated nf=1 geometry from PDK expressions
+.subckt Transmission_v1_26 phi VSS1 In Out VDD phibar
+MM1 Out phi In VSS1 n L=.8u W=2.5e-06 ad=7.75e-12 as=7.75e-12 pd=1.12e-05 ps=1.12e-05 nrd=0.72 nrs=0.72 m=1
+MM2 Out phibar In VDD p L=.8u W=4.5e-06 ad=1.395e-11 as=1.395e-11 pd=1.52e-05 ps=1.52e-05 nrd=0.4 nrs=0.4 m=1
+.ends Transmission_v1_26

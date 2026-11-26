@@ -1,0 +1,34 @@
+[
+  {
+    "case": "40",
+    "L_um": 202.7,
+    "M": 5,
+    "pmos_capacitance_pF": 40.0866770384,
+    "matches_previous_device_card": true,
+    "CS_pF": 10.0
+  },
+  {
+    "case": "50",
+    "L_um": 253.375,
+    "M": 5,
+    "pmos_capacitance_pF": 50.08596359697,
+    "matches_previous_device_card": true,
+    "CS_pF": 10.0
+  },
+  {
+    "case": "60",
+    "L_um": 304.05,
+    "M": 5,
+    "pmos_capacitance_pF": 60.08525015554,
+    "matches_previous_device_card": true,
+    "CS_pF": 10.0
+  },
+  {
+    "case": "double_M",
+    "L_um": 202.7,
+    "M": 10,
+    "pmos_capacitance_pF": 80.1733540768,
+    "matches_previous_device_card": true,
+    "CS_pF": 20.0
+  }
+]
