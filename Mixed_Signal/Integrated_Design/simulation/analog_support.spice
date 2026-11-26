@@ -1,0 +1,35 @@
+.include "/home/shreyas/open_source_scl_cp8d/open_pdks/scl_cp8d/libs.tech/ngpsice/model/hspice/models49/mos/tntp49_5v"
+.include "/home/shreyas/open_source_scl_cp8d/open_pdks/scl_cp8d/libs.tech/ngpsice/model/hspice/models49/res/typ/ppr"
+.include "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/vcr_low_total.spice"
+.temp 27
+.options reltol=4e-4 vntol=3u abstol=1e-11 numdgt=12 method=gear maxord=2
+VDD vdd 0 5
+VOTA vdd ota_vdd 0
+VREFSRC ref_src 0 2.5
+VREFSENSE ref_src vref 0
+.include "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/clock.spice"
+.include "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/vcr_low_total_bias.spice"
+VBIASDD vdd bias_vdd 0
+XB ref_src bias_vdd 0 vbn vbp bias_src ota_bias08
+VIREF bias_src bias 0
+VEXC vp 0 5
+RLEAKP sensp 0 1e12
+RLEAKN sensn 0 1e12
+.save v(outp) v(outn) v(sump) v(sumn) v(txp) v(txn) v(rxp) v(rxn) v(sensp) v(sensn) v(phi1) v(phi2) v(phit) i(vdd) v(vbn) v(vbp) i(viref) i(vota) i(vbiasdd) i(vexc) v(xicm.cm_x) v(xicm.cm_hold)
+.options method=gear reltol=4e-4 trtol=10
+.tran 80n {SIM_STOP} 0 80n
+.subckt corrected_tg A B PHI PHIB VDD VSS
+MN A PHI B VSS N W=10u L=0.8u AD=45p AS=45p PD=29u PS=29u
+MP A PHIB B VDD P W=20u L=0.8u AD=90p AS=90p PD=49u PS=49u
+.ends corrected_tg
+
+.include /home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/user_tg.spice
+.subckt user_tg_control A B CTRL VDD
+MINV_N cb CTRL 0 0 N W=2.5u L=.8u
+MINV_P cb CTRL VDD VDD P W=4.5u L=.8u
+XSW CTRL 0 A B VDD cb Transmission_v1_26
+.ends user_tg_control
+
+.options klu
+
+.options maxord=1

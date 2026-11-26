@@ -1,0 +1,11 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=label
+spice_primitive=true
+format="*.alias @lab"
+template="name=RNET lab=net caption=net"}
+V {}
+S {}
+E {}
+B 5 -2.5 -2.5 2.5 2.5 {name=P dir=inout pinnumber=1}
+T {@caption} 9 -8 0 0 0.32 0.32 {layer=1}

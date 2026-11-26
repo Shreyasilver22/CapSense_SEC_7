@@ -1,0 +1,30 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=pmos
+spice_primitive=true
+format="@name @@SUM @@OUT @@SUM @@SUM @model W=@W L=@L M=@M
++ AD='( @W ) * 4.5u' AS='( @W ) * 4.5u' PD='2 * ( @W ) + 9u' PS='2 * ( @W ) + 9u'"
+template="name=MCF model=P W=20u L=202.7u M=5"}
+V {}
+S {}
+E {}
+L 4 -40 0 -30 0 {}
+L 4 -30 -18 -30 18 {}
+L 4 -30 -18 -12 -18 {}
+L 4 -30 18 -12 18 {}
+L 4 -12 -18 -12 -12 {}
+L 4 -12 12 -12 18 {}
+L 4 -12 -12 -4 -12 {}
+L 4 -12 12 -4 12 {}
+L 4 -4 -16 -4 16 {}
+L 4 4 -12 4 12 {}
+A 4 10 0 4 0 360 {}
+L 4 4 0 6 0 {}
+L 4 14 0 40 0 {}
+L 4 -30 0 -12 0 {}
+P 4 4 -12 -3 -17 0 -12 3 -12 -3 {fill=true}
+B 5 -42.5 -2.5 -37.5 2.5 {name=SUM dir=inout pinnumber=1}
+B 5 37.5 -2.5 42.5 2.5 {name=OUT dir=inout pinnumber=2}
+T {@name} 42 -16 0 0 0.15 0.15 {}
+T {G} 22 5 0 0 0.12 0.12 {layer=7}
+T {D/S/B} -39 -27 0 0 0.12 0.12 {layer=7}

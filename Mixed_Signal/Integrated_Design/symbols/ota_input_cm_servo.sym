@@ -1,0 +1,27 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=XICM"}
+V {}
+S {}
+E {}
+L 4 -75 -58 75 -58 {}
+L 4 75 -58 75 58 {}
+L 4 75 58 -75 58 {}
+L 4 -75 58 -75 -58 {}
+T {INPUT CM} -46 -34 0 0 0.31 0.31 {layer=4}
+T {CORRECTION} -54 -8 0 0 0.31 0.31 {layer=4}
+T {2.5 V target} -48 22 0 0 0.24 0.24 {layer=8}
+L 4 95 -24 75 -24 {}
+B 5 92.5 -26.5 97.5 -21.5 {name=sump dir=inout pinnumber=1}
+L 4 95 22 75 22 {}
+B 5 92.5 19.5 97.5 24.5 {name=sumn dir=inout pinnumber=2}
+L 4 -95 -42 -75 -42 {}
+B 5 -97.5 -44.5 -92.5 -39.5 {name=vdd dir=inout pinnumber=3}
+L 4 -95 -13 -75 -13 {}
+B 5 -97.5 -15.5 -92.5 -10.5 {name=phi1 dir=inout pinnumber=4}
+L 4 -95 15 -75 15 {}
+B 5 -97.5 12.5 -92.5 17.5 {name=phi2 dir=inout pinnumber=5}
+L 4 -95 44 -75 44 {}
+B 5 -97.5 41.5 -92.5 46.5 {name=phit dir=inout pinnumber=6}

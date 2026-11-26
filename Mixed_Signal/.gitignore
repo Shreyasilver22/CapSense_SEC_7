@@ -1,0 +1,24 @@
+# Local paths and configured copies
+/work/
+/local_setup.json
+# Compiled runtime, downloaded tools and temporary files
+**/runtime/
+**/runtime-src/
+**/__pycache__/
+**/plotting_deps/
+**/mplconfig/
+*.pyc
+*.so
+*.vpi
+*.vvp
+*.o
+# Generated simulation output (selected historical reports are tracked)
+*.raw
+*.vcd
+*.log
+*.tmp
+*.bak
+**/runs/
+**/runs_replay/
+**/accuracy_replay/
+**/before_*/

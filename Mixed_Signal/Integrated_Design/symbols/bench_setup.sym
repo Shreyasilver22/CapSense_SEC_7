@@ -1,0 +1,14 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=netlist_commands
+spice_primitive=true
+format="@value"
+template="name=BENCH value=setup"}
+V {}
+S {}
+E {}
+L 4 -120 -20 120 -20 {}
+L 4 120 -20 120 20 {}
+L 4 120 20 -120 20 {}
+L 4 -120 20 -120 -20 {}
+T {CLOCK, BIAS AND SIMULATION} -105 -8 0 0 0.28 0.28 {layer=4}

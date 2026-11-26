@@ -1,0 +1,746 @@
+[
+  {
+    "path": "Phase_Generator_Testbench/rtl/capsense_phase_gen.v",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/rtl/capsense_phase_gen.v",
+    "sha256": "4f5c235cd9758df1c617838d8691471fd2f33c041aedf64101b412d2962ac63c",
+    "bytes": 1107
+  },
+  {
+    "path": "Phase_Generator_Testbench/schematic/phase_generator_tb.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/schematic/phase_generator_tb.sch",
+    "sha256": "fea72059f29583faea923ae2c04f6355b2604d13a56e0eea26ca0a48ffcefac2",
+    "bytes": 3738
+  },
+  {
+    "path": "Phase_Generator_Testbench/symbols/capsense_adc.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/symbols/capsense_adc.sym",
+    "sha256": "4727a766ec506062715554ddd011b281ac3132b1ce2889cd847ab692b44d488f",
+    "bytes": 653
+  },
+  {
+    "path": "Phase_Generator_Testbench/symbols/capsense_dac.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/symbols/capsense_dac.sym",
+    "sha256": "ce765ee36024f0a5ff733e03108632b69fb336deaa2f4c2ddc315955bceaef0e",
+    "bytes": 501
+  },
+  {
+    "path": "Phase_Generator_Testbench/symbols/capsense_phase_gen.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/symbols/capsense_phase_gen.sym",
+    "sha256": "7a5b8f5f82a2d63a8db8813b767c438604dcb620160dda6003c733a77665ae55",
+    "bytes": 1481
+  },
+  {
+    "path": "Phase_Generator_Testbench/README.md",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/README.md",
+    "sha256": "1efc263f86354d7e4ca65adfbaee7fd8d3833216004444866441ff3e4d3555db",
+    "bytes": 4360
+  },
+  {
+    "path": "Phase_Generator_Testbench/xschemrc",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/xschemrc",
+    "sha256": "8c40d774314cd87903f90aa26a39907643402bb9686664bef946de6af2ba155b",
+    "bytes": 223
+  },
+  {
+    "path": "Phase_Generator_Testbench/open_xschem.sh",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/open_xschem.sh",
+    "sha256": "5bd3e51d704d2bad1c6ce738e0467fbea10ac35f9a41723f92d13a296b84a255",
+    "bytes": 108
+  },
+  {
+    "path": "Phase_Generator_Testbench/run_testbench.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/run_testbench.py",
+    "sha256": "5cff3d059eea9445eecd30cd153f50ba8e0c1ee8062c58daa5d3ca96e0a70925",
+    "bytes": 958
+  },
+  {
+    "path": "Phase_Generator_Testbench/validate_cosim.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/validate_cosim.py",
+    "sha256": "dd6f6e6b1d688e4e055b557a83fbaa7f2f5901ffc3b79ab734a64c2e6ba04587",
+    "bytes": 1396
+  },
+  {
+    "path": "Phase_Generator_Testbench/build_adapter.sh",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/build_adapter.sh",
+    "sha256": "f450b2392df62e87e7410388fef6064fd411e030c09e59810b5f8a58c2a850a5",
+    "bytes": 570
+  },
+  {
+    "path": "Phase_Generator_Testbench/build_local_runtime.sh",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/build_local_runtime.sh",
+    "sha256": "90a2380816f88f130fdee0885a6685524d5b1611663a8372b16ba974d46fd496",
+    "bytes": 422
+  },
+  {
+    "path": "Integrated_Design/rtl/capsense_phase_gen.v",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/rtl/capsense_phase_gen.v",
+    "sha256": "4f5c235cd9758df1c617838d8691471fd2f33c041aedf64101b412d2962ac63c",
+    "bytes": 1107
+  },
+  {
+    "path": "Integrated_Design/schematic/capsense_cfb_40pf.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_cfb_40pf.sch",
+    "sha256": "e4a78612d9a76a4c346a7053542dbe93f5c646c7532cf1d1fc9eb2e442e72845",
+    "bytes": 15832
+  },
+  {
+    "path": "Integrated_Design/schematic/capsense_cfb_50pf.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_cfb_50pf.sch",
+    "sha256": "a5c05be87fd6aab4c8b8e0a098863d72d8a8c297173189190e16d4b8133f309d",
+    "bytes": 19508
+  },
+  {
+    "path": "Integrated_Design/schematic/capsense_cfb_60pf.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_cfb_60pf.sch",
+    "sha256": "240c2ba92c64178641096a768ea451cd988883083dabea14bbae0105393b6e3f",
+    "bytes": 19506
+  },
+  {
+    "path": "Integrated_Design/schematic/capsense_integrated_pmos_cs_tb.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_integrated_pmos_cs_tb.sch",
+    "sha256": "f8cee737bafb2bdb4993d8352413e2804a50c5fb9f0530134aed3fd581e41780",
+    "bytes": 16142
+  },
+  {
+    "path": "Integrated_Design/schematic/capsense_integrated_tb.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_integrated_tb.sch",
+    "sha256": "bf31761db5ecbb84d95436b603d5af0bbab165fbf00d0ce7a51758e3fc1f50d3",
+    "bytes": 19416
+  },
+  {
+    "path": "Integrated_Design/schematic/ota_input_cm_servo.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/ota_input_cm_servo.sch",
+    "sha256": "0087c3b7b8f6c4186697c34847c9bdc6e1a20978e4cdbf9c64f767d6521d5946",
+    "bytes": 8818
+  },
+  {
+    "path": "Integrated_Design/schematic/ota_vcr_no_mcc.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/ota_vcr_no_mcc.sch",
+    "sha256": "edfad92422c6f0cd936484e5c89bbe2463ad763e7a526b86a36c419f3ebb34ac",
+    "bytes": 17740
+  },
+  {
+    "path": "Integrated_Design/schematic/sc_vcr_input_cm.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/sc_vcr_input_cm.sch",
+    "sha256": "102d3414a246e1a5d81c92151c1764b7bf45c35b235c124204632d7cbc5b06ac",
+    "bytes": 8766
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26.sch",
+    "sha256": "90f7bb4bcf18341bc9c84726a608f8fe076b312efdc61248ae6d404524df277b",
+    "bytes": 1114
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26.sym",
+    "sha256": "db52d63a0b01a8d07fbb1ff8c1f99a29a7cf235238e4ded66056595b5d3ce09a",
+    "bytes": 887
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26_h.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_h.sch",
+    "sha256": "b7fe4fe52e5b446e1d83bf47d23bbed50f503b5cfe434a0c4fce70db50b552c6",
+    "bytes": 1248
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26_h.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_h.sym",
+    "sha256": "2420e8dcb6cdfa910500e681dd830563d29972dd3fc4d82ccde301c6b22ceff0",
+    "bytes": 689
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26_v.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_v.sch",
+    "sha256": "b7fe4fe52e5b446e1d83bf47d23bbed50f503b5cfe434a0c4fce70db50b552c6",
+    "bytes": 1248
+  },
+  {
+    "path": "Integrated_Design/symbols/Transmission_v1_26_v.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_v.sym",
+    "sha256": "20442721f5c7f2e1b8df650a2172d8d1014cfca7486370bf248cbf9eca009811",
+    "bytes": 689
+  },
+  {
+    "path": "Integrated_Design/symbols/bench_setup.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/bench_setup.sym",
+    "sha256": "461b5033efd8d51a6d0f96fe2a65f6fd2bb08ca36459f29836f153664e0f2e40",
+    "bytes": 314
+  },
+  {
+    "path": "Integrated_Design/symbols/cap_h.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/cap_h.sym",
+    "sha256": "9ca3665899319ff25cb87eab7a4d56f633cdaf38fa56b811131927b05605a366",
+    "bytes": 345
+  },
+  {
+    "path": "Integrated_Design/symbols/cap_v.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/cap_v.sym",
+    "sha256": "f4582e1fcc1572ca7a3e253c2bf2afec1c63037e39042215c95fede0ad70b5a4",
+    "bytes": 344
+  },
+  {
+    "path": "Integrated_Design/symbols/capsense_adc.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/capsense_adc.sym",
+    "sha256": "8896e0a2100494ce5a620fb5e5af5cc40d410cdcbba8ada6caef1f7913eae3d2",
+    "bytes": 547
+  },
+  {
+    "path": "Integrated_Design/symbols/capsense_dac.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/capsense_dac.sym",
+    "sha256": "936329443741a4a2d3d372575198cdad350654f716c1fd41ee5835dbe892bf64",
+    "bytes": 398
+  },
+  {
+    "path": "Integrated_Design/symbols/capsense_phase_gen.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/capsense_phase_gen.sym",
+    "sha256": "7a5b8f5f82a2d63a8db8813b767c438604dcb620160dda6003c733a77665ae55",
+    "bytes": 1481
+  },
+  {
+    "path": "Integrated_Design/symbols/icm_behavior.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/icm_behavior.sym",
+    "sha256": "b08d765796c9331c9c0d77771d8c0c1dc782aa9a07c2ffeb936e440eb139b4d2",
+    "bytes": 384
+  },
+  {
+    "path": "Integrated_Design/symbols/icm_models.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/icm_models.sym",
+    "sha256": "ab745c66f6ffaa863c7e803c3f315e41fe3cd58ce08438e04286518b1ba97839",
+    "bytes": 161
+  },
+  {
+    "path": "Integrated_Design/symbols/icm_pmos40.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/icm_pmos40.sym",
+    "sha256": "b8260aa5353100c33b7119c56bb36cfd2913add3235b030f4577aed15538f66f",
+    "bytes": 707
+  },
+  {
+    "path": "Integrated_Design/symbols/icm_switch.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/icm_switch.sym",
+    "sha256": "12c83af796caee1c9c0f3524b0afede83c5697b58f72a1b27d225a47e869ef83",
+    "bytes": 496
+  },
+  {
+    "path": "Integrated_Design/symbols/net_right.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/net_right.sym",
+    "sha256": "bb1ed85733df656c78b337cf94b5c3e475a023c8c03323056065c3a18fdf39b1",
+    "bytes": 256
+  },
+  {
+    "path": "Integrated_Design/symbols/ota_input_cm_servo.sch",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_input_cm_servo.sch",
+    "sha256": "0087c3b7b8f6c4186697c34847c9bdc6e1a20978e4cdbf9c64f767d6521d5946",
+    "bytes": 8818
+  },
+  {
+    "path": "Integrated_Design/symbols/ota_input_cm_servo.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_input_cm_servo.sym",
+    "sha256": "312ab9f76857b413785deafb1e201dca77a9745a27dec354837d8c795981a414",
+    "bytes": 848
+  },
+  {
+    "path": "Integrated_Design/symbols/ota_tri_vcr.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_tri_vcr.sym",
+    "sha256": "7f64e71fed684c1dde6e6d8a3c4d786c719b449f734121771d38060c7ffcac10",
+    "bytes": 524
+  },
+  {
+    "path": "Integrated_Design/symbols/ota_vcr_final.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_vcr_final.sym",
+    "sha256": "37f0017a54d139e7f3d8fe7342075e4514991436092777c4de280b837153d50c",
+    "bytes": 1608
+  },
+  {
+    "path": "Integrated_Design/symbols/pmos_cfb.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/pmos_cfb.sym",
+    "sha256": "9f9bca19b68fb5f68a4179d60582edc566bd157c609fe220faf419766cba9990",
+    "bytes": 836
+  },
+  {
+    "path": "Integrated_Design/symbols/tg_h.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/tg_h.sym",
+    "sha256": "23c4c6cec24665289016303912220e909663d3a13e8ca34eff34566fa991316c",
+    "bytes": 432
+  },
+  {
+    "path": "Integrated_Design/symbols/tg_v.sym",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/tg_v.sym",
+    "sha256": "693549ab37cb79c743de76ebbf950f50dc0ca181e3afbd63f482f27c51334266",
+    "bytes": 430
+  },
+  {
+    "path": "Integrated_Design/models/clock.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/clock.spice",
+    "sha256": "2e4944717a027c8b115d958c20cbc5cf9d7d0334c33cf76814caa9311c625ae4",
+    "bytes": 8394
+  },
+  {
+    "path": "Integrated_Design/models/vcr_low_total.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/vcr_low_total.spice",
+    "sha256": "17a4593f683b93cc69573092a940d9b8e5a0ebffbe4061702d5ecda1293e049b",
+    "bytes": 12270
+  },
+  {
+    "path": "Integrated_Design/models/vcr_low_total_bias.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/models/vcr_low_total_bias.spice",
+    "sha256": "5f06a6ced567cc7878b29609c30644c1d28b4b0c0c9b3474d10693276321a4c3",
+    "bytes": 1120
+  },
+  {
+    "path": "Integrated_Design/scripts/capsense_experiment_1.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/scripts/capsense_experiment_1.py",
+    "sha256": "1f3c331b990007a291e3532ac4f8a99c9868a9605f0b95b684c266b70fcba10e",
+    "bytes": 20516
+  },
+  {
+    "path": "Integrated_Design/scripts/capsense_experiment_2.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/scripts/capsense_experiment_2.py",
+    "sha256": "cb0e550061b75a71f50c50b546b53898c6da9785f3404766729b19bcc07036bd",
+    "bytes": 3465
+  },
+  {
+    "path": "Integrated_Design/scripts/capsense_experiment_3.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/scripts/capsense_experiment_3.py",
+    "sha256": "78c5f38dae4586a2b264e41012aef7eb86e72a9f0b26b554f87cb460c63fd26f",
+    "bytes": 25285
+  },
+  {
+    "path": "Integrated_Design/README.md",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/README.md",
+    "sha256": "489d5eb96e98c4885d9c64fa4527b2cf258d24fb190c27d1460744a732228fd7",
+    "bytes": 8623
+  },
+  {
+    "path": "Integrated_Design/xschemrc",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/xschemrc",
+    "sha256": "877f77367f40438d2397f482ca4a0e118676b79ebe9941105195ee125734da0b",
+    "bytes": 225
+  },
+  {
+    "path": "Integrated_Design/open_xschem.sh",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/open_xschem.sh",
+    "sha256": "2ee5e7974d35390209c990a223434375644274e4dc565dfc454607dc89a7a2e2",
+    "bytes": 112
+  },
+  {
+    "path": "Integrated_Design/run_simulation.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/run_simulation.py",
+    "sha256": "001e3b133d44fe2c83b715fd041477a2e1ef146c50c1b87013e6316d5137d226",
+    "bytes": 1416
+  },
+  {
+    "path": "Phase_Generator_Testbench/simulation/models.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/simulation/models.spice",
+    "sha256": "93a6e500d9cd0802893d9f004d8eaf4242a84174e2ec7aa8eae9dbe2d8c6169e",
+    "bytes": 360
+  },
+  {
+    "path": "Phase_Generator_Testbench/simulation/rtl_testbench.v",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/simulation/rtl_testbench.v",
+    "sha256": "50c2157da13e7a35a90b94b25a2de360cedcd811954f7812e9076c7a5f7052a9",
+    "bytes": 677
+  },
+  {
+    "path": "Phase_Generator_Testbench/reports/verification.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/simulation/verification.json",
+    "sha256": "cf0eaf96afdbd6bfa1da43cffd3f9c5ca1476fa02ea29d0ae9671b536f3f06ae",
+    "bytes": 192
+  },
+  {
+    "path": "Phase_Generator_Testbench/reports/provenance.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/simulation/provenance.json",
+    "sha256": "9f028bc77bca39d7647130ae4d6c9650c8b272206499af71bf6ea0af7cf09ac9",
+    "bytes": 201
+  },
+  {
+    "path": "Phase_Generator_Testbench/reports/phases.svg",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/simulation/phases.svg",
+    "sha256": "f085268afc6d6115aa9c7dbccbfcf5088327e6a86957dad1179a7ef9e555a1b5",
+    "bytes": 6374
+  },
+  {
+    "path": "Integrated_Design/simulation/analog_support.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/analog_support.spice",
+    "sha256": "e499860f135e2df26b38837b1edc6f1aea89d51ebdd1444793cd3f0bdb09f899",
+    "bytes": 1520
+  },
+  {
+    "path": "Integrated_Design/simulation/cosim_models.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/cosim_models.spice",
+    "sha256": "632ec209a61a517407736f2d65c3c4ce57e1d08d70aabc6f9fe2449a6b973125",
+    "bytes": 519
+  },
+  {
+    "path": "Integrated_Design/simulation/user_tg.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/user_tg.spice",
+    "sha256": "88fc30844c331aa7f03273bdc2d92ac0e2376dec29334ccf88693f51f7f5d7fb",
+    "bytes": 393
+  },
+  {
+    "path": "Integrated_Design/simulation/rtl_testbench.v",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/rtl_testbench.v",
+    "sha256": "b176844e9aa8088e5291386ecc4001016ae5b612b96183c58b8ca63b7ff30180",
+    "bytes": 620
+  },
+  {
+    "path": "Integrated_Design/simulation/.spiceinit",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/.spiceinit",
+    "sha256": "b507bb3081b1ab6e15858fe2315bcd1881ef24b2fdd57d997c4cef4ac85464fc",
+    "bytes": 37
+  },
+  {
+    "path": "Integrated_Design/reports/verification_final_verification.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/verification_final/verification.json",
+    "sha256": "ea6916f92e6b59d427737a7acff008461977261e00bce0aec6f9ac771c9035a5",
+    "bytes": 915
+  },
+  {
+    "path": "Integrated_Design/reports/pmos_cs_check_verification.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/pmos_cs_check/verification.json",
+    "sha256": "62dfd601cd565ab19ed237f62272004e38c8fe9078b3ec7341b4a8542e3428ce",
+    "bytes": 876
+  },
+  {
+    "path": "Integrated_Design/reports/cap_controls_check_electrical_equivalence.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/cap_controls_check/electrical_equivalence.json",
+    "sha256": "f08c73b6853ebdd07c18e4145819f269678dea2643bb08b530df07d3289e0af8",
+    "bytes": 654
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/FINISHED.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/FINISHED.json",
+    "sha256": "76aea8fab340907533749773be9d283cdded67244df725a60eee1a70138b2d51",
+    "bytes": 99
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/RESULTS.txt",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/RESULTS.txt",
+    "sha256": "32a894abf6099e52935914a40ecbdba8a64df4fe9cf51daf628c80190797811d",
+    "bytes": 2884
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/analyze_results.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/analyze_results.py",
+    "sha256": "b7d3b8011769a92000c9ad0b4737df4914beac81b2250434e07b2caed11ab967",
+    "bytes": 5977
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_40_grid.npz",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_40_grid.npz",
+    "sha256": "c687ed1e1450a0164b66096dbcd7c9e44744d0356ecfb79c4561fdddd2a50175",
+    "bytes": 32286
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_40_measurements.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_40_measurements.pdf",
+    "sha256": "a5ba8903b38ec2edb42efea29e5393ccfb455cf7e5d6288075d14138f97df338",
+    "bytes": 51455
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_40_measurements.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_40_measurements.png",
+    "sha256": "148bcec13310d41231b487da47edf62fc4db6d58ddf6fce72ba77cee78a0ad2a",
+    "bytes": 181461
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_40_sensitivity.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_40_sensitivity.pdf",
+    "sha256": "b12b7669d1e8f0bbf32a325e5b50075ea1f5aefdb4894ad0fc7f884df9178584",
+    "bytes": 30828
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_40_sensitivity.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_40_sensitivity.png",
+    "sha256": "041fcb62bc386f3b236a68f67ad2c8e97a104618cdc1fcfa0c508eeda622fe28",
+    "bytes": 61164
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_50_grid.npz",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_50_grid.npz",
+    "sha256": "265347d39893f0a32b097bc845ec0bc3646bdbb95cba0c47e3a9db2230ed5edd",
+    "bytes": 31991
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_50_measurements.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_50_measurements.pdf",
+    "sha256": "f677491e53424a3bcaf5e6ef4ef5cb93f94220bdc15a0c0f2272d68f6be90e5b",
+    "bytes": 51601
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_50_measurements.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_50_measurements.png",
+    "sha256": "2582446d8adada176120ea41a2ae9c7f9296f3b0adb06ac7517ffb2a6cd89d2a",
+    "bytes": 182547
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_50_sensitivity.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_50_sensitivity.pdf",
+    "sha256": "1991c3234a47ea24dc6162d485ed09c4e4a288691f310eb951c77b503baffdbc",
+    "bytes": 30800
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_50_sensitivity.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_50_sensitivity.png",
+    "sha256": "972de396db99d8fdf16d5cbc9467feb0e60535604fcbbc3c4c761a21ef3ddb95",
+    "bytes": 64786
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_60_grid.npz",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_60_grid.npz",
+    "sha256": "d527345424c4effa3dd5bcf8544d27ea0d0b8830249d9463a987c575bcc9d397",
+    "bytes": 31939
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_60_measurements.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_60_measurements.pdf",
+    "sha256": "951d1d7873d5df258ad904f8eca5ca54447511e20d0db7cdbe33675236e6859d",
+    "bytes": 50977
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_60_measurements.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_60_measurements.png",
+    "sha256": "ad1e55e75173de344e4f333ec37acd173dc27f4fa6af87e72911cf109389b7ff",
+    "bytes": 166097
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_60_sensitivity.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_60_sensitivity.pdf",
+    "sha256": "397874ae3cecc76b98b6a4e05f1d20500e28200ba773f168b66506c7e1593ff0",
+    "bytes": 30581
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/cfb_60_sensitivity.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/cfb_60_sensitivity.png",
+    "sha256": "044b0c18d729d357083d0b01bf5e8d81b0ccb7dbcf02e3e894a7d805de31e7ac",
+    "bytes": 60753
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/characterize_cv_dense.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/characterize_cv_dense.py",
+    "sha256": "76497ca2a983ced791262083300e69f5222a75cd9a7c629e6d4fc28370eddc61",
+    "bytes": 1200
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/coarse_timestep_validation.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/coarse_timestep_validation.json",
+    "sha256": "795d0a1f9dd1686d4a27ef1e32f57a571984052ca72b4d9df3398146abf76658",
+    "bytes": 1172
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/debug_case.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/debug_case.py",
+    "sha256": "c2419f5c644a33fdee881dd45d44420075fb2a0f7c41f3a36dd2caa19379bd8c",
+    "bytes": 981
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/dense_capacitance_cv.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/dense_capacitance_cv.json",
+    "sha256": "44ee4adf38bdbcf6b0ece9aa19aa1e08fecc95015020534930241c2a2f71957d",
+    "bytes": 107445
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/diagnose_operating_range.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/diagnose_operating_range.py",
+    "sha256": "153fc63138830e946e4eae920d9e7ef0de5f1c3b43af3fb09659ca9422fc8cb0",
+    "bytes": 1588
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/feedback_comparison.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/feedback_comparison.pdf",
+    "sha256": "1e910364b92fc224d760ebb7196f7c522e069ba6f1440feb2980f3981713f67e",
+    "bytes": 19795
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/feedback_comparison.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/feedback_comparison.png",
+    "sha256": "179d5598dc54a3200f5dca3a64b4adc1283bb07afde17f1ab2f667f98e7b6a36",
+    "bytes": 156793
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/final_verification.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/final_verification.json",
+    "sha256": "e42f0f637cee67bd32d2792be9ff5a2fecc846a4b3abd1dfe6cc557d2b5c1414",
+    "bytes": 1268
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/make_rtl_replay.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/make_rtl_replay.py",
+    "sha256": "df9bc524dd5a49bad26210d1ed1dc6bf67b26bf6db4fee71fa2a73e54728d9be",
+    "bytes": 845
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/measurements.dat",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/measurements.dat",
+    "sha256": "74663388555078d973703bdbac1d22b6026660f1cfa8e401e7b4426889b43b44",
+    "bytes": 285143
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/off_tg_charge_result.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/off_tg_charge_result.json",
+    "sha256": "198928deb52d0e175b2821ea2c4b6977e58f1bf21a4846dbf531840ceb8d769e",
+    "bytes": 441
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/operating_range_diagnostics.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/operating_range_diagnostics.json",
+    "sha256": "b88b5a8f935cacee0ffc050b460641480f5285f1db0de6d2ffd88ef515505e09",
+    "bytes": 8703
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/plot_capacitance_cv.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/plot_capacitance_cv.py",
+    "sha256": "c8acd4982030335e46a82b8d79653fbd87a63d51fbeda64e910958336658d615",
+    "bytes": 1168
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/pmos_capacitance_cv.pdf",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/pmos_capacitance_cv.pdf",
+    "sha256": "862bad21c3b82002139f16f89af3c64ffb07bb6944ac3b90e9a6f3dfbc1c04c3",
+    "bytes": 24893
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/pmos_capacitance_cv.png",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/pmos_capacitance_cv.png",
+    "sha256": "126c612e31c82c6236e38c8a85ac4979fa3e34adce8f121ce84d3d928b680917",
+    "bytes": 138355
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/prepare_sweep.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/prepare_sweep.py",
+    "sha256": "0a663576287eca3769b141359f277678a7a6bbc39a191d164f02c62535bf054e",
+    "bytes": 2531
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/replay_vs_live_validation.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/replay_vs_live_validation.json",
+    "sha256": "6c17ec39f65201d55807f64dcb64f5a3f347c9f706292b9644c0b714ccaafc17",
+    "bytes": 1415
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/rtl_recorded_edges.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/rtl_recorded_edges.json",
+    "sha256": "c215d1eab0cfeaea1b659dcc45b469df561c090aac251b2ffc849bf00471da03",
+    "bytes": 3054
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/simulation_support_snapshot.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/simulation_support_snapshot.spice",
+    "sha256": "8254e2351b7f353b04b2c52dc304ac473a39987f648b19980511105908cfbe0d",
+    "bytes": 1646
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/specified_cap_cv.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/specified_cap_cv.json",
+    "sha256": "8cfdcfc541b0756fec083692a63ab83f671d913ebe860f3412cca78ca588a5d3",
+    "bytes": 3733
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/specified_sizes.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/specified_sizes.json",
+    "sha256": "f1ddcf8987c2104888fb8e0611df27912805bd937e3e59648c387162b75ce110",
+    "bytes": 341
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/study_notes.txt",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/study_notes.txt",
+    "sha256": "f3d00cb19ce2d2fccdd7cb4b4d106b419bbc271ea8e07b651c30c0d1dd4d45e8",
+    "bytes": 6434
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/study_provenance.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/study_provenance.json",
+    "sha256": "0854597dda325bfc2a9bae937570f3060b08c15a8147cfccfca4f5a91dd08420",
+    "bytes": 1155
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/summary.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/summary.json",
+    "sha256": "73f3eba23a28a7440e4ae6996f236e380c3386f96b14f365e45046aa312c1f0d",
+    "bytes": 5042
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/sweep.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/sweep.py",
+    "sha256": "a4719d57d9444f1cb7b7456acc22e9d12b94442cb65efb2ee30bf744628523a0",
+    "bytes": 9276
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/sweep_results_replay.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/sweep_results_replay.json",
+    "sha256": "563469ca27b3348e88dae216aa2067e7a156e4621f58be0fd28b7818ab1a890e",
+    "bytes": 1440229
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/sweep_template.spice",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/sweep_template.spice",
+    "sha256": "2b7fdd401a700004340cb283992d1848293d3730ea19e25f82490539ca26608b",
+    "bytes": 5551
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/timestep_validation.json",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/timestep_validation.json",
+    "sha256": "2f77ec96cec7bbf789e5ba1faf370e0e20037d68d70543c2e925bf1ef3865689",
+    "bytes": 1276
+  },
+  {
+    "path": "Integrated_Design/cfb_sweep/verify_variants.py",
+    "source": "/home/shreyas/Desktop/Sec_7/Integrated_Design/cfb_sweep/verify_variants.py",
+    "sha256": "298da6d041d715ef6dd1682e3fa37c947be6eeba169959e2c01dbad157144d12",
+    "bytes": 1298
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/icarus_shim.c",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/icarus_shim.c",
+    "sha256": "53d62ad7b82372826a183f2f5ed0d89fbb90845d312ff7f2c2e0b489db668f2b",
+    "bytes": 8893
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/icarus_shim.h",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/icarus_shim.h",
+    "sha256": "cb3a43a781157f1477b9ba4ed5ca6669c60b76e3f1c6d9674153f703b6395912",
+    "bytes": 3360
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/coroutine.h",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/coroutine.h",
+    "sha256": "7cf5658515a0896da730a9c7b8017472ba96a10015a3f612090676fd37292176",
+    "bytes": 862
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/coroutine_shim.h",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/coroutine_shim.h",
+    "sha256": "312cd4c02bb77aca1b2cf094531a7f062fa1624153cffd9d037c91eece461ada",
+    "bytes": 4262
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/coroutine_cosim.h",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/coroutine_cosim.h",
+    "sha256": "78de72acfb12c09155f46b53821d8ecab2b596423ce93c995384dd971550716e",
+    "bytes": 800
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/vpi.c",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/vpi.c",
+    "sha256": "4e4fd55d0daa123f5cad0b93f453be29bff530128fcbcca1d686e9ad6f261761",
+    "bytes": 11619
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/vpi_user_dummy.h",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/vpi_user_dummy.h",
+    "sha256": "07a910e49e033513fd3779f2d1aa36cd8c8e36b314121f67e4e97648d9bdb84d",
+    "bytes": 2602
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/README.txt",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/src/xspice/verilog/README.txt",
+    "sha256": "7e3476ae441d95cc5b09268f86db4b340716b1fe690ca1ac380ef494c61bacea",
+    "bytes": 844
+  },
+  {
+    "path": "Phase_Generator_Testbench/adapter/COPYING.ngspice",
+    "source": "/home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench/runtime-src/ngspice/COPYING",
+    "sha256": "6d939001e899ede403277fb37124c2af6f1cf92926465cd8f4bf59859e06f579",
+    "bytes": 45714
+  }
+]

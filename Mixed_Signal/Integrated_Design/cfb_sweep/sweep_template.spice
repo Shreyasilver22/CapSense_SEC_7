@@ -1,0 +1,140 @@
+** sch_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_integrated_tb.sch
+**.subckt capsense_integrated_tb
+XOTA sumn sump outp outn ota_vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+CMEMP 0 sensp {CP}
+XSENSEP phi2 0 sensp txp vdd phi2b Transmission_v1_26_h
+XSRESETP phi1 0 sensp 0 vdd phi1b Transmission_v1_26_v
+XCHARGEP phi1 0 vp txp vdd phi1b Transmission_v1_26_v
+CSP txp rxp 10p
+XRRESETP phi1 0 rxp 0 vdd phi1b Transmission_v1_26_v
+XXFERP phit 0 rxp sump vdd phitb Transmission_v1_26_h
+XCFP sump outp corrected_pmos_bank
+XFBRESETP phi1 0 sump outp vdd phi1b Transmission_v1_26_h
+CLP outp 0 5p
+CMEMN 0 sensn {CN}
+XSENSEN phi2 0 sensn txn vdd phi2b Transmission_v1_26_h
+XSRESETN phi1 0 0 sensn vdd phi1b Transmission_v1_26_v
+XCHARGEN phi1 0 txn vp vdd phi1b Transmission_v1_26_v
+CSN txn rxn 10p
+XRRESETN phi1 0 0 rxn vdd phi1b Transmission_v1_26_v
+XXFERN phit 0 rxn sumn vdd phitb Transmission_v1_26_h
+XCFN sumn outn corrected_pmos_bank
+XFBRESETN phi1 0 sumn outn vdd phi1b Transmission_v1_26_h
+CLN 0 outn 5p
+XICM sump sumn vdd phi1 phi2 phit ota_input_cm_servo
+APHASE [ d_clk_1mhz d_rst_n ] [ d_phi1 d_phit d_phi2 d_phi1b d_phitb d_phi2b d_sample_valid ] null
++ capsense_phase_gen_cosim
+Vclk_1mhz clk_1mhz 0 PULSE(0 5 0 1n 1n 499n 1u)
+Vrst_n rst_n 0 PWL(0 0 2u 0 2.001u 5)
+AINPUTS [ clk_1mhz rst_n ] [ d_clk_1mhz d_rst_n ] capsense_adc
+ADAC_phi1 [ d_phi1 ] [ phi1 ] capsense_dac
+ADAC_phi1b [ d_phi1b ] [ phi1b ] capsense_dac
+ADAC_phit [ d_phit ] [ phit ] capsense_dac
+ADAC_phitb [ d_phitb ] [ phitb ] capsense_dac
+ADAC_phi2 [ d_phi2 ] [ phi2 ] capsense_dac
+ADAC_phi2b [ d_phi2b ] [ phi2b ] capsense_dac
+ADAC_sample_valid [ d_sample_valid ] [ sample_valid ] capsense_dac
+**** begin user architecture code
+.include /home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/analog_support.spice
+.include /home/shreyas/Desktop/Sec_7/Integrated_Design/simulation/cosim_models.spice
+
+.save v(sample_valid) v(clk_1mhz) v(rst_n) v(phi1b) v(phitb) v(phi2b)
+.control
+set xtrtol=2
+shell ln -sfn /home/shreyas/Desktop/Sec_7/Phase_Generator_Testbench /tmp/capsense_phase_runtime
+shell ln -sfn /home/shreyas/Desktop/Sec_7/Integrated_Design /tmp/capsense_integrated
+set wr_singlescale
+set wr_vecnames
+run
+let vdiff=v(outp)-v(outn)
+let vcm_in=(v(sump)+v(sumn))/2
+let vcm_out=(v(outp)+v(outn))/2
+wrdata exp1_clocks.dat v(phi1) v(phit) v(phi2) v(phi1b) v(phitb) v(phi2b) v(sample_valid)
+wrdata exp1_tx.dat v(txp) v(txn)
+wrdata exp1_rx.dat v(rxp) v(rxn)
+wrdata exp1_ota_inputs.dat v(sump) v(sumn)
+wrdata exp1_ota_outputs.dat v(outp) v(outn)
+wrdata exp1_commonmode.dat vcm_in vcm_out
+wrdata exp1_differential.dat vdiff
+write integrated.raw all
+.endc
+
+
+.param CP=11.79p CN=10p CFB_L=202.7u
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:
+*+  /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_h.sym # of pins=6
+** sym_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_h.sym
+** sch_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_h.sch
+.subckt Transmission_v1_26_h phi VSS1 In Out VDD phibar
+*.iopin Out
+*.iopin In
+*.iopin phibar
+*.iopin phi
+*.iopin VSS1
+*.iopin VDD
+MM1 Out phi In VSS1 n L=0.8u W=2.5u ad=7.75e-12 as=7.75e-12 pd=1.12e-05 ps=1.12e-05 nrd=0.72
++ nrs=0.72 m=1
+MM2 Out phibar In VDD p L=0.8u W=4.5u ad=1.395e-11 as=1.395e-11 pd=1.52e-05 ps=1.52e-05 nrd=0.4
++ nrs=0.4 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_v.sym # of pins=6
+** sym_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_v.sym
+** sch_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/Transmission_v1_26_v.sch
+.subckt Transmission_v1_26_v phi VSS1 In Out VDD phibar
+*.iopin Out
+*.iopin In
+*.iopin phibar
+*.iopin phi
+*.iopin VSS1
+*.iopin VDD
+MM1 Out phi In VSS1 n L=0.8u W=2.5u ad=7.75e-12 as=7.75e-12 pd=1.12e-05 ps=1.12e-05 nrd=0.72
++ nrs=0.72 m=1
+MM2 Out phibar In VDD p L=0.8u W=4.5u ad=1.395e-11 as=1.395e-11 pd=1.52e-05 ps=1.52e-05 nrd=0.4
++ nrs=0.4 m=1
+.ends
+
+
+* expanding   symbol:  /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_input_cm_servo.sym
+*+ # of pins=6
+** sym_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_input_cm_servo.sym
+** sch_path: /home/shreyas/Desktop/Sec_7/Integrated_Design/symbols/ota_input_cm_servo.sch
+.subckt ota_input_cm_servo sump sumn vdd phi1 phi2 phit
+*.iopin vdd
+*.iopin phit
+*.iopin phi1
+*.iopin phi2
+*.iopin sump
+*.iopin sumn
+BICMERR 0 cm_acc I = 1m*v(cm_sample)*(2.5-(v(sump)+v(sumn))/2)
+CICMINT cm_acc 0 1n m=1
+RICMINT cm_acc 0 1e13 m=1
+VICMSAMPLE cm_sample 0 PULSE(0 1 84u 10n 10n 2u 100u)
+BICMCTRL cm_ctrl 0 V = max(0,min(v(vdd),2.5+v(cm_acc)))
+XSICMHOLD cm_ctrl cm_hold phi1 vdd user_tg_control
+CICMHOLD cm_hold 0 20p m=1
+RICMHOLD cm_hold cm_init 1e13 m=1
+VICMINIT cm_init 0 2.5
+XSICMEDGE1 vdd cm_edge1 phit vdd user_tg_control
+XSICMRST1 0 cm_edge1 phi1 vdd user_tg_control
+CICMEDGE1 cm_edge1 0 10p m=1
+XSICMEDGE2 vdd cm_edge2 phi2 vdd user_tg_control
+XSICMRST2 0 cm_edge2 phi1 vdd user_tg_control
+CICMEDGE2 cm_edge2 0 10p m=1
+BICMDRIVE cm_x 0 V = ((.68*v(cm_edge1)+.32*v(cm_edge2))/max(.1,v(vdd)))*v(cm_hold)
+MCORRp sump cm_x sump sump P W=20u L=10u M=40 AD=90p AS=90p PD=49u PS=49u
+MCORRn sumn cm_x sumn sumn P W=20u L=10u M=40 AD=90p AS=90p PD=49u PS=49u
+**** begin user architecture code
+.model icm_hold SW(Ron=10 Roff=1e14 Vt=2 Vh=.1)
+.model icm_edge_set SW(Ron=3000 Roff=1e13 Vt=1 Vh=.05)
+.model icm_edge_reset SW(Ron=100k Roff=1e13 Vt=2 Vh=.1)
+**** end user architecture code
+.ends
+
+.end

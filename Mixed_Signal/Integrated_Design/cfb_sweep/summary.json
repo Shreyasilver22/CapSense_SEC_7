@@ -1,0 +1,188 @@
+{
+  "40": {
+    "cases": 529,
+    "completed": 529,
+    "settled": 529,
+    "unsettled": 0,
+    "failed": 0,
+    "output_rail_excursion_cases": 0,
+    "ranges": {
+      "vdiff_V": [
+        -0.4472001150499674,
+        0.44720637622587267
+      ],
+      "input_vcm_V": [
+        2.499149424629942,
+        2.5029711975350963
+      ],
+      "output_vcm_V": [
+        2.499145818286003,
+        2.5058023646940475
+      ],
+      "voutp_V": [
+        2.282202121441231,
+        2.7294055528069836
+      ],
+      "voutn_V": [
+        2.282199176581111,
+        2.7294022364911985
+      ],
+      "sensitivity_cp_mV_per_pF": [
+        -3.008823875642719,
+        95.2334302145279
+      ],
+      "sensitivity_cn_mV_per_pF": [
+        -95.22553891429686,
+        3.019146498637326
+      ],
+      "sensitivity_delta_mV_per_pF": [
+        0.018235526877408148,
+        77.87570593541227
+      ]
+    },
+    "at_CP_CN_10pF": {
+      "vdiff_V": 5.394054714003005e-08,
+      "input_vcm_V": 2.499403992422504,
+      "output_vcm_V": 2.4991458327369567,
+      "voutp_V": 2.4991458597072302,
+      "voutn_V": 2.499145805766683,
+      "sensitivity_cp_mV_per_pF": 46.743399657046325,
+      "sensitivity_cn_mV_per_pF": -46.74352818562699,
+      "sensitivity_delta_mV_per_pF": 46.743463921336655
+    },
+    "center_CP_CN_6p5pF": {
+      "vdiff_V": -9.643404030867941e-08,
+      "input_vcm_V": 2.499989264524504,
+      "output_vcm_V": 2.499145829264703,
+      "voutp_V": 2.499145781047683,
+      "voutn_V": 2.4991458774817232,
+      "sensitivity_cp_mV_per_pF": 68.71722455284245,
+      "sensitivity_cn_mV_per_pF": -68.71737151538326,
+      "sensitivity_delta_mV_per_pF": 68.71729803411286
+    }
+  },
+  "50": {
+    "cases": 529,
+    "completed": 529,
+    "settled": 529,
+    "unsettled": 0,
+    "failed": 0,
+    "output_rail_excursion_cases": 0,
+    "ranges": {
+      "vdiff_V": [
+        -0.34309814721962173,
+        0.3430927329906903
+      ],
+      "input_vcm_V": [
+        2.4999785312280514,
+        2.5038035064205637
+      ],
+      "output_vcm_V": [
+        2.4991458146169387,
+        2.5030736410174472
+      ],
+      "voutp_V": [
+        2.3315245674076364,
+        2.674619884300515
+      ],
+      "voutn_V": [
+        2.3315271513098246,
+        2.674622714627258
+      ],
+      "sensitivity_cp_mV_per_pF": [
+        -2.3885516071611157,
+        71.41412025015192
+      ],
+      "sensitivity_cn_mV_per_pF": [
+        -71.42605456509754,
+        2.3402696008743007
+      ],
+      "sensitivity_delta_mV_per_pF": [
+        0.002055997522232289,
+        62.220780765451345
+      ]
+    },
+    "at_CP_CN_10pF": {
+      "vdiff_V": -1.348811009549422e-07,
+      "input_vcm_V": 2.4999888253023386,
+      "output_vcm_V": 2.4991458297219027,
+      "voutp_V": 2.499145762281352,
+      "voutn_V": 2.499145897162453,
+      "sensitivity_cp_mV_per_pF": 37.40524616561203,
+      "sensitivity_cn_mV_per_pF": -37.4055175588679,
+      "sensitivity_delta_mV_per_pF": 37.40538186223996
+    },
+    "center_CP_CN_6p5pF": {
+      "vdiff_V": -8.279837082625363e-08,
+      "input_vcm_V": 2.49999995703174,
+      "output_vcm_V": 2.499145829296829,
+      "voutp_V": 2.4991457878976435,
+      "voutn_V": 2.4991458706960143,
+      "sensitivity_cp_mV_per_pF": 54.9542790293267,
+      "sensitivity_cn_mV_per_pF": -54.95416381443485,
+      "sensitivity_delta_mV_per_pF": 54.954221421880774
+    }
+  },
+  "60": {
+    "cases": 529,
+    "completed": 529,
+    "settled": 529,
+    "unsettled": 0,
+    "failed": 0,
+    "output_rail_excursion_cases": 0,
+    "ranges": {
+      "vdiff_V": [
+        -0.2776864513763875,
+        0.27768003816340103
+      ],
+      "input_vcm_V": [
+        2.4999387383523866,
+        2.5044407787478673
+      ],
+      "output_vcm_V": [
+        2.4991458109424216,
+        2.5017221135797527
+      ],
+      "voutp_V": [
+        2.3628788878915588,
+        2.6405620142807376
+      ],
+      "voutn_V": [
+        2.3628819761173365,
+        2.6405653392679462
+      ],
+      "sensitivity_cp_mV_per_pF": [
+        -1.756756106062518,
+        56.572270290064175
+      ],
+      "sensitivity_cn_mV_per_pF": [
+        -56.57063353747649,
+        2.354790208858315
+      ],
+      "sensitivity_delta_mV_per_pF": [
+        0.02198544066178698,
+        51.78152342201847
+      ]
+    },
+    "at_CP_CN_10pF": {
+      "vdiff_V": -1.1996589144303016e-07,
+      "input_vcm_V": 2.499958854169628,
+      "output_vcm_V": 2.499145830036426,
+      "voutp_V": 2.4991457700534805,
+      "voutn_V": 2.499145890019372,
+      "sensitivity_cp_mV_per_pF": 31.170114858015907,
+      "sensitivity_cn_mV_per_pF": -31.170018067496308,
+      "sensitivity_delta_mV_per_pF": 31.170066462756107
+    },
+    "center_CP_CN_6p5pF": {
+      "vdiff_V": -1.0304262776372752e-07,
+      "input_vcm_V": 2.500000450956014,
+      "output_vcm_V": 2.4991458292991404,
+      "voutp_V": 2.4991457777778265,
+      "voutn_V": 2.4991458808204543,
+      "sensitivity_cp_mV_per_pF": 45.78618145874502,
+      "sensitivity_cn_mV_per_pF": -45.785942496994636,
+      "sensitivity_delta_mV_per_pF": 45.78606197786983
+    }
+  }
+}

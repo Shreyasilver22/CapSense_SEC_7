@@ -1,0 +1,21 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=primitive
+format="@name [ @@a @@b ] [ @@da @@db ] @model"
+template="name=A1 model=capsense_adc"}
+V {}
+S {}
+E {}
+L 4 -60 -40 60 -40 {}
+L 4 60 -40 60 40 {}
+L 4 60 40 -60 40 {}
+L 4 -60 40 -60 -40 {}
+T {ADC bridge} -50 -10 0 0 0.23 0.23 {}
+L 4 -80 -20 -60 -20 {}
+B 5 -82.5 -22.5 -77.5 -17.5 {name=a dir=in}
+L 4 -80 20 -60 20 {}
+B 5 -82.5 17.5 -77.5 22.5 {name=b dir=in}
+L 4 80 -20 60 -20 {}
+B 5 77.5 -22.5 82.5 -17.5 {name=da dir=out}
+L 4 80 20 60 20 {}
+B 5 77.5 17.5 82.5 22.5 {name=db dir=out}

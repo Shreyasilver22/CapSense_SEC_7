@@ -1,0 +1,36 @@
+{
+  "xschem_netlist": "pass",
+  "new_schematic": "/home/shreyas/Desktop/Sec_7/Integrated_Design/schematic/capsense_integrated_pmos_cs_tb.sch",
+  "original_schematic_unchanged": true,
+  "no_ideal_CSP_or_CSN": true,
+  "PMOS_CS_connections": {
+    "MCSP": "txp rxp txp txp",
+    "MCSN": "txn rxn txn txn"
+  },
+  "feedback_PMOS_banks": 2,
+  "TG_instances": 12,
+  "seven_RTL_outputs_preserved": true,
+  "cv_100kHz_27C": [
+    {
+      "gate_minus_TX_V": -5,
+      "capacitance_pF": 9.997338025515
+    },
+    {
+      "gate_minus_TX_V": -2.5,
+      "capacitance_pF": 10.0543832862
+    },
+    {
+      "gate_minus_TX_V": -1.25,
+      "capacitance_pF": 9.91275625962
+    },
+    {
+      "gate_minus_TX_V": -0.85,
+      "capacitance_pF": 1.7955137132949999
+    },
+    {
+      "gate_minus_TX_V": 0,
+      "capacitance_pF": 10.088817362690001
+    }
+  ],
+  "full_AFE_transient_rerun": false
+}

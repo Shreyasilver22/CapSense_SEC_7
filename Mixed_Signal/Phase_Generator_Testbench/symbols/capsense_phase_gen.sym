@@ -1,0 +1,45 @@
+v {xschem version=3.4.5 file_version=1.2}
+G {}
+K {type=primitive
+format="@name [ @@clk_1mhz @@rst_n ] [ @@phi1 @@phit @@phi2 @@phi1b @@phitb @@phi2b @@sample_valid ] null @model"
+template="name=A1 model=capsense_phase_gen_cosim"
+verilog_ignore=true
+vhdl_ignore=true
+}
+V {}
+S {}
+E {}
+L 4 -220 -180 220 -180 {}
+L 4 220 -180 220 180 {}
+L 4 220 180 -220 180 {}
+L 4 -220 180 -220 -180 {}
+T {@name} -220 -205 0 0 0.3 0.3 {}
+T {CAPSENSE PHASE GENERATOR} -150 -15 0 0 0.28 0.28 {}
+T {MOD-100 COUNTER} -95 35 0 0 0.28 0.28 {}
+L 4 -220 -80 -260 -80 {}
+B 5 -262.5 -82.5 -257.5 -77.5 {name=clk_1mhz dir=in}
+T {clk_1mhz} -210 -87 0 0 0.22 0.22 {}
+L 4 -220 0 -260 0 {}
+B 5 -262.5 -2.5 -257.5 2.5 {name=rst_n dir=in}
+T {rst_n} -210 -7 0 0 0.22 0.22 {}
+L 4 220 -120 260 -120 {}
+B 5 257.5 -122.5 262.5 -117.5 {name=phi1 dir=out}
+T {phi1} 210 -127 0 1 0.22 0.22 {}
+L 4 220 -40 260 -40 {}
+B 5 257.5 -42.5 262.5 -37.5 {name=phit dir=out}
+T {phit} 210 -47 0 1 0.22 0.22 {}
+L 4 220 40 260 40 {}
+B 5 257.5 37.5 262.5 42.5 {name=phi2 dir=out}
+T {phi2} 210 33 0 1 0.22 0.22 {}
+L 4 220 -80 260 -80 {}
+B 5 257.5 -82.5 262.5 -77.5 {name=phi1b dir=out}
+T {phi1b} 210 -87 0 1 0.22 0.22 {}
+L 4 220 0 260 0 {}
+B 5 257.5 -2.5 262.5 2.5 {name=phitb dir=out}
+T {phitb} 210 -7 0 1 0.22 0.22 {}
+L 4 220 80 260 80 {}
+B 5 257.5 77.5 262.5 82.5 {name=phi2b dir=out}
+T {phi2b} 210 73 0 1 0.22 0.22 {}
+L 4 220 120 260 120 {}
+B 5 257.5 117.5 262.5 122.5 {name=sample_valid dir=out}
+T {sample_valid} 210 113 0 1 0.22 0.22 {}

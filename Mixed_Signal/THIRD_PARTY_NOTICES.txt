@@ -1,0 +1,7 @@
+The SCL CP8D PDK, transistor model cards, standard-cell libraries, and compiled toolchains are NOT included. Users need their own installed PDK and applicable permissions.
+
+Phase_Generator_Testbench/adapter contains ngspice Icarus co-simulation bridge source from ngspice commit 47eb8ad02f8a3d634fea514956af2c15748bcd5d. Preserve file copyright notices and adapter/COPYING.ngspice. These upstream files retain their own licensing terms and are not relicensed by the repository's MIT license.
+
+Icarus source is obtained separately from https://github.com/steveicarus/iverilog at commit 24acba16baba765484df7b3f29c8fa931c10e6ec. It is not vendored here. ngspice source: https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/ .
+
+The design schematics reference installed SCL device symbols; those symbols and their PDK implementations are external dependencies.

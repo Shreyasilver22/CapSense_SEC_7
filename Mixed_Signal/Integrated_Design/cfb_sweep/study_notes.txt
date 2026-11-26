@@ -1,0 +1,33 @@
+CP/CN/PMOS-CFB measurement sweep
+
+User-specified geometry (used, not retuned to the model):
+40 pF label: 5 parallel fingers, W=20um each, L=202.7um; gate area20270um2.
+50 pF label: 5 parallel fingers, W=20um each, L=253.375um; gate area25337.5um2.
+60 pF label: 5 parallel fingers, W=20um each, L=304.05um; gate area30405um2.
+Source/drain/well are tied to SUM; gate is OUT, preserving the existing feedback topology.
+
+Nominal bias characterization: SUM=2.5V, OUT=2.5V, 100kHz small-signal AC, typical MOS, 27C. Model capacitances: 40.08668 / 50.08596 / 60.08525pF. These are nominal values, not constant capacitances. specified_cap_cv.json reports model C-V at other biases. The prior parallel-unit/trim-device sizing experiment is NOT used.
+
+Grid: CFB labels40,50,60; CP=1:0.5:12pF; CN=1:0.5:12pF. Full Cartesian grid: 3*23*23=1587 cases. Both feedback branches use the same geometry in each case. Sampling capacitors and 5pF output loads are unchanged.
+
+Simulation: original SC network, actual user's Transmission_v1_26 TG geometry, original OTA/bias/input-CM design with prior TG replacements. 5V, 27C, typical native SCL MOS/RPP. First-order Gear, KLU, reltol4e-4, vntol3u, abstol1e-11. Main Xschem bench retains live Icarus co-simulation and 80ns maxstep.
+
+Batch acceleration: the counter has no analog feedback input. The batch replays the original unchanged RTL's recorded output sequence with the same 1us voltage-edge model; it does NOT substitute independently invented output PULSE clocks. rtl_recorded_edges.json identifies the recording. The visible Xschem bench still executes the actual Verilog model. Four live/replay pilot comparisons agreed within0.638mV for requested voltages. This comparison tolerance is1mV and does not certify absolute analog accuracy. A digital-source/live-cosimulation acceleration experiment failed with time reversal and is NOT used.
+
+The checked batch uses400ns maximum step and starts saving at time0; failed cases retry at80ns then20ns. Four pilot comparisons of400ns against20ns gave <=15uV differences in the requested voltages. 80ns output-start-time combinations caused numerical timeouts in some cases; start_time_comparison.json records the diagnosis. Per-case maxstep is recorded. All cases use the same physical circuit; only numerical retry settings may differ.
+
+Measurement time: near the center of the final sample_valid high window, at83us within a100us frame (e.g.783us after8 frames,1583us after16). Interpolation uses the actual transient samples. VOUTP, VOUTN, (VOUTP-VOUTN), input VCM=(SUM_P+SUM_N)/2, output VCM=(OUT_P+OUT_N)/2 are recorded. sample_valid and all3 primary phases must toggle0-5V and sample_valid must be asserted at extraction.
+
+Initial duration8,16 or32 frames chosen from pilot settling behavior (longer for larger CFB and low effective sensor capacitance). Extend to16 and32 frames if the maximum cycle-to-cycle change of VOUTP, VOUTN or input VCM exceeds1mV. This is a drift criterion, not proof of an absolute voltage error bound. Rows still drifting after32 frames remain flagged unsettled. Numerical timeouts, transient aborts and nonfinite/incomplete data are retained as failures, with reasons. Output rail excursions beyond[-0.3,5.3]V are flagged over the saved interval. Most runs save the full trace; earlier cached80ns pilot/tail runs save the last two cycles, so their flags exclude startup. The true foundry reliability limits are not established by these thresholds.
+
+Sensitivity from0.5pF grid: partial d(VOUTP-VOUTN)/dCP at fixed CN; partial derivative with respect to CN at fixed CP; differential sensitivity at fixed mean capacitance, dVdiff/d(CP-CN)=0.5*(dVdiff/dCP-dVdiff/dCN). Units mV/pF. Central differences internally, second-order one-sided differences at edges. Derivatives requiring missing/unsettled neighbors are not reported. No single global slope is assumed across all mean-capacitance values.
+
+Results: sweep_results_replay.json, measurements.json, measurements.dat, per-CFB .npz arrays, PNG/PDF heatmaps and comparison curves. Failed/unsettled points are masked in plots. runs_replay/<case>/ retains each deck/log/result and waveform; smaller-step retries are under accuracy_replay/. completed.jsonl is an audit stream that may contain repeated pilot/retry entries; the final JSON array is the authoritative deduplicated dataset. FINISHED.json is created only after all1587 cases are processed and analysis completes.
+
+This is a nominal prelayout simulation study. It is not fabrication signoff: feedback C-V, behavioral input-CM sensing, ideal digital voltage interfaces, actual output buffers, PVT/mismatch, extracted layout and ADC loading need separate evaluation. External ADC fixture was already removed from this AFE-only bench. No original RTL or PDK files are changed by this sweep.
+
+GUI nominal benches use SIM_STOP=795us for40pF and1595us for50/60pF. The batch template uses explicit per-case durations instead. simulation_support_snapshot.spice preserves the support file loaded when this sweep started; its fixed795us .tran card is stripped by the batch before per-case transient commands are inserted. Changing only the GUI .tran duration to a parameter does not change the batch circuit.
+
+Selected operating-range diagnostics: at CP1pF/CN1.5pF, sensor nodes charge before phi2 assertion and differential output is almost zero at the sample window. In a separate TG-off test (phi0V/phibar5V), boosting the other terminal5->5.5V charges a1pF sensor node above5V. These model results explain why completion/drift flags alone do not establish useful ASIC sensitivity or safe internal voltage stress. See operating_range_diagnostics.json and off_tg_charge_result.json. The grid circuit is not altered to hide this behavior.
+
+Ideal charge-sharing diagnostic (not an additional transistor simulation): for the implemented10pF sampling capacitor reset at VEXC=5V/RX=0V and transferred to VSUM~2.5V, ideal retention gives VTX~CS*(VEXC+VSUM)/(CS+CMEMS). Thus a sensor below about5pF requires VTX above5V. The actual TG model instead permits charge escape/premature sensor charging, explaining the low-C response collapse. This is a limitation of the requested operating range with the unchanged5V excitation/input-CM setup; changing only CFB does not guarantee its removal. Only the selected diagnostic cases directly measured internal-node extrema. The full grid measures the requested outputs and common modes.

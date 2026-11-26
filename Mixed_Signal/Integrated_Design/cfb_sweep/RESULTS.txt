@@ -1,0 +1,53 @@
+Completed PMOS feedback-capacitor study
+
+Geometry per feedback branch: five parallel PMOS fingers, each W=20um.
+CFB label     L per finger       total gate area
+40pF          202.7um            20270um2
+50pF          253.375um          25337.5um2
+60pF          304.05um           30405um2
+Only L changes between variants. Original RTL and installed model files are unchanged.
+
+CP=1..12pF and CN=1..12pF, independently, in 0.5pF steps.
+23x23x3 = 1587 simulations, all completed; zero failed or drift-flagged cases.
+The final-cycle drift criterion is <=1mV for VOUTP, VOUTN and input VCM.
+Maximum observed drift is 0.9785mV. This is not an absolute error bound.
+
+At CP=CN=10pF, d(VOUTP-VOUTN)/dCP at fixed CN:
+CFB40: 46.7434mV/pF
+CFB50: 37.4052mV/pF
+CFB60: 31.1701mV/pF
+Input and output common modes are near2.5V. All individual values are in measurements.dat/measurements.json.
+Sensitivity uses adjacent0.5pF points. Pressure sensitivity requires sensor C-versus-pressure calibration.
+
+Full-grid sampled differential-output ranges:
+CFB40: -0.447200..+0.447206V
+CFB50: -0.343098..+0.343093V
+CFB60: -0.277686..+0.277680V
+These ranges include the low-sensitivity operating region.
+
+Measured quantities: VOUTP, VOUTN, VOUTP-VOUTN, input VCM, output VCM,
+CP partial sensitivity, CN partial sensitivity and fixed-mean differential-capacitance sensitivity.
+Measurement is at83us of the final100us frame, while sample_valid is asserted.
+Runs use8,16 or32 frames according to settling behavior.
+
+Open schematic/capsense_cfb_40pf.sch, capsense_cfb_50pf.sch or capsense_cfb_60pf.sch
+in the parent project. These Xschem benches retain live Icarus RTL co-simulation.
+The batch uses recorded original RTL phases, compared against live co-simulation
+in four pilot cases (requested voltage differences <=0.638mV). No independently
+invented phase PULSE sources were substituted. See study_notes.txt for details.
+
+Remaining circuit issue: low sensor capacitances can boost TX above5V; selected
+TG-off and circuit diagnostics show premature sensor charging and charge loss.
+Sensitivity approaches zero in part of the requested range. Changing CFB alone
+does not fix this. Diagnostics are in operating_range_diagnostics.json and
+off_tg_charge_result.json. Internal-node stress was not checked across every case.
+
+PMOS capacitance depends on bias. Model capacitance at2.5V/2.5V is approximately
+40.0867/50.0860/60.0853pF, but the C-V plots show significant variation with bias.
+This nominal prelayout study is not ASIC signoff. Behavioral input-CM sensing and
+ideal digital interfaces remain; PVT/mismatch, physical buffers and extracted
+layout still require separate verification.
+
+Results: measurements.dat, measurements.json, summary.json; per-CFB grid.npz;
+cfb_40/50/60_measurements.png/pdf and sensitivity.png/pdf; feedback_comparison.png/pdf.
+Verification: FINISHED.json and final_verification.json.
