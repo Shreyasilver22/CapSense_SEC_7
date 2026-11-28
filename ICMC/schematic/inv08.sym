@@ -1,0 +1,25 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+spice_primitive=true
+format="@name @pinlist inv08 w=@w"
+template="name=X1 w=5u"}
+V {}
+S {}
+E {}
+
+B 4 -95 -44 95 44 {fill=false}
+T {INVERTER} -78 -42 0 0 0.23 0.23 {layer=4}
+T {@name} -78 30 0 0 0.21 0.21 {layer=4}
+L 4 -95 -21 -115 -21 {}
+B 5 -117.5 -23.5 -112.5 -18.5 {name=in dir=inout pinnumber=1}
+T {in} -88 -26 0 0 0.21 0.21 {layer=4}
+L 4 -95 10 -115 10 {}
+B 5 -117.5 7.5 -112.5 12.5 {name=out dir=inout pinnumber=2}
+T {out} -88 5 0 0 0.21 0.21 {layer=4}
+L 4 95 -21 115 -21 {}
+B 5 112.5 -23.5 117.5 -18.5 {name=vdd dir=inout pinnumber=3}
+T {vdd} 85 -26 0 1 0.21 0.21 {layer=4}
+L 4 95 10 115 10 {}
+B 5 112.5 7.5 117.5 12.5 {name=vss dir=inout pinnumber=4}
+T {vss} 85 5 0 1 0.21 0.21 {layer=4}

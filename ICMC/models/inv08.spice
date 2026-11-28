@@ -1,0 +1,5 @@
+* SCL08 inverter used by the ICMC and integrated phase generator.
+.subckt inv08 a y vdd vss params: w=5u
+MN y a vss vss N W={w} L=.8u
+MP y a vdd vdd P W={2*w} L=.8u
+.ends inv08

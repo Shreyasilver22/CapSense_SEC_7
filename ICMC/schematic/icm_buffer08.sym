@@ -1,0 +1,28 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit
+
+format="@name @pinlist @symname"
+template="name=X1 "}
+V {}
+S {}
+E {}
+
+B 4 -95 -60 95 60 {fill=false}
+T {VOLTAGE BUFFER} -78 -58 0 0 0.23 0.23 {layer=4}
+T {@name} -78 46 0 0 0.21 0.21 {layer=4}
+L 4 -95 -37 -115 -37 {}
+B 5 -117.5 -39.5 -112.5 -34.5 {name=hold dir=inout pinnumber=1}
+T {hold} -88 -42 0 0 0.21 0.21 {layer=4}
+L 4 -95 -6 -115 -6 {}
+B 5 -117.5 -8.5 -112.5 -3.5 {name=out dir=inout pinnumber=2}
+T {out} -88 -11 0 0 0.21 0.21 {layer=4}
+L 4 -95 25 -115 25 {}
+B 5 -117.5 22.5 -112.5 27.5 {name=vdd dir=inout pinnumber=3}
+T {vdd} -88 20 0 0 0.21 0.21 {layer=4}
+L 4 95 -37 115 -37 {}
+B 5 112.5 -39.5 117.5 -34.5 {name=vss dir=inout pinnumber=4}
+T {vss} 85 -42 0 1 0.21 0.21 {layer=4}
+L 4 95 -6 115 -6 {}
+B 5 112.5 -8.5 117.5 -3.5 {name=nb dir=inout pinnumber=5}
+T {nb} 85 -11 0 1 0.21 0.21 {layer=4}

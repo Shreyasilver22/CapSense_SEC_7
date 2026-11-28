@@ -1,5 +1,7 @@
 # Fully integrated CapSense readout
 
+**Current transistor-level revision.** Open [transistor_level_icmc](transistor_level_icmc/) for the complete SC + OTA circuit with the [reusable SCL08 ICMC](../ICMC/). The original behavioral-controller bench is documented below.
+
 This is the selected SCL 0.8 µm switched-capacitor readout. It uses transmission gates, the low-power fully differential telescopic OTA with NMOS MOSFET resistors and output CMFB, and PMOS input common-mode correction targeting 2.5 V. The testbench includes the track-and-hold and an illustrative external ADC input load.
 
 - A single 10 kHz master clock supplies the timing circuit. The nominal track-close tap is 87 µs and external acquisition starts at 88.1 µs.

@@ -1,0 +1,5 @@
+/runs/
+/*.stdout
+/schematic/netlist/
+/schematic/bench_support.spice
+__pycache__/
