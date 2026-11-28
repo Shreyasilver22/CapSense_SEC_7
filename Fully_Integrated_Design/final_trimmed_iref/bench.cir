@@ -1,0 +1,62 @@
+* Integrated SC + telescopic OTA + input common-mode correction
+**.subckt corrected_differential_sc
+XOTA sumn sump outp outn ota_vdd 0 bias vref vbn vbp ota_telescopic_cm2p5
+CMEMP 0 sensp 11.79p
+XSENSEP sensp txp phi2 phi2b vdd 0 corrected_tg
+XSRESETP sensp 0 phi1 phi1b vdd 0 corrected_tg
+XCHARGEP vp txp phi1 phi1b vdd 0 corrected_tg
+CSP txp rxp 10p
+XRRESETP rxp 0 phi1 phi1b vdd 0 corrected_tg
+XXFERP rxp sump phit phitb vdd 0 corrected_tg
+XCFP sump outp corrected_pmos_bank
+XFBRESETP sump outp phi1 phi1b vdd 0 corrected_tg
+CLP outp 0 5p
+CMEMN 0 sensn 10p
+XSENSEN sensn txn phi2 phi2b vdd 0 corrected_tg
+XSRESETN 0 sensn phi1 phi1b vdd 0 corrected_tg
+XCHARGEN txn vp phi1 phi1b vdd 0 corrected_tg
+CSN txn rxn 10p
+XRRESETN 0 rxn phi1 phi1b vdd 0 corrected_tg
+XXFERN rxn sumn phit phitb vdd 0 corrected_tg
+XCFN sumn outn corrected_pmos_bank
+XFBRESETN sumn outn phi1 phi1b vdd 0 corrected_tg
+CLN 0 outn 5p
+
+CSMPp holdp 0 10p
+CSMPn holdn 0 10p
+MN_tr_p outp tr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_p outp trb holdp vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_p acq_ref pr holdp 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_p acq_ref prb holdp vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+MN_tr_n outn tr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_tr_n outn trb holdn vdd P W=7.5u L=.8u AD=33.75p AS=33.75p PD=49u PS=49u
+MN_pr_n acq_ref pr holdn 0 N W=10u L=.8u AD=45p AS=45p PD=29u PS=29u
+MP_pr_n acq_ref prb holdn vdd P W=20u L=.8u AD=90p AS=90p PD=49u PS=49u
+RPKGp holdp pinp 5
+CBOARDp pinp 0 7.01p
+RBUFFERp pinp 0 100Meg
+RPKGn holdn pinn 5
+CBOARDn pinn 0 7.01p
+RBUFFERn pinn 0 100Meg
+XREFH ref_src acq_ref d2 refh_vdd 0 refbuf08
+VREFHDD vdd refh_vdd 0
+* The following switches represent the illustrative external ADC input.
+VADC adc_sw 0 PULSE(0 1 88.1u 1n 1n 1u 100u)
+VDIS dis_sw 0 PULSE(1 0 88u 1n 1n 1.3u 100u)
+.model SW_ACQ SW(Ron=100 Roff=1e13 Vt=.5 Vh=.01)
+CADCp adcp 0 5p
+SADCp pinp adcp adc_sw 0 SW_ACQ
+SDISp adcp 0 dis_sw 0 SW_ACQ
+CADCn adcn 0 5p
+SADCn pinn adcn adc_sw 0 SW_ACQ
+SDISn adcn 0 dis_sw 0 SW_ACQ
+
+VICMDD vdd cmdd 0
+XICM sump sumn vref phi1 phi1b phit phitb phi2 cmdd 0 cm_sample cm_sampleb cm_x cm_hold accum icm_cell08 mi=9 drive_w=40
+
+**** begin user architecture code
+.include "support.spice"
+.include "models/input_cm_scl08_low_current.spice"
+**** end user architecture code
+**.ends
+.end

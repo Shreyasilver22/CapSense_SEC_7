@@ -1,0 +1,29 @@
+* Interleaved charge pump and two MOS low-pass sections.
+.subckt iref_filter08 low low_b high high_b control vdd vss params: size=4 lp=8
+XCA qa vdd high high_b vdd vss ref_tg08
+XDA qa raw low low_b vdd vss ref_tg08
+XCB qb vdd low low_b vdd vss ref_tg08
+XDB qb raw high high_b vdd vss ref_tg08
+MCA vss qa vss vss P W=40u L=20u M={size}
+MCB vss qb vss vss P W=40u L=20u M={size}
+MAVG raw raw vss vss N W=2.5u L=8u
+MRAW vss raw vss vss P W=40u L=20u M=40
+* Series long-channel MOSFETs implement the two on-chip low-pass resistances.
+MLP1A raw vdd lp1a vss N W=2.5u L=140u
+MLP1B lp1a vdd lp1b vss N W=2.5u L=140u
+MLP1C lp1b vdd pole1 vss N W=2.5u L=140u
+MLP2A pole1 vdd lp2a vss N W=2.5u L=140u
+MLP2B lp2a vdd lp2b vss N W=2.5u L=140u
+MLP2C lp2b vdd control vss N W=2.5u L=140u
+MC1 vss pole1 vss vss P W=40u L=20u M={lp}
+MC2 vss control vss vss P W=40u L=20u M={2*lp}
+.ends iref_filter08
+
+* Two interleaved charge pumps generate an average reference current.
+* A MOS low-pass filter keeps the output mirror continuously biased.
+.subckt clocked_iref08 low low_b high high_b iref vdd vss params: size=4 ratio=8 lp=8
+XCTRL low low_b high high_b control vdd vss iref_filter08 size={size} lp={lp}
+MNI di control vss vss N W=2.5u L=8u M={ratio}
+MPD di di vdd vdd P W=5u L=16u
+MPO iref di vdd vdd P W=5u L=16u
+.ends clocked_iref08

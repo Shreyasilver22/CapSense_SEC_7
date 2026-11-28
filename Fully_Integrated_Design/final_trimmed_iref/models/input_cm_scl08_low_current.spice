@@ -1,0 +1,58 @@
+* SCL08 sampled input-common-mode correction
+.subckt icm_error08 inp ref drive sample vdd vss nb
+MREF mirror ref tail vss N W=12u L=2.4u
+MSIG drive inp tail vss N W=12u L=2.4u
+MEN tail sample sink vss N W=8u L=.8u
+MT sink nb vss vss N W=6u L=8u
+MP0 mirror mirror vdd vdd P W=12u L=4u
+MP1 drive mirror vdd vdd P W=12u L=4u
+.ends icm_error08
+
+.subckt icm_tg08 a b en enb vdd vss
+MN a en b vss N W=4u L=.8u AD=18p AS=18p PD=17u PS=17u
+MP a enb b vdd P W=8u L=.8u AD=36p AS=36p PD=25u PS=25u
+.ends icm_tg08
+
+.subckt icm_drive_tg08 a b en enb vdd vss
+MN a en b vss N W=12u L=.8u AD=54p AS=54p PD=33u PS=33u
+MP a enb b vdd P W=24u L=.8u AD=108p AS=108p PD=57u PS=57u
+.ends icm_drive_tg08
+
+.subckt icm_buffer08 hold out vdd vss nb
+MIN nleft out tail vss N W=20u L=2.4u
+MREF gain hold tail vss N W=20u L=2.4u
+MTAIL tail nb vss vss N W=8u L=4.8u
+MP0 nleft nleft vdd vdd P W=10u L=3.2u
+MP1 gain nleft vdd vdd P W=10u L=3.2u
+MP2 out gain vdd vdd P W=100u L=1.6u
+MN2 out nb vss vss N W=12u L=4.8u
+MCOMP out gain out out P W=30u L=12u M=2
+.ends icm_buffer08
+
+.subckt icm_cell08 sump sumn ref phi1 phi1b phit phitb phi2 vdd vss sample sampleb cm_x cm_hold accum params: mi=9 drive_w=40
+XRBIAS vdd nb RPP W=2.4u L=20000u
+MBIAS nb nb vss vss N W=20u L=2.4u
+XEP sump ref current sample vdd vss nb icm_error08
+XEN sumn ref current sample vdd vss nb icm_error08
+XUP current accum sample sampleb vdd vss icm_tg08
+XPRE drive current sampleb sample vdd vss icm_tg08
+* Integrator and hold capacitors use PDK PMOS devices in their own wells.
+MCINT vdd accum vdd vdd P W=100u L=20u M={mi}
+MCH vdd cm_hold vdd vdd P W=100u L=20u
+* Soft clamps give the storage node a physical DC path and avoid rail lock.
+MLOW ref ref accum vss N W=2.5u L=4u
+MHIGH accum ref ref vdd P W=2.5u L=4u
+XLATCH accum cm_hold phi1 phi1b vdd vss icm_tg08
+XBUF cm_hold drive vdd vss nb icm_buffer08
+* Two resistor weights give a nominal 68/32 correction voltage during transfer.
+XTXB phi2 tx_b vdd vss inv08 w=3u
+XTXA tx_b tx_a vdd vss inv08 w=12u
+XRXHI drive edge_r phit phitb vdd vss icm_drive_tg08
+XRXLO vss edge_r phitb phit vdd vss icm_drive_tg08
+XTXHI drive edge_t tx_a tx_b vdd vss icm_drive_tg08
+XTXLO vss edge_t tx_b tx_a vdd vss icm_drive_tg08
+XR1 edge_r cm_x RPP W=2.4u L=350u
+XR2 edge_t cm_x RPP W=2.4u L=744u
+MCORRP sump cm_x sump sump P W=20u L=10u M={drive_w} AD=90p AS=90p PD=49u PS=49u
+MCORRN sumn cm_x sumn sumn P W=20u L=10u M={drive_w} AD=90p AS=90p PD=49u PS=49u
+.ends icm_cell08

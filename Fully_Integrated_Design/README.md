@@ -1,6 +1,10 @@
 # Fully integrated CapSense readout
 
-**Current transistor-level revision.** Open [transistor_level_icmc](transistor_level_icmc/) for the complete SC + OTA circuit with the [reusable SCL08 ICMC](../ICMC/). The original behavioral-controller bench is documented below.
+**Finalized schematic revision.** Open the [integrated readout with programmable IREF](final_trimmed_iref/) for the runnable SCL08 SPICE deck, circuit models and measured results.
+
+The [transistor-level ICMC revision](transistor_level_icmc/) contains the earlier editable Xschem hierarchy and the [reusable SCL08 ICMC](../ICMC/).
+
+## Earlier behavioral-controller reference
 
 This is the selected SCL 0.8 µm switched-capacitor readout. It uses transmission gates, the low-power fully differential telescopic OTA with NMOS MOSFET resistors and output CMFB, and PMOS input common-mode correction targeting 2.5 V. The testbench includes the track-and-hold and an illustrative external ADC input load.
 

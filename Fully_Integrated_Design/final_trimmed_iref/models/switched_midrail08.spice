@@ -1,0 +1,54 @@
+* Clocked, ratiometric common-mode reference implemented with SCL08 MOS devices.
+* The same flying capacitor is connected across each rail-to-midpoint half.
+* The reference settles where the charge transferred in both phases balances.
+.subckt ref_inv08 a z hi lo params: channel=0.8u
+MP z a hi hi P W=5u L={channel}
+MN z a lo lo N W=2.5u L={channel}
+.ends ref_inv08
+
+.subckt ref_nand08 a b z hi lo
+MPA z a hi hi P W=5u L=.8u
+MPB z b hi hi P W=5u L=.8u
+MNA z a stack lo N W=5u L=.8u
+MNB stack b lo lo N W=5u L=.8u
+.ends ref_nand08
+
+.subckt ref_tg08 a b en enb hi lo
+MN a en b lo N W=2.5u L=.8u
+MP a enb b hi P W=5u L=.8u
+.ends ref_tg08
+
+.subckt ref_phase08 clk low low_b high high_b vdd vss
+* Nonoverlap from direct and delayed clock paths.
+XINV clk clkb vdd vss ref_inv08
+XDL0 clk delayed_b vdd vss ref_inv08 channel=16u
+MDL vdd delayed_b vdd vdd P W=10u L=3u
+XDL1 delayed_b delayed vdd vss ref_inv08
+XDL2 delayed delayed_inv vdd vss ref_inv08
+XN0 clkb delayed_inv low_b vdd vss ref_nand08
+XN1 clk delayed high_b vdd vss ref_nand08
+XIN0 low_b low vdd vss ref_inv08
+XIN1 high_b high vdd vss ref_inv08
+.ends ref_phase08
+
+.subckt switched_midrail08 low low_b high high_b out vdd vss params: nfly=8 nhold=24 sink=60u
+* Hold charge on mid. A PMOS gate over its n-well is the flying capacitor.
+XLOWTOP ct mid low low_b vdd vss ref_tg08
+XLOWBOT cb vss low low_b vdd vss ref_tg08
+XHIGHTOP ct vdd high high_b vdd vss ref_tg08
+XHIGHBOT cb mid high high_b vdd vss ref_tg08
+MFLY cb ct cb cb P W=40u L=20u M={nfly}
+MHOLD vss mid vss vss P W=40u L=20u M={nhold}
+* Unity buffer isolates the charge balance from the other reference consumers.
+MPBIAS nb nb vdd vdd P W=2.5u L=18u
+MNBIAS nb nb vss vss N W=20u L=2.4u
+MIN nleft out tail vss N W=20u L=2.4u
+MREF gain mid tail vss N W=20u L=2.4u
+MTAIL tail nb vss vss N W=8u L=4.8u
+MP0 nleft nleft vdd vdd P W=10u L=3.2u
+MP1 gain nleft vdd vdd P W=10u L=3.2u
+MP2 out gain vdd vdd P W=100u L=1.6u
+MN2 out nb vss vss N W={sink} L=4.8u
+MCOMP out gain out out P W=30u L=12u M=2
+MDEC vdd out vdd vdd P W=50u L=20u M=2
+.ends switched_midrail08

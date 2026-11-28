@@ -1,0 +1,34 @@
+* Integer trim for the SCL08 PMOS sourced OTA reference.
+* IREF is sourced into the OTA. T0 is the least significant bit.
+* High means VDD. Set the trim code during reset and hold it in operation.
+* Uses iref_filter08, ref_inv08 and ref_tg08 from the parent bias library.
+
+.subckt iref_pmos_segment08 iref mirror_gate trim vdd vss params: units=1
+XNOT trim trim_b vdd vss ref_inv08
+XON mirror_gate selected_gate trim trim_b vdd vss ref_tg08
+MOFF selected_gate trim vdd vdd P W=5u L=0.8u
+MOUT iref selected_gate vdd vdd P W=2.5u L=16u M={units}
+.ends iref_pmos_segment08
+
+.subckt clocked_iref_trim08 low low_b high high_b iref vdd vss t0 t1 t2 t3 t4 t5 t6 t7 params: gain=7 size=4 lp=24
+XCTRL low low_b high high_b control vdd vss iref_filter08 size={size} lp={lp}
+MNI mirror_gate control vss vss N W=2.5u L=8u M={gain}
+* All output fingers and the diode-connected reference share W and L.
+MPD mirror_gate mirror_gate vdd vdd P W=2.5u L=16u M=256
+MPBASE iref mirror_gate vdd vdd P W=2.5u L=16u M=128
+XTR0 iref mirror_gate t0 vdd vss iref_pmos_segment08 units=1
+XTR1 iref mirror_gate t1 vdd vss iref_pmos_segment08 units=2
+XTR2 iref mirror_gate t2 vdd vss iref_pmos_segment08 units=4
+XTR3 iref mirror_gate t3 vdd vss iref_pmos_segment08 units=8
+XTR4 iref mirror_gate t4 vdd vss iref_pmos_segment08 units=16
+XTR5 iref mirror_gate t5 vdd vss iref_pmos_segment08 units=32
+XTR6 iref mirror_gate t6 vdd vss iref_pmos_segment08 units=64
+XTR7 iref mirror_gate t7 vdd vss iref_pmos_segment08 units=128
+.ends clocked_iref_trim08
+
+* The existing buffered VREF and clock splitter are reused unchanged.
+.subckt bias_reference_trim08 vdd vss clk vref iref t0 t1 t2 t3 t4 t5 t6 t7 params: gain=7
+XPH clk low low_b high high_b vdd vss ref_phase08
+XV low low_b high high_b vref vdd vss switched_midrail08 nfly=8 nhold=24 sink=60u
+XI low low_b high high_b iref vdd vss t0 t1 t2 t3 t4 t5 t6 t7 clocked_iref_trim08 gain={gain}
+.ends bias_reference_trim08
