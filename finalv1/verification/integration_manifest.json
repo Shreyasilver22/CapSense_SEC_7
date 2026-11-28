@@ -1,0 +1,43 @@
+{
+  "source_GDS": "/home/shreyas/Desktop/Sec_7/intergrate_gds/post_layout/grid_clean_chip/CapSense_ASIC_ROUTED.gds",
+  "source_sha256": "49e7148e284b2e1f97c32afde6485debd4ce96accc5511f7ecca0e97443b1f4c",
+  "new_digital_sha256": "f6ca9579428d2aad49a051f81c8087381fdad1f8b9705a2e7d31826f92a369be",
+  "output_sha256": "5006fc3c9b7107d935bbd16b5e139559dc34e84df2084e198679afa68037366a",
+  "output_reference_sha256": "70037fac601382d48fe318b5aa8216619839cf275877f2f3ca7a45b14eac6e72",
+  "only_replaced_hierarchy": "capsense_phase_gen",
+  "existing_native_cells_geometry_checked": [
+    "ADNR00",
+    "AND200",
+    "AND300",
+    "AND500",
+    "BUFF00",
+    "DFCL11",
+    "DFPR11",
+    "FILLER1",
+    "FILLER2",
+    "FILLER3",
+    "FILLER4",
+    "FILLER5",
+    "FILLER6",
+    "INVR00",
+    "NND200",
+    "NND300",
+    "NND400",
+    "NOR200",
+    "OR2100",
+    "ORND00",
+    "VIA_M2_M1",
+    "VIA_via1_2_15000_15000_5_5_3000_3000",
+    "VIA_via1_2_15000_7000_2_5_3000_3000"
+  ],
+  "new_native_cells_added": [
+    "AND400",
+    "AOI400",
+    "XNR200"
+  ],
+  "new_CDL_definitions_added": [],
+  "analog_reference_changed": false,
+  "digital_reference_changed": true,
+  "digital_function_equivalence": "Yosys routed versus original RTL: 21 proven, 0 unproven",
+  "scope": "Isolated integrated candidate. Whole-chip DRC/LVS/manual checks still required. External macro pin interface preserved."
+}

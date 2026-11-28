@@ -1,0 +1,30 @@
+{
+  "source": "/home/shreyas/Desktop/Sec_7/intergrate_gds/post_layout/manual_rule_clean_chip/CapSense_ASIC_ROUTED.gds",
+  "source_sha256": "5006fc3c9b7107d935bbd16b5e139559dc34e84df2084e198679afa68037366a",
+  "reference_document": "SCL Analog Open Source PDK CSCB03002Y, printed pages 30-31; rule 9.3.1 / 9.4.1",
+  "excluded_cells": [
+    "frame4mmx4mm",
+    "OS0223"
+  ],
+  "scope": "Core geometric supplement only; no foundry waiver or full manual-rule signoff. Via-overlap checks do not replace full spacing checks or pad/necking checks.",
+  "checks": {
+    "VIA_OVER_CONTACT": {
+      "overlap_region_count": 0,
+      "overlap_area_um2": 0.0,
+      "first_boxes_um": [],
+      "passed_geometry_screen": true
+    },
+    "VIA_OVER_POLY": {
+      "overlap_region_count": 0,
+      "overlap_area_um2": 0.0,
+      "first_boxes_um": [],
+      "passed_geometry_screen": true
+    },
+    "VIA_CUTS_DIFFUSION_EDGE": {
+      "overlap_region_count": 0,
+      "overlap_area_um2": 0.0,
+      "first_boxes_um": [],
+      "passed_geometry_screen": true
+    }
+  }
+}

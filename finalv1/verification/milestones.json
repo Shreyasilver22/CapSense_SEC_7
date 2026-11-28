@@ -1,0 +1,15 @@
+{
+  "A": {
+    "status": "ENGINEERING_CORE_REPAIRS_VERIFIED_FULL_EXTRACTION_UNQUALIFIED"
+  },
+  "B": {
+    "status": "SELECTED_LAYOUT_DRC_LVS_MANUAL_SCREENS_PASS_ELECTRICAL_ACCEPTANCE_PENDING"
+  },
+  "C": {
+    "status": "NOMINAL_DIGITAL_LOAD_PASS_ANALOG_STARTUP_COMPLETE_SETTLED_RESULTS_PENDING"
+  },
+  "D": {
+    "status": "NOT_PASSED",
+    "reason": "Missing/unrun qualification evidence; only existing PDK/PDFs available."
+  }
+}

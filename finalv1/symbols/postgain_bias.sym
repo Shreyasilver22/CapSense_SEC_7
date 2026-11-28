@@ -1,0 +1,30 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=subcircuit spice_primitive=true format="@name @pinlist ota_bias08" template="name=XB"}
+V {}
+S {}
+E {}
+L 4 -105 -132 105 -132 {}
+L 4 105 -132 105 132 {}
+L 4 105 132 -105 132 {}
+L 4 -105 132 -105 -132 {}
+T {SCL OTA BIAS} -88 -117 0 0 0.25 0.25 {layer=4}
+T {@name} -105 142 0 0 0.25 0.25 {layer=4}
+L 4 -125 -72 -105 -72 {}
+B 5 -127.5 -74.5 -122.5 -69.5 {name=REF dir=inout pinnumber=1}
+T {REF} -100 -82 0 0 0.2 0.2 {layer=4}
+L 4 -125 -40 -105 -40 {}
+B 5 -127.5 -42.5 -122.5 -37.5 {name=VDD dir=inout pinnumber=2}
+T {VDD} -100 -50 0 0 0.2 0.2 {layer=4}
+L 4 -125 -8 -105 -8 {}
+B 5 -127.5 -10.5 -122.5 -5.5 {name=VSS dir=inout pinnumber=3}
+T {VSS} -100 -18 0 0 0.2 0.2 {layer=4}
+L 4 125 -72 105 -72 {}
+B 5 122.5 -74.5 127.5 -69.5 {name=VBN dir=inout pinnumber=4}
+T {VBN} 35 -82 0 0 0.2 0.2 {layer=4}
+L 4 125 -40 105 -40 {}
+B 5 122.5 -42.5 127.5 -37.5 {name=VBP dir=inout pinnumber=5}
+T {VBP} 35 -50 0 0 0.2 0.2 {layer=4}
+L 4 125 -8 105 -8 {}
+B 5 122.5 -10.5 127.5 -5.5 {name=IREF dir=inout pinnumber=6}
+T {IREF} 35 -18 0 0 0.2 0.2 {layer=4}

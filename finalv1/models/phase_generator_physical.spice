@@ -1,0 +1,60 @@
+* Full mapped phase generator, exact CDL pin ordering.
+.subckt phase_generator_physical clk_1mhz rst_n phi1 phit phi2 phi1b phitb phi2b sample_valid GROUND VDD
+X$abc$776$auto$blifparse.cc:396:parse_blif$777 n11 n12 GROUND VDD INVR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$778 n13 n14 GROUND VDD INVR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$779 n15 n16 GROUND VDD INVR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$780 n11 n17 n18 GROUND VDD AND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$781 n11 n17 n19 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$782 n18 n20 n21 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$783 n11 n17 n20 n22 n23 GROUND VDD NND400
+X$abc$776$auto$blifparse.cc:396:parse_blif$784 n24 n23 n25 VDD GROUND NOR200
+X$abc$776$auto$blifparse.cc:396:parse_blif$785 n25 n13 n26 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$786 n27 n16 n13 n28 GROUND VDD NND300
+X$abc$776$auto$blifparse.cc:396:parse_blif$787 n22 n20 n19 n29 GROUND VDD OR3100
+X$abc$776$auto$blifparse.cc:396:parse_blif$788 n29 n28 n30 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$789 n25 n13 n31 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$790 n31 n30 n26 n32 GROUND VDD AND300
+X$abc$776$auto$blifparse.cc:396:parse_blif$791 n20 n18 n33 VDD GROUND NOR200
+X$abc$776$auto$blifparse.cc:396:parse_blif$792 n30 n21 n34 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$793 n33 n34 n35 VDD GROUND NOR200
+X$abc$776$auto$blifparse.cc:396:parse_blif$794 n24 n36 n23 GROUND VDD XOR200
+X$abc$776$auto$blifparse.cc:396:parse_blif$795 n36 n29 n28 n37 GROUND VDD ORND00
+X$abc$776$auto$blifparse.cc:396:parse_blif$796 n37 n38 GROUND VDD INVR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$797 n11 n17 n39 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$798 n39 n19 n40 GROUND VDD AND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$799 n14 n16 n23 n41 VDD GROUND NOR300
+X$abc$776$auto$blifparse.cc:396:parse_blif$800 n41 n27 n42 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$801 n41 n27 n43 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$802 n43 n42 n30 n44 GROUND VDD AND300
+X$abc$776$auto$blifparse.cc:396:parse_blif$803 n21 n22 n45 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$804 n45 n37 n46 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$805 n46 n32 n44 n47 VDD GROUND ADNR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$806 n21 n22 n48 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$807 n48 n45 n49 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$808 n48 n44 n38 n34 n14 n50 GROUND VDD AND500
+X$abc$776$auto$blifparse.cc:396:parse_blif$809 n13 n37 n45 n51 VDD GROUND NOR300
+X$abc$776$auto$blifparse.cc:396:parse_blif$810 n51 n32 n52 GROUND VDD OR2100
+X$abc$776$auto$blifparse.cc:396:parse_blif$811 n20 n17 n11 n53 VDD GROUND NOR300
+X$abc$776$auto$blifparse.cc:396:parse_blif$812 n53 n22 n54 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$813 n13 n37 n54 n55 GROUND VDD OR3100
+X$abc$776$auto$blifparse.cc:396:parse_blif$814 n55 n44 n56 GROUND VDD AND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$815 n19 n20 n22 n57 GROUND VDD NND300
+X$abc$776$auto$blifparse.cc:396:parse_blif$816 n57 n37 n58 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$817 n58 n32 n44 n59 VDD GROUND ADNR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$818 n56 n52 n59 n60 VDD GROUND ADNR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$819 n39 n19 n20 n22 n61 GROUND VDD NND400
+X$abc$776$auto$blifparse.cc:396:parse_blif$820 n61 n37 n62 GROUND VDD NND200
+X$abc$776$auto$blifparse.cc:396:parse_blif$821 n62 n32 n44 n63 VDD GROUND ADNR00
+X$abc$776$auto$blifparse.cc:396:parse_blif$822 n56 n52 n63 n64 VDD GROUND ADNR00
+X$auto$ff.cc:266:slice$281 clk_1mhz n47 rst_n phi1b phi1 GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$293 clk_1mhz n60 rst_n phitb phit GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$295 clk_1mhz n64 rst_n phi2b phi2 GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$302 clk_1mhz n50 rst_n n65 sample_valid GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$303 clk_1mhz n12 rst_n n66 n11 GROUND VDD DFPR11
+X$auto$ff.cc:266:slice$304 clk_1mhz n40 rst_n n67 n17 GROUND VDD DFPR11
+X$auto$ff.cc:266:slice$305 clk_1mhz n35 rst_n n68 n20 GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$306 clk_1mhz n49 rst_n n69 n22 GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$307 clk_1mhz n38 rst_n n24 n15 GROUND VDD DFCL11
+X$auto$ff.cc:266:slice$308 clk_1mhz n32 rst_n n70 n13 GROUND VDD DFPR11
+X$auto$ff.cc:266:slice$309 clk_1mhz n44 rst_n n71 n27 GROUND VDD DFPR11
+.ends phase_generator_physical

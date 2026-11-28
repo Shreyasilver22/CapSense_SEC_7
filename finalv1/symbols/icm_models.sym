@@ -1,0 +1,9 @@
+v {xschem version=3.4.4 file_version=1.2}
+G {}
+K {type=netlist_commands
+format="@value"
+template="name=MODELS only_toplevel=false value=models"}
+V {}
+S {}
+E {}
+

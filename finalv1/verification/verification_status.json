@@ -1,0 +1,8 @@
+{
+  "gds_sha256": "5006fc3c9b7107d935bbd16b5e139559dc34e84df2084e198679afa68037366a",
+  "reference_sha256": "70037fac601382d48fe318b5aa8216619839cf275877f2f3ca7a45b14eac6e72",
+  "drc_exit": 0,
+  "DRC_markers": 0,
+  "lvs_exit": 0,
+  "LVS_match": true
+}

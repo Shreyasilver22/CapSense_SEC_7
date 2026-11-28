@@ -1,0 +1,127 @@
+{
+  "stop_us": 110.0,
+  "clock_logic_errors": [],
+  "ranges_V": {
+    "clk": [
+      0.0,
+      5.0
+    ],
+    "rst": [
+      0.0,
+      5.0
+    ],
+    "phi1": [
+      -0.02178919351315,
+      5.03992369584
+    ],
+    "phi1b": [
+      -0.0154987960074,
+      5.028776203749
+    ],
+    "phit": [
+      -0.02990327445692,
+      5.06599120622
+    ],
+    "phitb": [
+      -0.02596643807122,
+      5.045009834865
+    ],
+    "phi2": [
+      -0.03037831467961,
+      5.065991225078
+    ],
+    "phi2b": [
+      -0.02596640165995,
+      5.045100753932
+    ],
+    "sample_valid": [
+      -0.03954725933273,
+      5.088256212015
+    ]
+  },
+  "slew_10_90_ns": {
+    "phi1": {
+      "rise": {
+        "maximum_ns": 0.6139526731801157,
+        "edge_count": 2
+      },
+      "fall": {
+        "maximum_ns": 0.5765665435049968,
+        "edge_count": 1
+      }
+    },
+    "phi1b": {
+      "rise": {
+        "maximum_ns": 0.815437829320689,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.9347212296436768,
+        "edge_count": 2
+      }
+    },
+    "phit": {
+      "rise": {
+        "maximum_ns": 0.3830081656629289,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.35416990569686957,
+        "edge_count": 1
+      }
+    },
+    "phitb": {
+      "rise": {
+        "maximum_ns": 0.5387541434162405,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.565932864753007,
+        "edge_count": 1
+      }
+    },
+    "phi2": {
+      "rise": {
+        "maximum_ns": 0.3797803490486755,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.3541699076484335,
+        "edge_count": 1
+      }
+    },
+    "phi2b": {
+      "rise": {
+        "maximum_ns": 0.5387541463435863,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.5633196401071084,
+        "edge_count": 1
+      }
+    },
+    "sample_valid": {
+      "rise": {
+        "maximum_ns": 0.267383310669422,
+        "edge_count": 1
+      },
+      "fall": {
+        "maximum_ns": 0.22167615833235121,
+        "edge_count": 1
+      }
+    }
+  },
+  "source_CDL_sha256": "4e1272c92e6ec301d502d112b0fecaa2cd41a5a332142179961b9e454004ae97",
+  "scope": "Nominal transistor-level new mapped counter with all seven external fanouts from actual analog gate geometry. Gate S/D held at 2.5 V. Local syntax-only PMOS model trial; no wire RC or full analog dynamics/PVT/signoff.",
+  "nonoverlap_2p5V_screen": {
+    "phit": false,
+    "phi2": false
+  },
+  "logic_sample_screen_passed": true,
+  "supply_current_screen": {
+    "mean_A": 7.107312268389375e-06,
+    "maximum_positive_A": 0.004794008044953,
+    "maximum_absolute_A": 0.004794008044953,
+    "scope": "Standalone ideal supply, excludes routing/pads and dynamic analog stage."
+  }
+}

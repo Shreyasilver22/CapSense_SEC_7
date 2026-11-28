@@ -1,0 +1,18 @@
+v {xschem version=3.4.5 file_version=1.2}
+G {}
+K {type=primitive
+format="@name @pinlist RPP W=@W L=@L"
+template="name=XR1 W=2.4u L=100u"}
+V {}
+S {}
+E {}
+L 4 -60 0 -35 0 {}
+L 4 -35 -10 35 -10 {}
+L 4 35 -10 35 10 {}
+L 4 35 10 -35 10 {}
+L 4 -35 10 -35 -10 {}
+L 4 35 0 60 0 {}
+B 5 -62.5 -2.5 -57.5 2.5 {name=A dir=inout}
+B 5 57.5 -2.5 62.5 2.5 {name=B dir=inout}
+T {@name RPP} -40 -35 0 0 .2 .2 {}
+T {W=@W L=@L} -60 20 0 0 .16 .16 {}
